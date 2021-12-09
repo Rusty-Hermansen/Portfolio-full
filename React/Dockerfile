@@ -1,4 +1,4 @@
-FROM node:13-alpine
+FROM node:11-alpine AS client_build
 WORKDIR /app
 
 COPY package.json ./
@@ -7,7 +7,9 @@ COPY package-lock.json ./
 RUN npm install
 
 COPY . .
+RUN npm run build
 
-EXPOSE 3000
+FROM nginx AS nginx_build
+COPY  --from=client_build /app/build /usr/share/nginx/html
+EXPOSE 80
 
-CMD ["npm", "start"]
