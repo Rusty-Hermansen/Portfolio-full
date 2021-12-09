@@ -16,4 +16,5 @@ jobs:
       - name: build and test
         run: |
           git secret reveal
+          docker volume prune -f
           docker-compose up --build -d
