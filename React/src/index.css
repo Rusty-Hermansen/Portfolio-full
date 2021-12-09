@@ -1,0 +1,20 @@
+@import url("https://unpkg.com/@tailwindcss/typography@.2.x/dist/typography.min.css");
+@import url("https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
+
+.prose img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.home-name {
+  font-size: 150px
+}
+
+.header a:hover, 
+.header a:active, 
+.header a.active {
+  color: rgb(245, 218, 218);
+  padding-bottom: .25rem;
+  border-bottom: 4px solid white;
+}

@@ -1,0 +1,38 @@
+version: "3.8"
+services: 
+  react-app:
+    container_name: portfolio_frontend
+    build: ./React
+    # image: rusty23/portfolio
+    stdin_open: true
+    ports: 
+      - "3000:3000"
+
+  api-server:                           #node api
+    container_name: portfolio_backend
+    build: ./backend
+    # image: rusty23/portfolio-api
+    environment: 
+      DB_HOST: db
+      DB_PORT: 5432
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5000:5000"
+    depends_on: 
+      - db
+
+  db:
+    container_name: portfolio_database
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: rusty
+      POSTGRES_PASSWORD: password
+    ports:
+      - "7000:5432"
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+ 
