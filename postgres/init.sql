@@ -182,10 +182,32 @@ INSERT INTO portfolio_post.position(position) VALUES (1),(2),(3),(4),(5),(6),(7)
 13),(14),(15),(16),(17),(18),(19),(20),(21),(22),(23),(24),(25),(26),(27),(28),(29),(30),(31),(32),(33),(34),(35);
 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
-VALUES (1, null, 1, 1), (null, 1, 2, 1), (2, null, 3, 1), (null, 2, 4, 1), (3, null, 5, 1),(null, 3, 6, 1), 
-(4, null, 7, 1), (null, 4, 8, 1), (5, null, 9, 1), (null, 5, 10, 1), (6, null, 11, 1), (null, 6, 12, 1), 
-(7, null, 13, 1), (null, 7, 14, 1), (8, null, 15, 1),(null,8,16,1), (9, null, 17,1),(null,9,18,1), (10,null, 19,1),
-(null,10,20,1),(11,null,21,1),(null,11,22,1),(12,null,23,1),(null,12,24,1),(13,null,15,1);
+VALUES 
+(1, null, 1, 1), 
+(null, 1, 2, 1), 
+(2, null, 3, 1), 
+(null, 2, 4, 1), 
+(3, null, 5, 1),
+(null, 3, 6, 1), 
+(4, null, 7, 1), 
+(null, 4, 8, 1), 
+(5, null, 9, 1), 
+(null, 5, 10, 1), 
+(6, null, 11, 1), 
+(null, 6, 12, 1), 
+(7, null, 13, 1), 
+(null, 7, 14, 1), 
+(8, null, 15, 1),
+(null,8,16,1), 
+(9, null, 17,1),
+(null,9,18,1), 
+(10,null, 19,1),
+(null,10,20,1),
+(11,null,21,1),
+(null,11,22,1),
+(12,null,23,1),
+(null,12,24,1),
+(13,null,25,1);
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechnologies.com/img/solutions/dotnet.png', '2021-11-21 10:23:54');
@@ -395,10 +417,10 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img alt="
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (36, null, 1, 5),
-(null, 37, 2, 5), 
+(null, 35, 2, 5), 
 (37, null, 3, 5), 
-(null, 38, 4, 5), 
-(null, 39, 5, 5),
+(null, 36, 4, 5), 
+(null, 37, 5, 5),
 (38, null, 6, 5), 
 (39, null, 7, 5); 
 
@@ -458,20 +480,20 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image7', '<img
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (40, null, 1, 6),
-(null, 40, 2, 6), 
+(null, 38, 2, 6), 
 (41, null, 3, 6), 
-(null, 41, 4, 6), 
+(null, 39, 4, 6), 
 (42, null, 5, 6),
-(null, 42, 6, 6), 
+(null, 40, 6, 6), 
 (43, null, 7, 6),
-(null, 43, 8, 6), 
-(null, 44, 9, 6), 
+(null, 41, 8, 6), 
+(null, 42, 9, 6), 
 (44, null, 10, 6), 
-(null, 45, 11, 6), 
+(null, 43, 11, 6), 
 (45, null, 12, 6),
-(null, 46, 13, 6), 
+(null, 44, 13, 6), 
 (46, null, 14, 6),
-(null, 47, 15, 6),
+(null, 45, 15, 6),
 (47, null, 16, 6); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
@@ -582,21 +604,21 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (48, null, 1, 7),
-(null, 48, 2, 7), 
+(null, 46, 2, 7), 
 (49, null, 3, 7), 
-(null, 49, 4, 7), 
+(null, 47, 4, 7), 
 (50, null, 5, 7),
-(null, 50, 6, 7), 
+(null, 48, 6, 7), 
 (51, null, 7, 7),
-(null, 51, 8, 7), 
+(null, 49, 8, 7), 
 (52, null, 9, 7), 
-(null, 52, 10, 7), 
+(null, 50, 10, 7), 
 (53, null, 11, 7), 
-(null, 53, 12, 7),
+(null, 51, 12, 7),
 (54, null, 13, 7), 
-(null, 54, 14, 7),
+(null, 52, 14, 7),
 (55, null, 15, 7),
-(null, 55, 16, 7); 
+(null, 53, 16, 7); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Creating A Node/Express API With Database Interaction','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54');
@@ -637,15 +659,15 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (56, null, 1, 8),
-(null, 56, 2, 8), 
+(null, 54, 2, 8), 
 (57, null, 3, 8), 
-(null, 57, 4, 8), 
+(null, 55, 4, 8), 
 (58, null, 5, 8),
-(null, 58, 6, 8), 
+(null, 56, 6, 8), 
 (59, null, 7, 8),
-(null, 59, 8, 8), 
+(null, 57, 8, 8), 
 (60, null, 9, 8), 
-(null, 60, 10, 8), 
+(null, 58, 10, 8), 
 (61, null, 11, 8); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
@@ -663,7 +685,7 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image1', '<img
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (62, null, 1, 8),
-(null, 61, 2, 8), 
+(null, 59, 2, 8), 
 (63, null, 3, 8);
 
 insert into portfolio_post.post(title,post_img, post_date) 
@@ -761,31 +783,31 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (64, null, 1, 9),
-(null, 62, 2, 9), 
+(null, 60, 2, 9), 
 (65, null, 3, 9), 
-(null, 63, 4, 9), 
+(null, 61, 4, 9), 
 (66, null, 5, 9),
-(null, 64, 6, 9), 
+(null, 62, 6, 9), 
 (67, null, 7, 9),
-(null, 65, 8, 9), 
+(null, 63, 8, 9), 
 (68, null, 9, 9), 
-(null, 66, 10, 9), 
+(null, 64, 10, 9), 
 (69, null, 11, 9), 
-(null, 67, 12, 9),
+(null, 65, 12, 9),
 (70, null, 13, 9), 
-(null, 68, 14, 9),
+(null, 66, 14, 9),
 (71, null, 15, 9),
-(null, 69, 16, 9),
+(null, 67, 16, 9),
 (72, null, 17, 9),
-(null, 70, 18, 9), 
+(null, 68, 18, 9), 
 (73, null, 19, 9), 
-(null, 71, 20, 9), 
+(null, 69, 20, 9), 
 (74, null, 21, 9),
-(null, 72, 22, 9), 
+(null, 70, 22, 9), 
 (75, null, 23, 9),
-(null, 73, 24, 9), 
+(null, 71, 24, 9), 
 (76, null, 25, 9), 
-(null, 74, 26, 9), 
+(null, 72, 26, 9), 
 (77, null, 27, 9); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
@@ -827,15 +849,15 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image4', '<img
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (78, null, 1, 9),
-(null, 75, 2, 9), 
+(null, 73, 2, 9), 
 (79, null, 3, 9), 
-(null, 76, 4, 9), 
+(null, 74, 4, 9), 
 (80, null, 5, 9),
-(null, 77, 6, 9), 
+(null, 75, 6, 9), 
 (81, null, 7, 9),
-(null, 78, 8, 9), 
+(null, 76, 8, 9), 
 (82, null, 9, 9), 
-(null, 79, 10, 9), 
+(null, 77, 10, 9), 
 (83, null, 11, 9);
 
 insert into portfolio_post.post(title,post_img, post_date) 
@@ -911,26 +933,26 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image5', '<img
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (84, null, 1, 10),
-(null, 80, 2, 10), 
+(null, 78, 2, 10), 
 (85, null, 3, 10), 
-(null, 81, 4, 10), 
+(null, 79, 4, 10), 
 (86, null, 5, 10),
-(null, 82, 6, 10), 
+(null, 80, 6, 10), 
 (87, null, 7, 10),
-(null, 83, 8, 10), 
+(null, 81, 8, 10), 
 (88, null, 9, 10), 
-(null, 84, 10, 10), 
+(null, 82, 10, 10), 
 (89, null, 11, 10), 
-(null, 85, 12, 10), 
-(null, 86, 13, 10), 
+(null, 83, 12, 10), 
+(null, 84, 13, 10), 
 (90, null, 15, 10),
-(null, 87, 16, 10),
+(null, 85, 16, 10),
 (91, null, 17, 10),
-(null, 88, 18, 10), 
+(null, 86, 18, 10), 
 (92, null, 19, 10), 
-(null, 89, 20, 10), 
+(null, 87, 20, 10), 
 (93, null, 21, 10),
-(null, 90, 22, 10); 
+(null, 88, 22, 10); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1686026.png', '2021-11-21 10:23:54');
@@ -1035,35 +1057,35 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
 (94, null, 1, 11),
-(null, 91, 2, 11), 
+(null, 89, 2, 11), 
 (95, null, 3, 11), 
-(null, 92, 4, 11), 
+(null, 90, 4, 11), 
 (96, null, 5, 11),
-(null, 93, 6, 11), 
+(null, 91, 6, 11), 
 (97, null, 7, 11),
-(null, 94, 8, 11), 
+(null, 92, 8, 11), 
 (98, null, 9, 11), 
-(null, 95, 10, 11), 
+(null, 93, 10, 11), 
 (99, null, 11, 11), 
-(null, 96, 12, 11),  
+(null, 94, 12, 11),  
 (100, null, 13, 11),
-(null, 97, 14, 11),
+(null, 95, 14, 11),
 (101, null, 15, 11),
-(null, 98, 16, 11), 
+(null, 96, 16, 11), 
 (102, null, 17, 11), 
-(null, 99, 18, 11), 
+(null, 97, 18, 11), 
 (103, null, 19, 11),
-(null, 100, 20, 11),
+(null, 98, 20, 11),
 (104, null, 21, 11),
-(null, 101, 22, 11),
+(null, 99, 22, 11),
 (105, null, 23, 11),
-(null, 102, 24, 11), 
+(null, 100, 24, 11), 
 (106, null, 25, 11), 
-(null, 103, 26, 11), 
+(null, 101, 26, 11), 
 (107, null, 27, 11),
-(null, 104, 28, 11),
+(null, 102, 28, 11),
 (108, null, 29, 11),
-(null, 105, 30, 11),
+(null, 103, 30, 11),
 (109, null, 31, 11); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
