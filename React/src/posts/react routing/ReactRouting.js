@@ -172,18 +172,22 @@ export const reactRouting = {
     <p class="c0"><span class="c2">In this.In this post I&rsquo;ll be covering how you make a React application appear
             as though there are multiple pages using react-router-dom. </span></p>
     <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 484.00px; height: 364.00px;"><img
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
+            translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 484.00px; height: 364.00px;"><img
                 alt="" src="images/image2.png"
-                style="width: 484.00px; height: 364.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                style="width: 484.00px; height: 364.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c2">In this post I&rsquo;ll first start in index.js where the groundwork is laid to make
             page routing work in a react application. I first started by importing BrowserRouter from react-router-dom
             and wrapped &lt;App/&gt; with the &lt;BrowserRouter&gt; tags to enable routing in the application.</span>
     </p>
     <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 596.00px; height: 635.00px;"><img
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
+            translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 596.00px; height: 635.00px;"><img
                 alt="" src="images/image1.png"
-                style="width: 596.00px; height: 635.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                style="width: 596.00px; height: 635.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c2">Moving on to App.js, I imported Switch and Route from react-router-dom &nbsp;on line
             3 in order to create routes and the component that is tied to each route, as well as the related path. I
@@ -196,9 +200,11 @@ export const reactRouting = {
             what is needed. Lazy loading only loads those imported components when they&rsquo;re used. In my application
             it doesn&rsquo;t really make a difference, but it would in a larger application.</span></p>
     <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 349.33px;"><img
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
+            translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 349.33px;"><img
                 alt="" src="images/image3.png"
-                style="width: 624.00px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                style="width: 624.00px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c2">Inside of my navbar component I have navlinks that allow users to navigate to the
             desired &lsquo;page&rsquo;. Each navlink can have its own styling, including active styling that is
@@ -210,9 +216,11 @@ export const reactRouting = {
             want it styled. My favorite part about using react-social-icons is that it automatically determines which
             icon to use based upon the url that you use in the url attribute. </span></p>
     <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 392.00px;"><img
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
+            translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 392.00px;"><img
                 alt="" src="images/image5.png"
-                style="width: 624.00px; height: 392.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                style="width: 624.00px; height: 392.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c2">Here in my post component, I create tiles for each post that I have created and link
             to the individual post using the index as I map through each post. The links that are created have a path
@@ -220,9 +228,11 @@ export const reactRouting = {
             will be utilized in the SinglePost component via useParams to determine which post to load.</span></p>
     <p class="c0 c1"><span class="c2"></span></p>
     <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 342.67px;"><img
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
+            translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 342.67px;"><img
                 alt="" src="images/image4.png"
-                style="width: 624.00px; height: 342.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                style="width: 624.00px; height: 342.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c2">In this SinglePost component, I use useParams to pass down the index and I use that
             index to load the correct post from my locally stored posts array on lines 9 and 11. Here you have it, the

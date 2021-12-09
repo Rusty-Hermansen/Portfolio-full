@@ -169,9 +169,11 @@ export const complexQueries = {
             When learning about joins, I had a hard time envisioning when I would use something like a left or a right
             join. In this post I will go over the three different joins and why I use them. </span></p>
     <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 604.00px; height: 237.00px;"><img
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad)
+             translateZ(0px); width: 604.00px; height: 237.00px;"><img
                 alt="" src="images/image1.png"
-                style="width: 604.00px; height: 237.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                style="width: 604.00px; height: 237.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1">The object of this query is to return all of the content in a portfolio post. In
             order to do so, I had to carefully choose the type of joins that I use so all of the data could be

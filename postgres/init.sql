@@ -179,7 +179,7 @@ style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00p
 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">');
 
 INSERT INTO portfolio_post.position(position) VALUES (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(
-13),(14),(15),(16),(17),(18),(19),(20),(21),(22),(23),(24),(25);
+13),(14),(15),(16),(17),(18),(19),(20),(21),(22),(23),(24),(25),(26),(27),(28),(29),(30),(31),(32),(33),(34),(35);
 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES (1, null, 1, 1), (null, 1, 2, 1), (2, null, 3, 1), (null, 2, 4, 1), (3, null, 5, 1),(null, 3, 6, 1), 
@@ -464,7 +464,7 @@ VALUES
 (42, null, 5, 6),
 (null, 42, 6, 6), 
 (43, null, 7, 6),
-(null, 43, 8, 6), //
+(null, 43, 8, 6), 
 (null, 44, 9, 6), 
 (44, null, 10, 6), 
 (null, 45, 11, 6), 
@@ -588,9 +588,9 @@ VALUES
 (50, null, 5, 7),
 (null, 50, 6, 7), 
 (51, null, 7, 7),
-(null, 51, 8, 7), //
+(null, 51, 8, 7), 
 (52, null, 9, 7), 
-(null 52, 10, 7), 
+(null, 52, 10, 7), 
 (53, null, 11, 7), 
 (null, 53, 12, 7),
 (54, null, 13, 7), 
@@ -643,10 +643,10 @@ VALUES
 (58, null, 5, 8),
 (null, 58, 6, 8), 
 (59, null, 7, 8),
-(null, 59, 8, 8), //
-(60 null, 9, 8), 
-(null 60, 10, 8), 
-(61 null, 11, 8); 
+(null, 59, 8, 8), 
+(60, null, 9, 8), 
+(null, 60, 10, 8), 
+(61, null, 11, 8); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Postgres Joins','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54');
@@ -654,23 +654,417 @@ VALUES ('Postgres Joins','https://cdn-icons-png.flaticon.com/512/20/20093.png', 
 INSERT INTO portfolio_post.text(text_content) VALUES ('<p>When I first started learning sql, I was taking a databases class using postgresql. When learning about joins, I had a hard time envisioning when I would use something like a left or a right join. In this post I will go over the three different joins and why I use them.</p>');
 INSERT INTO portfolio_post.text(text_content) VALUES ('<p>The object of this query is to return all of the content in a portfolio post. In order to do so, I had to carefully choose the type of joins that I use so all of the data could be displayed. When I first started writing this query, I did all inner joins and my query returned nothing. I was stumped for a bit until I came to the realization that, when a text has a value an image is null and when text is null and an image has a value. That means that an inner join can’t be used to get a complete portfolio post. All of the other tables can use simple inner joins because they all exist at the same time. It turned out using left joins on the text and image tables allowed me to get all of the content for a complete post.</p>');
 
-Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
-                alt="" src="https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Portfolio%20API/images/image5.png?raw=true"
-                style="width: 624.00px; height: 333.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
-                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+Insert into portfolio_post.image(title, image_url) VALUES ('image1', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Postgres%20Complex%20Queries/images/image1.png?raw=true"
+                style="width: 604.00px; height: 237.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title="">');
+
+INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
+VALUES 
+(62, null, 1, 8),
+(null, 61, 2, 8), 
+(63, null, 3, 8);
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54');
 
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Being relatively new to the world of React.js and Javascript as well as an avid browser of the internet, I thought I’d take a stab at making some good, basic form validation in React using useReducer, useEffect, and useContext. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here is my basic file tree, as you can probably tell, it’s pretty bare bones and will only focus on form validation. This application is similar to another one that I built in the past, but implements functionality in a much different way and includes no styling. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is the context that I’m going to be using to keep track of the cars this application will interact with. We create our context that has a list of cars and an empty onAddCar method, this is done mostly to aid intellisense in vs:code as I write code later on. I also made a CarContextProvider, this context provider will make the addCarHandler accessible for when I need to submit my form and will allow me to add cars to my car list. The provider in the return statement helps us to use this in code, I’ll touch on how the provider is used once you reach the form page. Using context in this manner helps us so that we don’t have to pass state down through a bunch of different components and can make things much less messy and complicated since state isn’t being passed through props. This application is simple enough that it doesn’t need to use context but I thought it good practice anyways. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>The app file helps us to know how this application is constructed, here we can also see how the context provider is used. The provider component allows any of its children access to the state and functions that live inside of the context. So the TilePage component and NewCarForm component can access the contexts state and functions. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>These are the fields that I will be interested in in the forms, and this component will be used inside of the TilePage component as seen in the next image.</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Now that we’re on the TilePage component, context is used in order to get my list of cars and map through them, showing all of the details about each car. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>The form page that I made is somewhat lengthy so I have to break it up into a number of digestible pieces. I also get the opportunity to use useContext, useReducer, useEffect, as well as useState again. This is where I indicate the types of actions that I will use when I dispatch using my reducer as well as indicate the initial state of the form.</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is my form reducer that will dispatch actions based upon the action type. This includes submission with some validation, so in the yearValid portion, we can see a valid value for the year is from the year 1900 and newer. This will also return the form back to its initial state once it is submitted. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Inside of the NewCarForm function the event is passed in and we can see the context will be used, the reducer, state for a valid form, and if each field has been touched. We can see how the reducer handles if each field has a valid input value and how I use them along with my touched states to handle if the form is initially invalid to show styling and a message that indicates invalid input. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here in the useEffect is used in order to determine if the form as a whole is valid. This is done by setting the formValid state variable to true if all of the fields have valid inputs. This useEffect will cause the page to re-render any time a change is detected with isXxxxValid reducer states. 
+Each of the handlers dispatch the appropriate action for each field and the input is validated in the formReduce function. The blur handlers help make the initial form state to look pretty with no warning colors or messages, once one of them is clicked on, styling and a message will display if the input is invalid. 
+</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>The submitHandler will use the available context method to add a car to the car list the lives in context, so long as the form is valid. It will then dispatch the action that resets the form and all of the touched state variables are reset to false. I also made inputClasses at the bottom of this clip that will style the form according to the if the given field is invalid or not. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is where the visible form is made that a user can interact with. We can see the submitHandler is applied to the form and we have each input with an appropriate label. Each input has the appropriate change and blur handlers in order to give us the validation that we want. Each field also has a message that is conditionally rendered based upon field validity, as can be seen on lines 117, 122, 127, and 132. The button will also be disabled if the form is invalid, not allowing the user to submit an invalid form. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is the initial form state. It’s not the prettiest thing in the world, but it shows everything is valid and not screaming at you. Notice while all of the fields appear valid the submit button is disabled. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here I have an example of different variations of validity in my fields. The year field has only been clicked on, and we’re shown that that field is invalid, the same goes for the model state. The make state has a valid string in it, so it’s happy and not showing us a message or anything else. The price field is indicating an invalid value, since cars generally don’t have a negative value. The submit button is also still disabled because all of our fields are not satisfied. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Now we finally have an example of a happy form! Each field has a valid value in it and our submit button is finally not disabled, allowing us to submit a car. Awesome!</p>');
+
+Insert into portfolio_post.image(title, image_url) VALUES ('image9', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image9.png?raw=true"
+                style="width: 154.91px; height: 511.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image4', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image4.png?raw=true"
+                style="width: 560.00px; height: 485.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image5', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image5.png?raw=true"
+                style="width: 590.00px; height: 371.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image1', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image1.png?raw=true"
+                style="width: 440.00px; height: 281.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image10', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image10.png?raw=true"
+                style="width: 624.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image6', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image6.png?raw=true"
+                style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image13', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image13.png?raw=true"
+                style="width: 624.00px; height: 334.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image3', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image3.png?raw=true"
+                style="width: 624.00px; height: 338.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image14', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image14.png?raw=true"
+                style="width: 624.00px; height: 486.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image11', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image11.png?raw=true"
+                style="width: 624.00px; height: 338.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image12', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image12.png?raw=true"
+                style="width: 624.00px; height: 354.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image8', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image8.png?raw=true"
+                style="width: 305.00px; height: 147.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image7', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image7.png?raw=true"
+                style="width: 368.00px; height: 307.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image2.png?raw=true"
+                style="width: 342.00px; height: 285.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+                
+INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
+VALUES 
+(64, null, 1, 9),
+(null, 62, 2, 9), 
+(65, null, 3, 9), 
+(null, 63, 4, 9), 
+(66, null, 5, 9),
+(null, 64, 6, 9), 
+(67, null, 7, 9),
+(null, 65, 8, 9), 
+(68, null, 9, 9), 
+(null, 66, 10, 9), 
+(69, null, 11, 9), 
+(null, 67, 12, 9),
+(70, null, 13, 9), 
+(null, 68, 14, 9),
+(71, null, 15, 9),
+(null, 69, 16, 9),
+(72, null, 17, 9),
+(null, 70, 18, 9), 
+(73, null, 19, 9), 
+(null, 71, 20, 9), 
+(74, null, 21, 9),
+(null, 72, 22, 9), 
+(75, null, 23, 9),
+(null, 73, 24, 9), 
+(76, null, 25, 9), 
+(null, 74, 26, 9), 
+(77, null, 27, 9); 
+
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54');
+
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>In this.In this post I’ll be covering how you make a React application appear as though there are multiple pages using react-router-dom. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>In this post I’ll first start in index.js where the groundwork is laid to make page routing work in a react application. I first started by importing BrowserRouter from react-router-dom and wrapped <App/> with the <BrowserRouter> tags to enable routing in the application.</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Moving on to App.js, I imported Switch and Route from react-router-dom  on line 3 in order to create routes and the component that is tied to each route, as well as the related path. I used the Switch component that starts on line 18 and wraps the route components on lines 19-22. Each route component allows me to create the routes that I want, determine which route loads which component, and also includes the associated path you desire that route to live in. I also implemented lazy loading in order to decrease page load times. In order to implement lazy loading all that really needs to happen is importing react from react and then importing only when the component is used like on lines 19-22. When a react application is loaded without lazy loading, every component in the application is loaded instead of only what is needed. Lazy loading only loads those imported components when they’re used. In my application it doesn’t really make a difference, but it would in a larger application</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Inside of my navbar component I have navlinks that allow users to navigate to the desired ‘page’. Each navlink can have its own styling, including active styling that is determined in activeClassName attribute that highlights the currently selected navlink.You can also tell which route that you want each navlink to take you in the ‘to’ attribute of the navlink component. The navbar also uses the react-social-icons npm package that will display social media icons that I used to link to my social media accounts. All it takes is the import on line 2 and using the component like I did on lines 30 and 31. You can tell the SocialIcon component what url you want to use and how you want it styled. My favorite part about using react-social-icons is that it automatically determines which icon to use based upon the url that you use in the url attribute.</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here in my post component, I create tiles for each post that I have created and link to the individual post using the index as I map through each post. The links that are created have a path they navigate to, a key, and state that can be passed down into the component being loaded. The index here will be utilized in the SinglePost component via useParams to determine which post to load.</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>In this SinglePost component I use useParams to pass down the index and I use that index to load the correct post from my locally stored posts array on lines 9 and 11. Here you have it, the complete picture of how the routing works in this very portfolio that you view at this moment. </p>');
+
+Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image2.png?raw=true"
+                style="width: 484.00px; height: 364.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image1', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image1.png?raw=true"
+                style="width: 596.00px; height: 635.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image3', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image3.png?raw=true"
+                style="width: 624.00px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image5', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image5.png?raw=true"
+                style="width: 624.00px; height: 392.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image4', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image4.png?raw=true"
+                style="width: 624.00px; height: 342.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+
+INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
+VALUES 
+(78, null, 1, 9),
+(null, 75, 2, 9), 
+(79, null, 3, 9), 
+(null, 76, 4, 9), 
+(80, null, 5, 9),
+(null, 77, 6, 9), 
+(81, null, 7, 9),
+(null, 78, 8, 9), 
+(82, null, 9, 9), 
+(null, 79, 10, 9), 
+(83, null, 11, 9);
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('My React Portfolio','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54');
 
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>In our modern tech world, it seems that many software engineers have their own portfolio. In this post I will show you my first stab at making my own portfolio and how it didn’t go quite as smoothly as I wanted. I started with grand plans of using a node api that interacts with a database but I found myself too short on time to be able to do that just yet. Here is the start of what is my software engineering portfolio. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here is my basic file structure with a handful of the necessary components for making a portfolio. There is also a posts folder that stores my current posts statically as well as some background images that I have used to dress up my portfolio page. I also have a copy of my most current resume that any potential employers can look over. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>I’ll start by showing you my app file. I use react-router in order to do the routing that I need to make my portfolio site a little easier to navigate. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here is the code for my simple home component, this is a pretty simple component that utilizes a black and white photo of a laptop as the background. Upon making this page initially I found that my text was hard to read because it blended in with the white in the picture. To help make it more readable I added a black opaque tint. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here you can see the rendered home component in all of its glory. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here is the code for my about component. I wanted to keep this component simple so I thought I’d display the pdf version of my resume here. I used an npm package called react-pdf that allows me to render my resume on this page. The react-pdf package was very easy to use and is supposed to have support for clickable links on pdfs but I couldn’t seem to get it working. Thankfully I have links in the navbar that take you to the same place.I also added the same black opaque tint to this page as I did to the home page to tone down dome of the intensity of the picture. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here is the code for the navbar, I used the React social icons package to get the social media icons and navlinks are utilized for routing. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is the code for the page that lists all of my portfolio posts. It currently maps through a static list. I didn’t quite get to finish styling this page so it’s still a little plain jane but it’s a good start. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here is what the posts page currently looks like. They all use the same image currently but that will easily be fixed in the futur</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here’s the code for the single post page. This page is also supposed to use react-router and have state passed to it in order to render this SinglePost component. I ran into the strange issue below that has me currently stumped and onlookers won’t be able to see my posts just yet.</p>');
+
+Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image2.png?raw=true"
+                style="width: 364.00px; height: 636.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image11', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image11.png?raw=true"
+                style="width: 595.00px; height: 480.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image9', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image9.png?raw=true"
+                style="width: 624.00px; height: 262.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image4', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image4.png?raw=true"
+                style="width: 624.00px; height: 313.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image6', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image6.png?raw=true"
+                style="width: 624.00px; height: 400.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image3', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image3.png?raw=true"
+                style="width: 624.00px; height: 314.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image8', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image8.png?raw=true"
+                style="width: 624.00px; height: 310.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image1', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image1.png?raw=true"
+                style="width: 624.00px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image10', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image10.png?raw=true"
+                style="width: 624.00px; height: 313.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image7', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image7.png?raw=true"
+                style="width: 440.00px; height: 369.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image5', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/site/images/image5.png?raw=true"
+                style="width: 624.00px; height: 286.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+
+INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
+VALUES 
+(84, null, 1, 10),
+(null, 80, 2, 10), 
+(85, null, 3, 10), 
+(null, 81, 4, 10), 
+(86, null, 5, 10),
+(null, 82, 6, 10), 
+(87, null, 7, 10),
+(null, 83, 8, 10), 
+(88, null, 9, 10), 
+(null, 84, 10, 10), 
+(89, null, 11, 10), 
+(null, 85, 12, 10), 
+(null, 86, 13, 10), 
+(90, null, 15, 10),
+(null, 87, 16, 10),
+(91, null, 17, 10),
+(null, 88, 18, 10), 
+(92, null, 19, 10), 
+(null, 89, 20, 10), 
+(93, null, 21, 10),
+(null, 90, 22, 10); 
+
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1686026.png', '2021-11-21 10:23:54');
+
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Infrastructure-as-code is todays modern, declarative way to set up cloud infrastructure. It gives us an easy, repeatable way to set that infrastructure up and is designed to be readable. Todays adventure is learning a bit about an infrastructure-as-code tool called Terraform and using it to set up some infrastructure in AWS. Terraform uses its own declarative language called HCL, or Hashicorp Configuration Language. This adventure will consist of a single file, called main.tf. It is possible to store all of your variables in another file with a *.tfvars file type, I have so few variables that I opted not to use another file. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here are my variables, where I declare my region, network address space for the VPC, and two subnet address spaces to be used with two different EC2 instances and a load balancer. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>
+This is where I indicate the cloud provider that I’m using, which is AWS. You can also use Google Cloud, Microsoft Azure, or smaller providers like Linode. I’m also getting a list of all available AWS availability zones as well as dynamically getting the most current AMI for the Amazon Linux 2 operating system for each of my EC2 virtual machines. 
+</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here I’m setting up my VPC or Virtual Private cloud, mainly for connectivity and security. I also have my aws internet gateway that allows the VPC to be reachable from the internet to make our EC2 instances reachable from the internet.</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Since I’ll be setting up two different EC2 instances, I need two subnets, each in a different availability zone to help make whatever I’m hosting be redundant, and more highly available than if I only used one availability zone. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>The route table directs traffic from subnets to wherever we want it to go, which is eventually my EC2 virtual machine. The route table associates associate our subnets to our route table. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is where we set up an elastic load balancer security group. This security group is associated with a vpc and tells us which ports traffic will be accepted from. In our case, port 80, via http. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here is another security group that is associated that will allow me to get into my VM’s using port 22 to ssh into it, or access it via http on port 80. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is where our actual EC2 virtual machines are defined, they are the smallest possible EC2 instance offered by AWS and are accessible via the Session Manager IAM profile. The elastic load balancer is then declared, given the appropriate subnets, security group, and EC2 instance ids) and set to listen on port 80 and can then route traffic to either EC2 instance. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is our output, as soon as all of the infrastructure is stood up, this output will give us the URL of our ELB to access our two EC2 virtual machines via the load balancer. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>
+Now that all of the terraform code is done, the ‘terraform init’ command needs to be run and get everything initialized. 
+</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Then a terraform plan can be called to double-check how the infrastructure is being set up. If everything looks good, a ‘terraform apply’ command can be called and the infrastructure that lives in main.tf can be stood up. Whenever you want it all come down, you can run terraform destroy and every piece of infrastructure in your main.tf will be taken down. My infrastructure is still up and I can find it in my AWS console. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here we can see that it made our two EC2 instances</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Now the vpc</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>The route table with two associated subnets</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>...and the elastic load balancer. </p>');
+
+Insert into portfolio_post.image(title, image_url) VALUES ('image6', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image6.png?raw=true"
+                style="width: 390.00px; height: 426.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image9', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image9.png?raw=true"
+                style="width: 624.00px; height: 321.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image1', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image1.png?raw=true"
+                style="width: 437.00px; height: 253.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image15', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image15.png?raw=true"
+                style="width: 624.00px; height: 345.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image3', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image3.png?raw=true"
+                style="width: 566.00px; height: 478.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image7', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image7.png?raw=true"
+                style="width: 474.00px; height: 283.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image8', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image8.png?raw=true"
+                style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image14', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image14.png?raw=true"
+                style="width: 624.00px; height: 640.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image13', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image13.png?raw=true"
+                style="width: 432.00px; height: 112.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image10', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image10.png?raw=true"
+                style="width: 624.00px; height: 260.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image5', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image5.png?raw=true"
+                style="width: 624.00px; height: 480.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image4', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image4.png?raw=true"
+                style="width: 624.00px; height: 173.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image11', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image11.png?raw=true"
+                style="width: 624.00px; height: 13.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image12', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image12.png?raw=true"
+                style="width: 624.00px; height: 13.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image2.png?raw=true"
+                style="width: 624.00px; height: 10.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+
+INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
+VALUES 
+(94, null, 1, 11),
+(null, 91, 2, 11), 
+(95, null, 3, 11), 
+(null, 92, 4, 11), 
+(96, null, 5, 11),
+(null, 93, 6, 11), 
+(97, null, 7, 11),
+(null, 94, 8, 11), 
+(98, null, 9, 11), 
+(null, 95, 10, 11), 
+(99, null, 11, 11), 
+(null, 96, 12, 11),  
+(100, null, 13, 11),
+(null, 97, 14, 11),
+(101, null, 15, 11),
+(null, 98, 16, 11), 
+(102, null, 17, 11), 
+(null, 99, 18, 11), 
+(103, null, 19, 11),
+(null, 100, 20, 11),
+(104, null, 21, 11),
+(null, 101, 22, 11),
+(105, null, 23, 11),
+(null, 102, 24, 11), 
+(106, null, 25, 11), 
+(null, 103, 26, 11), 
+(107, null, 27, 11),
+(null, 104, 28, 11),
+(108, null, 29, 11),
+(null, 105, 30, 11),
+(109, null, 31, 11); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solutions/dotnet.png', '2021-11-21 10:23:54');

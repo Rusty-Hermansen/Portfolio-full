@@ -13,7 +13,7 @@ const About = () => {
     return (
         <div className="bg-fixed bg-cover" style={{backgroundImage: `url(${image})`}}>
             
-            <div className="flex justify-center pt-8 bg-opacity-75  flex justify-center min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
+            <div className="flex justify-center pt-8 bg-opacity-75 min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
                 <Document file={resume} onItemClick={onItemClick}>
                     <Outline onItemClick={onItemClick} />
                     <Page pageNumber={page || 1} />
