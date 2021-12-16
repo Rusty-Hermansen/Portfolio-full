@@ -497,6 +497,140 @@ VALUES
 (47, null, 16, 6); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
+VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1686026.png', '2021-11-21 10:23:54');
+
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Infrastructure-as-code is todays modern, declarative way to set up cloud infrastructure. It gives us an easy, repeatable way to set that infrastructure up and is designed to be readable. Todays adventure is learning a bit about an infrastructure-as-code tool called Terraform and using it to set up some infrastructure in AWS. Terraform uses its own declarative language called HCL, or Hashicorp Configuration Language. This adventure will consist of a single file, called main.tf. It is possible to store all of your variables in another file with a *.tfvars file type, I have so few variables that I opted not to use another file. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here are my variables, where I declare my region, network address space for the VPC, and two subnet address spaces to be used with two different EC2 instances and a load balancer. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>
+This is where I indicate the cloud provider that I’m using, which is AWS. You can also use Google Cloud, Microsoft Azure, or smaller providers like Linode. I’m also getting a list of all available AWS availability zones as well as dynamically getting the most current AMI for the Amazon Linux 2 operating system for each of my EC2 virtual machines. 
+</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here I’m setting up my VPC or Virtual Private cloud, mainly for connectivity and security. I also have my aws internet gateway that allows the VPC to be reachable from the internet to make our EC2 instances reachable from the internet.</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Since I’ll be setting up two different EC2 instances, I need two subnets, each in a different availability zone to help make whatever I’m hosting be redundant, and more highly available than if I only used one availability zone. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>The route table directs traffic from subnets to wherever we want it to go, which is eventually my EC2 virtual machine. The route table associates associate our subnets to our route table. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is where we set up an elastic load balancer security group. This security group is associated with a vpc and tells us which ports traffic will be accepted from. In our case, port 80, via http. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here is another security group that is associated that will allow me to get into my VM’s using port 22 to ssh into it, or access it via http on port 80. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is where our actual EC2 virtual machines are defined, they are the smallest possible EC2 instance offered by AWS and are accessible via the Session Manager IAM profile. The elastic load balancer is then declared, given the appropriate subnets, security group, and EC2 instance ids) and set to listen on port 80 and can then route traffic to either EC2 instance. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This is our output, as soon as all of the infrastructure is stood up, this output will give us the URL of our ELB to access our two EC2 virtual machines via the load balancer. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>
+Now that all of the terraform code is done, the ‘terraform init’ command needs to be run and get everything initialized. 
+</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Then a terraform plan can be called to double-check how the infrastructure is being set up. If everything looks good, a ‘terraform apply’ command can be called and the infrastructure that lives in main.tf can be stood up. Whenever you want it all come down, you can run terraform destroy and every piece of infrastructure in your main.tf will be taken down. My infrastructure is still up and I can find it in my AWS console. </p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here we can see that it made our two EC2 instances</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Now the vpc</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>The route table with two associated subnets</p>');
+INSERT INTO portfolio_post.text(text_content) VALUES ('<p>...and the elastic load balancer. </p>');
+
+Insert into portfolio_post.image(title, image_url) VALUES ('image6', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image6.png?raw=true"
+                style="width: 390.00px; height: 426.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image9', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image9.png?raw=true"
+                style="width: 624.00px; height: 321.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image1', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image1.png?raw=true"
+                style="width: 437.00px; height: 253.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image15', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image15.png?raw=true"
+                style="width: 624.00px; height: 345.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image3', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image3.png?raw=true"
+                style="width: 566.00px; height: 478.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image7', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image7.png?raw=true"
+                style="width: 474.00px; height: 283.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image8', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image8.png?raw=true"
+                style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image14', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image14.png?raw=true"
+                style="width: 624.00px; height: 640.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image13', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image13.png?raw=true"
+                style="width: 432.00px; height: 112.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image10', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image10.png?raw=true"
+                style="width: 624.00px; height: 260.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image5', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image5.png?raw=true"
+                style="width: 624.00px; height: 480.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image4', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image4.png?raw=true"
+                style="width: 624.00px; height: 173.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image11', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image11.png?raw=true"
+                style="width: 624.00px; height: 13.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image12', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image12.png?raw=true"
+                style="width: 624.00px; height: 13.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
+                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image2.png?raw=true"
+                style="width: 624.00px; height: 10.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+                translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="">');
+
+INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
+VALUES 
+(48, null, 1, 7),
+(null, 46, 2, 7), 
+(49, null, 3, 7), 
+(null, 47, 4, 7), 
+(50, null, 5, 7),
+(null, 48, 6, 7), 
+(51, null, 7, 7),
+(null, 49, 8, 7), 
+(52, null, 9, 7), 
+(null, 50, 10, 7), 
+(53, null, 11, 7), 
+(null, 51, 12, 7),  
+(54, null, 13, 7),
+(null, 52, 14, 7),
+(55, null, 15, 7),
+(null, 53, 16, 7), 
+(56, null, 17, 7), 
+(null, 54, 18, 7), 
+(57, null, 19, 7),
+(null, 55, 20, 7),
+(58, null, 21, 7),
+(null, 56, 22, 7),
+(59, null, 23, 7),
+(null, 57, 24, 7), 
+(60, null, 25, 7), 
+(null, 58, 26, 7), 
+(61, null, 27, 7),
+(null, 59, 28, 7),
+(62, null, 29, 7),
+(null, 60, 30, 7),
+(63, null, 31, 7); 
+
+insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Creating an API with Node and Express','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54');
 
 INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Writing an API in Node and Express is simple and easy. In this post, I’ll show you how to create your own API with node and express.
@@ -603,22 +737,22 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
-(48, null, 1, 7),
-(null, 46, 2, 7), 
-(49, null, 3, 7), 
-(null, 47, 4, 7), 
-(50, null, 5, 7),
-(null, 48, 6, 7), 
-(51, null, 7, 7),
-(null, 49, 8, 7), 
-(52, null, 9, 7), 
-(null, 50, 10, 7), 
-(53, null, 11, 7), 
-(null, 51, 12, 7),
-(54, null, 13, 7), 
-(null, 52, 14, 7),
-(55, null, 15, 7),
-(null, 53, 16, 7); 
+(64, null, 1, 8),
+(null, 61, 2, 8), 
+(65, null, 3, 8), 
+(null, 62, 4, 8), 
+(66, null, 5, 8),
+(null, 63, 6, 8), 
+(67, null, 7, 8),
+(null, 64, 8, 8), 
+(68, null, 9, 8), 
+(null, 65, 10, 8), 
+(69, null, 11, 8), 
+(null, 66, 12, 8),
+(70, null, 13, 8), 
+(null, 67, 14, 8),
+(71, null, 15, 8),
+(null, 68, 16, 8); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Creating A Node/Express API With Database Interaction','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54');
@@ -658,17 +792,17 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
-(56, null, 1, 8),
-(null, 54, 2, 8), 
-(57, null, 3, 8), 
-(null, 55, 4, 8), 
-(58, null, 5, 8),
-(null, 56, 6, 8), 
-(59, null, 7, 8),
-(null, 57, 8, 8), 
-(60, null, 9, 8), 
-(null, 58, 10, 8), 
-(61, null, 11, 8); 
+(72, null, 1, 9),
+(null, 69, 2, 9), 
+(73, null, 3, 9), 
+(null, 70, 4, 9), 
+(74, null, 5, 9),
+(null, 71, 6, 9), 
+(75, null, 7, 9),
+(null, 72, 8, 9), 
+(76, null, 9, 9), 
+(null, 73, 10, 9), 
+(77, null, 11, 9); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Postgres Joins','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54');
@@ -684,9 +818,9 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image1', '<img
 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
-(62, null, 1, 8),
-(null, 59, 2, 8), 
-(63, null, 3, 8);
+(78, null, 1, 10),
+(null, 74, 2, 10), 
+(79, null, 3, 10);
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54');
@@ -782,33 +916,33 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
                 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
-(64, null, 1, 9),
-(null, 60, 2, 9), 
-(65, null, 3, 9), 
-(null, 61, 4, 9), 
-(66, null, 5, 9),
-(null, 62, 6, 9), 
-(67, null, 7, 9),
-(null, 63, 8, 9), 
-(68, null, 9, 9), 
-(null, 64, 10, 9), 
-(69, null, 11, 9), 
-(null, 65, 12, 9),
-(70, null, 13, 9), 
-(null, 66, 14, 9),
-(71, null, 15, 9),
-(null, 67, 16, 9),
-(72, null, 17, 9),
-(null, 68, 18, 9), 
-(73, null, 19, 9), 
-(null, 69, 20, 9), 
-(74, null, 21, 9),
-(null, 70, 22, 9), 
-(75, null, 23, 9),
-(null, 71, 24, 9), 
-(76, null, 25, 9), 
-(null, 72, 26, 9), 
-(77, null, 27, 9); 
+(80, null, 1, 11),
+(null, 75, 2, 11), 
+(81, null, 3, 11), 
+(null, 76, 4, 11), 
+(82, null, 5, 11),
+(null, 77, 6, 11), 
+(83, null, 7, 11),
+(null, 78, 8, 11), 
+(84, null, 9, 11), 
+(null, 79, 10, 11), 
+(85, null, 11, 11), 
+(null, 80, 12, 11),
+(86, null, 13, 11), 
+(null, 81, 14, 11),
+(87, null, 15, 11),
+(null, 82, 16, 11),
+(88, null, 17, 11),
+(null, 83, 18, 11), 
+(89, null, 19, 11), 
+(null, 84, 20, 11), 
+(90, null, 21, 11),
+(null, 85, 22, 11), 
+(91, null, 23, 11),
+(null, 86, 24, 11), 
+(92, null, 25, 11), 
+(null, 87, 26, 11), 
+(93, null, 27, 11); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54');
@@ -848,17 +982,17 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image4', '<img
 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
-(78, null, 1, 9),
-(null, 73, 2, 9), 
-(79, null, 3, 9), 
-(null, 74, 4, 9), 
-(80, null, 5, 9),
-(null, 75, 6, 9), 
-(81, null, 7, 9),
-(null, 76, 8, 9), 
-(82, null, 9, 9), 
-(null, 77, 10, 9), 
-(83, null, 11, 9);
+(97, null, 1, 12),
+(null, 88, 2, 12), 
+(98, null, 3, 12), 
+(null, 89, 4, 12), 
+(99, null, 5, 12),
+(null, 90, 6, 12), 
+(100, null, 7, 12),
+(null, 92, 8, 12), 
+(101, null, 9, 12), 
+(null, 93, 10, 12), 
+(102, null, 11, 12);
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('My React Portfolio','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54');
@@ -932,27 +1066,27 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image5', '<img
 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
-(84, null, 1, 10),
-(null, 78, 2, 10), 
-(85, null, 3, 10), 
-(null, 79, 4, 10), 
-(86, null, 5, 10),
-(null, 80, 6, 10), 
-(87, null, 7, 10),
-(null, 81, 8, 10), 
-(88, null, 9, 10), 
-(null, 82, 10, 10), 
-(89, null, 11, 10), 
-(null, 83, 12, 10), 
-(null, 84, 13, 10), 
-(90, null, 15, 10),
-(null, 85, 16, 10),
-(91, null, 17, 10),
-(null, 86, 18, 10), 
-(92, null, 19, 10), 
-(null, 87, 20, 10), 
-(93, null, 21, 10),
-(null, 88, 22, 10); 
+(103, null, 1, 13),
+(null, 94, 2, 13), 
+(104, null, 3, 13), 
+(null, 95, 4, 13), 
+(105, null, 5, 13),
+(null, 96, 6, 13), 
+(106, null, 7, 13),
+(null, 97, 8, 13), 
+(107, null, 9, 13), 
+(null, 98, 10, 13), 
+(108, null, 11, 13), 
+(null, 99, 12, 13), 
+(null, 100, 13, 13), 
+(109, null, 15, 13),
+(null, 101, 16, 13),
+(110, null, 17, 13),
+(null, 102, 18, 13), 
+(111, null, 19, 13), 
+(null, 103, 20, 13), 
+(112, null, 21, 13),
+(null, 104, 22, 13); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1686026.png', '2021-11-21 10:23:54');
@@ -1056,37 +1190,37 @@ Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img
 
 INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
 VALUES 
-(94, null, 1, 11),
-(null, 89, 2, 11), 
-(95, null, 3, 11), 
-(null, 90, 4, 11), 
-(96, null, 5, 11),
-(null, 91, 6, 11), 
-(97, null, 7, 11),
-(null, 92, 8, 11), 
-(98, null, 9, 11), 
-(null, 93, 10, 11), 
-(99, null, 11, 11), 
-(null, 94, 12, 11),  
-(100, null, 13, 11),
-(null, 95, 14, 11),
-(101, null, 15, 11),
-(null, 96, 16, 11), 
-(102, null, 17, 11), 
-(null, 97, 18, 11), 
-(103, null, 19, 11),
-(null, 98, 20, 11),
-(104, null, 21, 11),
-(null, 99, 22, 11),
-(105, null, 23, 11),
-(null, 100, 24, 11), 
-(106, null, 25, 11), 
-(null, 101, 26, 11), 
-(107, null, 27, 11),
-(null, 102, 28, 11),
-(108, null, 29, 11),
-(null, 103, 30, 11),
-(109, null, 31, 11); 
+(113, null, 1, 14),
+(null, 105, 2, 14), 
+(114, null, 3, 14), 
+(null, 106, 4, 14), 
+(115, null, 5, 14),
+(null, 107, 6, 14), 
+(116, null, 7, 14),
+(null, 108, 8, 14), 
+(117, null, 9, 14), 
+(null, 109, 10, 14), 
+(118, null, 11, 14), 
+(null, 110, 12, 14),  
+(119, null, 13, 14),
+(null, 111, 14, 14),
+(120, null, 15, 14),
+(null, 112, 16, 14), 
+(121, null, 17, 14), 
+(null, 113, 18, 14), 
+(122, null, 19, 14),
+(null, 114, 20, 14),
+(123, null, 21, 14),
+(null, 115, 22, 14),
+(124, null, 23, 14),
+(null, 116, 24, 14), 
+(125, null, 25, 14), 
+(null, 117, 26, 14), 
+(126, null, 27, 14),
+(null, 118, 28, 14),
+(127, null, 29, 14),
+(null, 119, 30, 14),
+(128, null, 31, 14); 
 
 insert into portfolio_post.post(title,post_img, post_date) 
 VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solutions/dotnet.png', '2021-11-21 10:23:54');
