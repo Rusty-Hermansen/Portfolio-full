@@ -36,6 +36,7 @@ const Home = () =>{
                       in the drivetrain from a wrecked 2012 Mustang GT that features the dual overhead cam 5.0L Coyote V8 engine
                       and 6-speed manual transmission. 
                       <br/>
+                      <br/>
                       I have a host of other interests, including playing video games, target shooting, playing the guitar, building things,
                       working on personal coding projects, and a host of other things. 
 
