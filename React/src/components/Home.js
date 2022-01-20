@@ -17,7 +17,7 @@ const Home = () =>{
                 strengths and we can help each other become stronger in areas that we may be weak in. If we all lift those around us, we all become excellent together. 
                     </p>
 
-                <h2 className="text-yellow-600 pt-20">...In My Spare Time</h2>
+                <h2 className="text-yellow-600 pt-10">...In My Spare Time</h2>
                 <p className="text-gray-400 pt-10">
                     Ever since I was a small boy I have had a fascination with machines and cars in specific. I 
                     got my very first car right after high school, a beautiful 1990 Mustang GT. That was the fastest
