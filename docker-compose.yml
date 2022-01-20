@@ -10,11 +10,12 @@ services:
       - PGID=1000
       - TZ=America/Denver
       - URL=rustyhermansensoftwareengineer.link
+      - STAGING=false
       - SUBDOMAINS=www,
       - VALIDATION=http
     volumes:
-      - ./nginx/default:/config/default
-      # - ./nginx/default.conf:/config/nginx/site-confs/default
+      - /swag:/config
+      - ./nginx/default.conf:/config/nginx/site-confs/default
     ports:
       - 443:443
       - 80:80
