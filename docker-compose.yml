@@ -36,7 +36,7 @@ services:
     env_file:
       - ./backend/.env
     ports:
-      - "5000:5000"
+      - "5000:3000"
     depends_on: 
       - db
 
@@ -47,8 +47,6 @@ services:
     environment:
       POSTGRES_USER: rusty
       POSTGRES_PASSWORD: password
-    ports:
-      - "7000:5432"
     volumes:
       - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
 
