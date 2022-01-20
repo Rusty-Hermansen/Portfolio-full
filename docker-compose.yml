@@ -13,7 +13,8 @@ services:
       - SUBDOMAINS=www,
       - VALIDATION=http
     volumes:
-      - ./nginx/default.conf:/config/nginx/site-confs/default
+      - ./nginx/default.conf:/config/default
+      # - ./nginx/default.conf:/config/nginx/site-confs/default
     ports:
       - 443:443
       - 80:80
