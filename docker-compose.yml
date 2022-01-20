@@ -36,7 +36,7 @@ services:
     env_file:
       - ./backend/.env
     ports:
-      - "5000:3000"
+      - "5000:5000"
     depends_on: 
       - db
 
