@@ -19,3 +19,6 @@ jobs:
         run: |
           git secret reveal
           docker-compose up --build -d
+          cd adminBackend
+          npm install
+          pm2 start process.yml
