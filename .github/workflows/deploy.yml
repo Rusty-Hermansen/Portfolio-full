@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v2.4.0
+        with: 
+          fetch-depth: 100
 
       - name: build and test
         run: |
