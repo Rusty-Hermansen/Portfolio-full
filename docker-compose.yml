@@ -36,8 +36,6 @@ services:
       DB_PORT: 5432
     env_file:
       - ./backend/.env
-    ports:
-      - "5000:5000"
     depends_on: 
       - db
 
@@ -50,6 +48,14 @@ services:
       POSTGRES_PASSWORD: password
     volumes:
       - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  admin_db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./postgres/admininit.sql:/docker-entrypoint-initdb.d/init.sql
 
 
  
