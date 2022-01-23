@@ -8,7 +8,7 @@ const pool = new Pool({
     port: process.env.DB_PORT
 })
 
-const addConfig = async (conf) => {
+const addConfig = async (config) => {
     const res= await pool.query(
     `INSERT INTO wireguard.client (
         client_name, 
