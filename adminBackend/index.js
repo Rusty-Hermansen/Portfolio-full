@@ -5,10 +5,10 @@ const { dbService } = require ("./db-service");
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(express.static('pages/Addclient.html'))
+app.use(express.static('pages/addclient.html'))
 
 app.get('/', async(req, res) =>{
-    res.sendFile(path.join(__dirname+'/pages/addClient.html'));
+    res.sendFile(path.join(__dirname+'/pages/addclient.html'));
 })
 app.post('/addconfig', async(req, res) =>{
     const config = {
