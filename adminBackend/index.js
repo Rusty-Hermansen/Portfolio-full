@@ -20,7 +20,8 @@ app.post('/addconfig', async(req, res) =>{
         dateAdded : new Date()
     }
     try{
-        res.json(await dbService.addConfig({}))
+        await dbService.addConfig(config);
+        res.send(200);
     }
     catch (ex) {
         console.log(ex);
