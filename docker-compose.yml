@@ -20,8 +20,8 @@ services:
       - 443:443
       - 80:80
     restart: unless-stopped
-    extra_hosts:
-      - host.docker.internal:host-gateway
+    
+      
   react-app:
     container_name: portfolio_frontend
     build: ./React
@@ -29,6 +29,18 @@ services:
     stdin_open: true
     volumes:
       - ./React/default.conf:/etc/nginx/conf.d/default.conf 
+
+  portfolio-admin:
+    container_name: portfolio_admin
+    build: ./portfolioadmin
+    stdin_open: true
+    volumes:
+      - ./portfolioadmin/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - admin_db
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
   api-server:                           #node api
     container_name: portfolio_backend
     build: ./backend
