@@ -1,13 +1,13 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import ClientConfig from "../Models/clientConfig";
 import clientConfig from "../Models/clientConfig";
 
-interfaceClientConfigState {
+interface ClientConfigState {
     configs: ClientConfig[];
 }
 
 const initialState = {
-    configs: [];
+    configs: []
 }
 
 // export const addConfig = createAsyncThunk(

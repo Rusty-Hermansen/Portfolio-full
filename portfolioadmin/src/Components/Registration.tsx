@@ -2,20 +2,20 @@ import { FC, FormEvent, ChangeEvent, useState } from 'react';
 import clientConfig from '../Models/clientConfig';
 
 const Registration: FC = (): JSX.Element => {
-    const [name, setName] = useState<string>();
-    const [ipAddress, setIpAddress] = useState<string>();
-    const [ipRange, setIpRange] = useState<string>();
-    const [publicKey, setPublicKey] = useState<string>();
-    const [privateKey, setPrivateKey] = useState<string>();
+    const [name, setName] = useState<string>("");
+    const [ipAddress, setIpAddress] = useState<string>("");
+    const [ipRange, setIpRange] = useState<string>("");
+    const [publicKey, setPublicKey] = useState<string>("");
+    const [privateKey, setPrivateKey] = useState<string>("");
 
-    const isFormValid = {
+    const isFormValid = (
         name.trim().length > 0 && 
         ipAddress.trim().length > 0 &&
         ipRange.trim().length> 0 &&
         publicKey.trim().length>0 &&
-        privateKey.trim().length>0;
-    }
-    }
+        privateKey.trim().length>0
+    )
+    
 
     const nameChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
        setName(event.target.value);
