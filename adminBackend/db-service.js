@@ -18,7 +18,7 @@ const addConfig = async (config) => {
         client_private_key,
         client_date_added) VALUES ( $1, $2, $3, $4, $5, $6)
         RETURNING *`,
-        [config.name, config.ipAddress, config.allowedIpRange, config.publicKey, config.privateKey, config.dateAdded]
+        [config.name, config.ipAddress, config.ipRange, config.publicKey, config.privateKey, config.dateAdded]
     );
     return res.rows[0];
 }

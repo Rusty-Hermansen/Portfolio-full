@@ -14,7 +14,7 @@ app.post('/api/addconfig', async(req, res) =>{
     const config = {
         name: req.body.name,
         ipAddress: req.body.ipAddress,
-        allowedIpRange: req.body.allowedIpRange,
+        ipRange: req.body.allowedIpRange,
         publicKey: req.body.publicKey,
         privateKey : req.body.privateKey,
         dateAdded : new Date()

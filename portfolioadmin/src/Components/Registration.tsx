@@ -49,7 +49,7 @@ const Registration: FC<Props> = (props): JSX.Element => {
                 publicKey,
                 privateKey, 
             }
-            props.onSubmit(config);
+            props.onSubmit(config)
         }
       
 
