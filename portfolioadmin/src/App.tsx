@@ -29,7 +29,7 @@ function App() {
   return (
     <>
     <Registration onSubmit={submitConfigHandler}/>
-    <pre>state</pre>
+    <pre>{state}</pre>
     <button type="button" onClick={restartClicked}>Restart Service</button>
     </>
     
