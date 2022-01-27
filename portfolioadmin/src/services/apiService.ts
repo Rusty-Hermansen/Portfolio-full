@@ -8,8 +8,19 @@ const addConfig = async (config: ClientConfig): Promise<ClientConfig> => {
     return res.data;
 }
 
+const getStatus = async (): Promise<string> => {
+    const res = await axios.get<string>(apiUrl + '/wgservice/status');
+    return res.data;
+}
+
+const restartService = async() => {
+    const res= await axios.get(apiUrl + 'wgservice/restart');
+}
+
 const apiService = {
-    addConfig
+    addConfig,
+    getStatus,
+    restartService
 }
 
 export default apiService;
