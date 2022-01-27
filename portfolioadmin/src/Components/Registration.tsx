@@ -1,7 +1,11 @@
 import { FC, FormEvent, ChangeEvent, useState } from 'react';
-import clientConfig from '../Models/clientConfig';
+import ClientConfig from '../Models/clientConfig';
 
-const Registration: FC = (): JSX.Element => {
+type Props = {
+    onSubmit: (config: ClientConfig) => void;
+}
+
+const Registration: FC<Props> = (props): JSX.Element => {
     const [name, setName] = useState<string>("");
     const [ipAddress, setIpAddress] = useState<string>("");
     const [ipRange, setIpRange] = useState<string>("");
@@ -37,30 +41,32 @@ const Registration: FC = (): JSX.Element => {
     const submitHandler = (event: FormEvent) =>{
         event.preventDefault();
         if (isFormValid){
-              const config: clientConfig = {
-            name,
-            ipAddress,
-            dateAdded: new Date(),
-            ipRange,
-            publicKey,
-            privateKey, 
-        }
+            const config: ClientConfig = {
+                name,
+                ipAddress,
+                dateAdded: new Date(),
+                ipRange,
+                publicKey,
+                privateKey, 
+            }
+            props.onSubmit(config);
         }
       
 
     }
-    return( <form>
-        <label>Client Name:</label>
-        <input type="text"/>
-        <label>IP Address:</label>
-        <input type="text"/>
-        <label>Allowed IP Range:</label>
-        <input type="text"/>
-        <label>Client Public Key:</label>
-        <input type="text"/>
-        <label>Client Private Key:</label>
-        <input type="text"/>
-        <button type ="submit">Submit</button>
+    return( 
+    <form onSubmit={submitHandler}>
+        <label>Client Name</label>
+        <input type="text" onChange={nameChangeHandler}/>
+        <label>IP Address</label>
+        <input type="text" onChange={ipAddressChangeHandler} />
+        <label>Allowed IP Range</label>
+        <input type="text" onChange={ipRangeChangeHandler} />
+        <label>Client public key</label>
+        <input type="text" onChange={publicKeyChangeHandler} />
+        <label>Client private key</label>
+        <input type="text" onChange={privateKeyChangeHandler} />
+        <button type='submit'>Submit</button>
     </form>
     )
 }

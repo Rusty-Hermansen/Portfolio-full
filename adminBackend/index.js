@@ -10,7 +10,7 @@ app.use(express.static('pages/addclient.html'))
 app.get('/', async(req, res) =>{
     res.sendFile(path.join(__dirname+'/pages/addclient.html'));
 })
-app.post('/addconfig', async(req, res) =>{
+app.post('/api/addconfig', async(req, res) =>{
     const config = {
         name: req.body.name,
         ipAddress: req.body.ipAddress,
