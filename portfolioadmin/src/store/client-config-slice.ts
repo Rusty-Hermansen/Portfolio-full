@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Client } from "pg";
 import ClientConfig from "../Models/clientConfig";
-import clientConfig from "../Models/clientConfig";
+
 import apiService from "../services/apiService";
 
 interface ClientConfigState {
@@ -20,6 +21,13 @@ export const addConfig = createAsyncThunk(
         return await apiService.addConfig(config);
   }
     )
+
+export const getAllConfigs = createAsyncThunk(
+    'getAllConfigs',
+    async(params, thunkApi): Promise<ClientConfig> => {
+        return await apiService.getConfigByName();
+    }
+)
 
 export const getStatus = createAsyncThunk(
     'getStatus',
@@ -46,6 +54,9 @@ const clientConfigSlice = createSlice({
         builder.addCase(addConfig.fulfilled, (state, action: PayloadAction<ClientConfig>) => {
             state.configs.push(action.payload);
         })
+        // .addCase(getAllConfigs.fulfilled, (state, action: PayloadAction<ClientConfig>) => { ////////////////////
+        //     state.configs.
+        // })
         .addCase(getStatus.fulfilled, (state, action: PayloadAction<string>) => {
             state.wg_status = action.payload;
         })
