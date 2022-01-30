@@ -69,17 +69,7 @@ const restartService = () => {
     )
 }
 
-const genConfig = async (body) => {
-    const config = {
-        name: body.name,
-        ipAddress: body.ipAddress,
-        ipRange: body.ipRange,
-        publicKey: body.publicKey,
-        privateKey: body.privateKey,
-        dateAdded: new Date()
-    }
-    exec(/home/github / actions - runner_work / Portfolio - full / Portfolio - full / wiregurad / adminBackend / Script.sh)
-}
+
 
 module.exports.peerService = {
     getStatus,
