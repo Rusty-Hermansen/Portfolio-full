@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 
 mkdir -p /home/rusty/clients/$1
 cd /home/rusty/clients/$1
