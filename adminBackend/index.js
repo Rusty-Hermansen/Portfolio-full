@@ -12,7 +12,7 @@ app.use(express.static('pages/addclient.html'))
 
 app.post('/api/addconfig', async (req, res) => {
     try {
-        peerService.genConfig(req.body);
+        peerService.addConfig(req.body);
         res.json(peerService.addConfig(config));
         res.send(200);
     }
