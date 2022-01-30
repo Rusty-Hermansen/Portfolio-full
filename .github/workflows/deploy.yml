@@ -20,6 +20,6 @@ jobs:
           git secret reveal
           docker-compose up --build -d
           cd adminBackend
-          chmod 755 script.sh
+          chmod 755 clientssh.bash
           npm install
           pm2 start process.yml
