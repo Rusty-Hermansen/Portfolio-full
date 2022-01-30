@@ -2,7 +2,7 @@ const { exec, execSync, execFile} = require('child_process')
 const {dbService} = require('./db-service');
 
 const genConfig = async (body) => {
-    execFile(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/clientssh.bash ${body.name}`, {uid: 1000})
+    execSync(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/clientssh.bash ${body.name}`, {uid: 1000})
    
     const config = {
         name: body.name,
