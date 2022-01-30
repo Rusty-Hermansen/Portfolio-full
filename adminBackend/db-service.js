@@ -23,8 +23,6 @@ const addConfig = async (config) => {
     return res.rows[0];
 }
 
-const  vpnpubkey
-
 const getConfigByName = async(name) => {
     const res = await pool.query(
         `select * from wireguard.client where name=$1;`,
