@@ -2,7 +2,7 @@ const { exec, execSync, execFile} = require('child_process')
 const {dbService} = require('./db-service');
 
 const genConfig = async (body) => {
-    execFile(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/script.sh ${config.name}`)
+    execFile(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/script.sh ${body.name}`)
    
     const config = {
         name: body.name,
@@ -13,7 +13,7 @@ const genConfig = async (body) => {
         dateAdded: new Date()
     }
 
-     clientConfig = await dbService.addConfig(config);
+     const clientConfig = await dbService.addConfig(config);
    
   
     clientConfig['vmIpAddress']= '45.33.5.185:51820'
