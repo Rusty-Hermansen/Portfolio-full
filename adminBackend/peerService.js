@@ -2,7 +2,7 @@ const { exec, execSync, execFile} = require('child_process')
 const {dbService} = require('./db-service');
 
 const genConfig = async (body) => {
-    execFile(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/script.sh ${body.name}`)
+    execFile(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/script.sh ${body.name}`, {uid: 1000})
    
     const config = {
         name: body.name,
@@ -28,32 +28,32 @@ return execSync(
 
 
 const getPublicKey = (clientName) => {
-     return execSync(`cat /home/rusty/clients/${clientName}/publickey`, { uid: 1000 },
+     return execSync(`cat /home/rusty/clients/${clientName}/publickey`, { uid: 1000 }
         )
 }
 
 const getPrivateKey = (clientName) => {
-    return execSync(`cat /home/rusty/clients/${clientName}/privatekey`, { uid: 1000 },
+    return execSync(`cat /home/rusty/clients/${clientName}/privatekey`, { uid: 1000 }
        )
 }
 
 const addConfig = async (body) => {
     const config = await genConfig(body);
     exec(
-        `sudo wg set wgvpn peer ${config.publicKey} allowed-ips ${config.ipRange}`
+        `sudo wg set wgvpn peer ${config.publicKey} allowed-ips ${config.ipRange}`, {uid: 1000}
     )
 }
 
 const removeConfig = async (body) => {
     exec(
-        `sudo wg set wgvpn peer ${body.ipAddress} allowed-ips ${body.ipRange} remove`
+        `sudo wg set wgvpn peer ${body.ipAddress} allowed-ips ${body.ipRange} remove`,{uid: 1000}
     )
 }
 
 const getStatus = () => { 
     
      return execSync(
-        'systemctl status wg-quick@wgvpn.service', { uid: 1000 },
+        'systemctl status wg-quick@wgvpn.service', { uid: 1000 }
        
     )
  
