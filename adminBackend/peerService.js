@@ -1,9 +1,8 @@
-const exec = require('child_process').exec;
-const {execSync} = require('child_process')
+const { exec, execSync, execFile} = require('child_process')
 const {dbService} = require('./db-service');
 
 const genConfig = async (body) => {
-    exec(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/script.sh ${config.name}`)
+    execFile(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/script.sh ${config.name}`)
    
     const config = {
         name: body.name,
