@@ -23,17 +23,17 @@ const genConfig = async (body) => {
 }
 const getVmPublicKey = () =>{
 return execSync(
-        `cat /etc/wireguard/publickey`, {uid: 1000},
+        `sudo cat /etc/wireguard/publickey`, {uid: 1000},
 )}
 
 
 const getPublicKey = (clientName) => {
-     return execSync(`sudo cat /home/rusty/clients/${clientName}/publickey`, { uid: 1000 },
+     return execSync(`cat /home/rusty/clients/${clientName}/publickey`, { uid: 1000 },
         )
 }
 
 const getPrivateKey = (clientName) => {
-    return execSync(`sudo cat /home/rusty/clients/${clientName}/privatekey`, { uid: 1000 },
+    return execSync(`cat /home/rusty/clients/${clientName}/privatekey`, { uid: 1000 },
        )
 }
 
