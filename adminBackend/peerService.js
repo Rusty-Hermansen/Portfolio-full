@@ -76,4 +76,5 @@ module.exports.peerService = {
     restartService,
     addConfig,
     removeConfig,
+    genConfig,
 }
