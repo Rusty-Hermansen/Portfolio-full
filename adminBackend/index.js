@@ -1,8 +1,8 @@
-const express = require('express')
+const express = require('express');
 const app = express();
-const path = require("path");
-const { dbService } = require("./db-service");
-const exec = require('child_process').exec
+const peerService = require("./peerService");
+
+
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
