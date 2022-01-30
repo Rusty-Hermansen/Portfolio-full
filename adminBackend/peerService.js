@@ -28,12 +28,12 @@ return execSync(
 
 
 const getPublicKey = (clientName) => {
-     return execSync(`sudo cat /home/rusty/adminBackend/clients/${clientName}/publickey`, { uid: 1000 },
+     return execSync(`sudo cat /home/rusty/clients/${clientName}/publickey`, { uid: 1000 },
         )
 }
 
 const getPrivateKey = (clientName) => {
-    return execSync(`sudo cat /home/rusty/adminBackend/clients/${clientName}/privatekey`, { uid: 1000 },
+    return execSync(`sudo cat /home/rusty/clients/${clientName}/privatekey`, { uid: 1000 },
        )
 }
 
