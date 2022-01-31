@@ -1457,5 +1457,73 @@ VALUES ('Testing in React with Jest','https://upload.wikimedia.org/wikipedia/com
             returned. The last line in the shot shows that we are looking for the document/page/component to have that
             specific block of HTML. </span></p>');
 
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('Database Revision','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54',
+'<p class="c1"><span class="c0">For this newest post on my portfolio it was time to address some issues. One of those
+            issues was how difficult it has been to add new posts. If you&rsquo;ve read some of my previous posts you
+            can see the design of my database and what it entails. I&rsquo;ll also give a brief refresher to give this
+            post some extra context. Here is my old design: </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 296.00px;"><img
+                alt="" src="images/image6.png"
+                style="width: 624.00px; height: 296.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">This is a perfectly fine design and for all intents and purposes, does its job. What
+            makes this hard to deal with, especially if you have a bunch of posts is, having tables for the text and
+            image content that need to be displayed in the proper order. After you get ten or so posts, this starts
+            getting ugly and if you have content that isn&rsquo;t positioned correctly, it takes a lot of time to figure
+            out whatever is going on. Here are my original tables:</span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 593.00px; height: 696.00px;"><img
+                alt="" src="images/image5.png"
+                style="width: 593.00px; height: 696.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">Here is my new table:</span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 393.00px; height: 146.00px;"><img
+                alt="" src="images/image4.png"
+                style="width: 393.00px; height: 146.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">This handles everything that I need it to and makes positioning much simpler. Instead
+            of breaking a post down into text and images, I just give it a giant block of HTML that I use Google Docs to
+            generate for me. Making this tweak also required that I made some changes on my frontend that displays them.
+            As far as displaying the tiles for each story, that remained exactly the same, displaying the full blog
+            posts was another story though.It first required that I made a small change in my API so that it queried the
+            database correctly. Here is both versions of the query I had in my API to fetch the desired data.The old
+            code is commented out above the new code:</span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 608.00px; height: 482.00px;"><img
+                alt="" src="images/image3.png"
+                style="width: 608.00px; height: 482.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0">&nbsp;As you can see, the new query is much more palatable. I also had to make some
+            changes to the frontend. Here is my original code JSX that displays the content of a post:</span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 412.00px;"><img
+                alt="" src="images/image2.png"
+                style="width: 624.00px; height: 412.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">Here you can see that the content had to be looped through using a map in order to
+            display it. </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 213.33px;"><img
+                alt="" src="images/image1.png"
+                style="width: 624.00px; height: 213.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">Now here you can see that there is no looping at all, it&rsquo;s simple and easy.
+            Granted, this wasn&rsquo;t without issue, as I fought with the dbPost state variable being empty when the
+            page renders, so I had to make it null or empty until it had content to display. These changes made it much
+            easier to add posts and to find and fix any issues any post may have and will allow me to have greater
+            velocity in the future. </span></p>
+');
+
+
 
 

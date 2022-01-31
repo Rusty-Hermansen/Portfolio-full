@@ -26,16 +26,6 @@ CREATE TABLE IF NOT EXISTS portfolio_post.position(
     position INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS portfolio_post.category(
-    id SERIAL PRIMARY KEY,
-    category VARCHAR(40)
-);
-
-CREATE TABLE IF NOT EXISTS portfolio_post.tag(
-    id SERIAL PRIMARY KEY, 
-    tag VARCHAR(40)
-);
-
 CREATE TABLE IF NOT EXISTS portfolio_post.post_position(
     id SERIAL PRIMARY KEY,
     post_text_id INT,
@@ -47,6 +37,16 @@ CREATE TABLE IF NOT EXISTS portfolio_post.post_position(
     FOREIGN KEY (post_position_id) REFERENCES portfolio_post.position(id),
     FOREIGN KEY (portfolio_post_id) REFERENCES portfolio_post.post(id),
     check(post_text_id is not null or post_image_id is not null)
+);
+
+CREATE TABLE IF NOT EXISTS portfolio_post.category(
+    id SERIAL PRIMARY KEY,
+    category VARCHAR(40)
+);
+
+CREATE TABLE IF NOT EXISTS portfolio_post.tag(
+    id SERIAL PRIMARY KEY, 
+    tag VARCHAR(40)
 );
 
 CREATE TABLE IF NOT EXISTS portfolio_post.post_category(
