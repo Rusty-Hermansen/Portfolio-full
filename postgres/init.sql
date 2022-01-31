@@ -10,7 +10,6 @@ CREATE TABLE IF NOT EXISTS portfolio_post.post(
     post_content TEXT
 );
 
-
 CREATE TABLE IF NOT EXISTS portfolio_post.category(
     id SERIAL PRIMARY KEY,
     category VARCHAR(40)
