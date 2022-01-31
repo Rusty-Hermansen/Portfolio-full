@@ -1525,13 +1525,13 @@ VALUES ('Database Revision','https://cdn-icons-png.flaticon.com/512/20/20093.png
 ');
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Adding a background image with a div in React','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54',
+VALUES ('Adding a background image with a div in React','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
 '<p class="c1"><span class="c0">There are a number of ways of adding background images to your web pages or react
             components. In this post I&rsquo;m going to go over how to easily do so using a div with inline CSS. </span>
     </p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 453.33px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/AddingBackground/images/image2.png?raw=true"
                 style="width: 624.00px; height: 453.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
@@ -1543,7 +1543,7 @@ VALUES ('Adding a background image with a div in React','https://cdn-icons-png.f
     <p class="c1 c2"><span class="c0"></span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 322.67px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/AddingBackground/images/image1.png?raw=true"
                 style="width: 624.00px; height: 322.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
