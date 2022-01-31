@@ -23,7 +23,7 @@ import image from "../background.jpg"
 //////////////////////////////////////This is for DATABASE INTERACTION///////////////////////////////////////
 const SinglePost = () => {
 
-    const [dbPost, setDbPost] = useState([]);
+    const [dbPost, setDbPost] = useState();
     const params = useParams();
 
     useEffect(() => {
@@ -37,7 +37,7 @@ const SinglePost = () => {
                         <div className=" container text-white">
                             <div className="row">
                                 <div className="col-12 p-5 bg-white bg-opacity-50">
-                                    {parse(dbPost.post.toString())}
+                                    {parse(dbPost.post)}
                                 </div>
                             </div>
                         </div>
