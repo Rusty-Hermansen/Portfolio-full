@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS portfolio_post.post_tag(
 );
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-logo_0.jpg', '2021-11-21 10:23:54','<body class="c3">
+VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-logo_0.jpg', '2021-11-21 10:23:54','
         <p class="c1"><span class="c0">Progressing toward earning my Bachelors degree and being immersed in the world of
                 tech, I have learned and heard about all sorts of different technologies. One of those technologies that has
                 caught my attention is kubernetes, or as it is commonly known, k8s. Working as a DevOps engineer intern for
@@ -152,7 +152,7 @@ VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-l
                     style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
         <p class="c1"><span class="c0">Here is the running app that lives in each pod of my cluster. </span></p>
-    </body>');
+    ');
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
@@ -163,7 +163,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
             new Blazor WebAssembly Application.<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px);
              -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 74.67px;"><img
-                alt="" src={require('./images/image8.png')}
+                alt="" src={require("./images/image8.png")}
                 style="width: 624.00px; height: 74.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span><br>You can give it an appropriate name for the project and solution and create it
@@ -244,7 +244,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
 ');
 
 
-insert into portfolio_post.post(title,post_img, post_date, post_content) 
+insert into portfolio_post.post(title, post_img, post_date, post_content) 
 VALUES ('Consuming an APi with React','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
 '<p class="c1 c2"><span class="c0"></span></p>
     <p class="c1"><span class="c0">Creating a react app that consumes an API with a key is simple and straightforward.
