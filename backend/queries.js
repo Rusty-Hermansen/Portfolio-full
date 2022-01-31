@@ -32,7 +32,7 @@ const pool = new Pool({
 
 const getPostById = async (Id) => {
     const res = await pool.query(
-        `select *
+        `select p.title, p.post_content as post
         from portfolio_post.post p
         WHERE p.id = $1
     ORDER BY pos.position asc;`, [Id])
