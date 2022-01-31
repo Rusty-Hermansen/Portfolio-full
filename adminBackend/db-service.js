@@ -20,7 +20,15 @@ const addConfig = async (config) => {
         RETURNING *`,
         [config.name, config.ipAddress, config.ipRange, config.publicKey, config.privateKey, config.dateAdded]
     );
-    return res.rows[0];
+    const data =  res.rows[0];
+    return {
+        name: data.name,
+        ipAddress: data.ipAddress,
+        ipRange: data.ipRange,
+        publicKey: data.publicKey,
+        privateKey: data.privateKey,
+        date: data.date
+    }
 }
 
 const getConfigByName = async(name) => {
@@ -30,7 +38,11 @@ const getConfigByName = async(name) => {
     )
     return res.rows;
 }
-
+const removeConfig = async = (publicKey) =>{
+    const res = await pool.query(`
+    DELETE FROM wireguard.client 
+    WHERE client_public_key= $1` , [publicKey])
+}
 
 
 module.exports.dbService= {

@@ -8,8 +8,8 @@ const genConfig = async (body) => {
         name: body.name,
         ipAddress: body.ipAddress,
         ipRange: body.ipRange,
-        publicKey: getPublicKey(body.name),
-        privateKey: getPrivateKey(body.name),
+        publicKey: getPublicKey(body.name).toString().trim(),
+        privateKey: getPrivateKey(body.name).toString().trim(),
         dateAdded: new Date()
     }
 
@@ -44,10 +44,11 @@ const addConfig = async (body) => {
     )
 }
 
-const removeConfig = async (body) => {
+const removeConfig = async (publicKey) => {
     exec(
-        `sudo wg set wgvpn peer ${body.ipAddress} allowed-ips ${body.ipRange} remove`,{uid: 1000}
+        `sudo wg set wgvpn peer ${publicKey.trim()} remove`,{uid: 1000}
     )
+    await dbService.removeConfig(publicKey)
 }
 
 const getStatus = () => { 
@@ -68,6 +69,30 @@ const restartService = () => {
         }
     )
 }
+
+const getPeers = () => {
+    const cmd = `sudo wg show | grep peer`;
+    const peers = execSync(cmd, {uid:1000})
+}
+
+const genConfigFile = (config) => {
+    const path = `/home/rusty/adminBackend/${config.name}/vpnconfig.conf`;
+    const cmd =  `echo "[Interface]"\
+    PrivateKey = ${config.privateKey}
+    Address = ${config.ipAddress}/24
+    DNS = 8.8.8.8
+    
+    [Peer]
+    PublicKey = ${config.vmPublicKey}
+    AllowedIPs = ${config.ipRange}/0
+    Endpoint = 45.33.5.185:51820" /home/rusty/adminBackend/clients/${config.name}/vpnconfig.conf`
+
+    execSync(
+        cmd, {uid: 1000 }
+    )
+    return path;
+}
+
 
 
 

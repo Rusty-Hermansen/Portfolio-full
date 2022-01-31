@@ -12,12 +12,22 @@ app.use(express.static('pages/addclient.html'))
 
 app.post('/api/addconfig', async (req, res) => {
     try {
-        peerService.addConfig(req.body);
-        res.send(200);
+        const configPath = await peerService.addConfig(req.body);
+        res.download(configPath);
+        
     }
     catch (ex) {
         console.error(ex);
         res.send(500)
+    }
+})
+
+app.post('/api/removeconfig', async (req, res)=>{
+    try{
+        peerService.removeConfig(req.body.publicKey)
+    }
+    catch{
+        res.sendStatus(500)
     }
 })
 
@@ -41,6 +51,15 @@ app.get('/api/wgservice/restart', async (req, res) => {
     catch (ex) {
         console.error(ex);
         res.send(500);
+    }
+})
+
+app.get('api/wgservice/peers', (req,res) => {
+    try {
+        res.send(peerService.getPeers());
+    }
+    catch{
+        res.send(500)
     }
 })
 

@@ -1,10 +1,12 @@
 import axios from "axios";
 import ClientConfig from "../Models/clientConfig";
+import fileDownload from "js-file-download";
 
 const apiUrl= '/api';
 
-const addConfig = async (config: ClientConfig): Promise<ClientConfig> => {
-    const res = await axios.post<ClientConfig>(apiUrl +'/addConfig', config)
+const addConfig = async (config: ClientConfig): Promise<Blob> => {
+    const res = await axios.post<ClientConfig>(apiUrl +'/addConfig', config, {responseType: 'blob'});
+    fileDownload(res.data, 'vpnconfig.conf')
     return res.data;
 }
 
@@ -22,11 +24,22 @@ const restartService = async() => {
     const res= await axios.get(apiUrl + '/wgservice/restart');
 }
 
+const getPeers = async(): Promise<string[]> => {
+    const res = await axios.get<string[]>(apiUrl + '/wgservice/peers');
+    return res.data;
+}
+const removePeer = async(publicKey: string) : Promise<string[]> =>{
+    await axios.post(apiUrl + '/wgservice/removeconfig', {publicKey})
+    return await removeConfig(publicKey)
+}
+
 const apiService = {
     addConfig,
     getConfigByName,
     getStatus,
-    restartService
+    restartService,
+    getPeers,
+    
 }
 
 export default apiService;

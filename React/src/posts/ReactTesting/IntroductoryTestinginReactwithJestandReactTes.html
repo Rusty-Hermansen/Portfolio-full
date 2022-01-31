@@ -1,0 +1,246 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <style type="text/css">
+        ol {
+            margin: 0;
+            padding: 0
+        }
+
+        table td,
+        table th {
+            padding: 0
+        }
+
+        .c0 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 11pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c1 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c4 {
+            background-color: #ffffff;
+            max-width: 468pt;
+            padding: 72pt 72pt 72pt 72pt
+        }
+
+        .c2 {
+            height: 11pt
+        }
+
+        .c3 {
+            margin-left: 36pt
+        }
+
+        .title {
+            padding-top: 0pt;
+            color: #000000;
+            font-size: 26pt;
+            padding-bottom: 3pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .subtitle {
+            padding-top: 0pt;
+            color: #666666;
+            font-size: 15pt;
+            padding-bottom: 16pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        li {
+            color: #000000;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        p {
+            margin: 0;
+            color: #000000;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        h1 {
+            padding-top: 20pt;
+            color: #000000;
+            font-size: 20pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h2 {
+            padding-top: 18pt;
+            color: #000000;
+            font-size: 16pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h3 {
+            padding-top: 16pt;
+            color: #434343;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h4 {
+            padding-top: 14pt;
+            color: #666666;
+            font-size: 12pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h5 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h6 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body class="c4">
+    <p class="c1"><span class="c0">When it comes to building frontend applications with Javascript frameworks like
+            React, writing tests and doing testing doesn&rsquo;t seem very intuitive compares to testing in a language
+            like C#. In this post I&rsquo;m going to cover introductory testing in React using Jest and the React
+            Testing Library. </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">In order to get started we need to install some NPM packages. The first being jest
+            where we can just run: </span></p>
+    <p class="c1 c3"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 523.00px; height: 28.00px;"><img
+                alt="" src="images/image5.png"
+                style="width: 523.00px; height: 28.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0">The next package that needs to be installed is the React Testing Library. It is
+            installed using the following command:</span></p>
+    <p class="c1"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 26.67px;"><img
+                alt="" src="images/image1.png"
+                style="width: 624.00px; height: 26.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">We do these installations because React does the testing and the React Testing
+            Library handles allowing us to render components for testing purposes. </span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 245.00px; height: 650.00px;"><img
+                alt="" src="images/image4.png"
+                style="width: 245.00px; height: 650.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">This demonstration is being done using my own portfolio site that I implemented a
+            number of simple tests in. The file system here shows my components as well as the tests folder that I
+            created for my tests to live in in order to keep my filesystem clean and easy to navigate. The files that
+            the tests are written in are made in the format of &lt;Component Name&gt;.test.js to test that specific
+            component. </span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 567.00px; height: 852.00px;"><img
+                alt="" src="images/image2.png"
+                style="width: 567.00px; height: 852.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0">Here is the test for my home component, importing everything from the react testing
+            library that is need to mock-render the component on line 1, then importing the BrowserRouter from
+            react-router-dom, and the component being tested. Inside of the describe on line 6 is where we make our
+            testing suite for testing this Home component and give it the name we want. Inside of this suite is where
+            the tests are written. The tests in here are all the same basic test that is designed to test to see if
+            every component that lives in the home page renders. Every test written is constructed in the following
+            manner:<br></span></p>
+    <p class="c1"><span class="c0">test(&ldquo;test name&rdquo;,()=&gt; {</span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">render(</span></p>
+    <p class="c1"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The component that is being tested is
+            rendered here</span></p>
+    <p class="c1"><span class="c0">)</span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">The actual test goes here. </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">Looking at the first test on line 8 above, the title of the test is stated, then in
+            lines 9-14 we can see what we want rendered, which is the home component. The home component has to be
+            wrapped inside the browser router in order to correctly render for testing. On lines 16-17 we can see which
+            form element that we want to test. In this case, we&rsquo;re looking for the text &ldquo;Rusty!&rdquo; to be
+            in the document, in other words, in the page/component that is being rendered. This style of test is the
+            only style of testing that is done in the project. </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 164.00px;"><img
+                alt="" src="images/image3.png"
+                style="width: 624.00px; height: 164.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">It is also possible to test entire HTML blocks that are rendered using React Testing
+            Libraries Extended Expect. I tried to use it to test the linkedin social media icon in my Navbar component
+            but since the image is an SVG and is basically never exactly the same dimension, the test always failed and
+            I was forced to remove it. It requires that specific component to have a test-id=&rsquo;linkedin&rsquo; prop
+            that the screen.getByTestId(&lsquo;linkedin&rsquo;) finds in order to test the piece of html that is
+            returned. The last line in the shot shows that we are looking for the document/page/component to have that
+            specific block of HTML. </span></p>
+</body>
+
+</html>
