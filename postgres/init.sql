@@ -163,7 +163,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
             new Blazor WebAssembly Application.<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px);
              -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 74.67px;"><img
-                alt="" src={require("./images/image8.png")}
+                alt="" src={require("https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image8.png?raw=true")}
                 style="width: 624.00px; height: 74.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span><br>You can give it an appropriate name for the project and solution and create it
@@ -172,7 +172,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) 
             translateZ(0px); width: 624.00px; height: 264.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image4.png?raw=true"
                 style="width: 624.00px; height: 264.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -181,7 +181,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
             packages.<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 118.67px;"><img
-                alt="" src="images/image9.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image9.png?raw=true"
                 style="width: 624.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span>Once you have the Refit nuget packages downloaded you can create a Models folder
@@ -189,7 +189,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
             is CarModel.cs.<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 292.00px; height: 413.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image5.png?raw=true"
                 style="width: 292.00px; height: 413.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -199,7 +199,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 416.00px; height: 272.00px;"><img
-                alt="" src="images/image6.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image6.png?raw=true"
                 style="width: 416.00px; height: 272.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span><br>Now that the model file is all set up and ready to go, you can create a
@@ -209,7 +209,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
             you&rsquo;ll use for that operation. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 445.00px; height: 493.00px;"><img
-                alt="" src="images/image7.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image7.png?raw=true"
                 style="width: 445.00px; height: 493.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -220,7 +220,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
             API running locally, I can access it via localhost. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 708.50px; height: 41.77px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image2.png?raw=true"
                 style="width: 708.50px; height: 41.77px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -229,7 +229,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
             cars. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 288.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image3.png?raw=true"
                 style="width: 624.00px; height: 288.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span class="c2"><br>Here is my running application with the list of cars and
@@ -237,7 +237,7 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 304.00px;"><img
-                alt="" src="./images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consume%20an%20api%20with%20dotnet/images/image1.png?raw=true"
                 style="width: 624.00px; height: 304.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -269,7 +269,7 @@ VALUES ('Consuming an APi with React','https://upload.wikimedia.org/wikipedia/co
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad)
              translateZ(0px); width: 179.00px; height: 392.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consuming%20an%20api%20with%20react/images/image3.png?raw=true"
                 style="width: 179.00px; height: 392.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -281,7 +281,7 @@ VALUES ('Consuming an APi with React','https://upload.wikimedia.org/wikipedia/co
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 560.00px; height: 313.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consuming%20an%20api%20with%20react/images/image5.png?raw=true"
                 style="width: 560.00px; height: 313.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -293,7 +293,7 @@ VALUES ('Consuming an APi with React','https://upload.wikimedia.org/wikipedia/co
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000;
              transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 500.00px; height: 544.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consuming%20an%20api%20with%20react/images/image4.png?raw=true"
                 style="width: 500.00px; height: 544.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -303,7 +303,7 @@ VALUES ('Consuming an APi with React','https://upload.wikimedia.org/wikipedia/co
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; 
             transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 156.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consuming%20an%20api%20with%20react/images/image1.png?raw=true"
 
                 style="width: 624.00px; height: 156.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
@@ -311,7 +311,7 @@ VALUES ('Consuming an APi with React','https://upload.wikimedia.org/wikipedia/co
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 508.00px; height: 422.00px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/consuming%20an%20api%20with%20react/images/image2.png?raw=true"
                 style="width: 508.00px; height: 422.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -337,7 +337,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 469.00px; height: 722.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Create%20Database/images/image1.png?raw=true"
                 style="width: 469.00px; height: 722.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -350,7 +350,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 623.00px; height: 552.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Create%20Database/images/image3.png?raw=true"
                 style="width: 623.00px; height: 552.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -365,7 +365,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 44.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Create%20Database/images/image5.png?raw=true"
                 style="width: 624.00px; height: 44.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -374,7 +374,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 88.00px;"><img
-                alt="" src="images/image7.png"
+                alt="" src="https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Create%20Database/images/image7.png?raw=true"
                 style="width: 624.00px; height: 88.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -386,7 +386,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 68.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Create%20Database/images/image4.png?raw=true"
                 style="width: 624.00px; height: 68.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -395,7 +395,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 42.67px;"><img
-                alt="" src="images/image6.png"
+                alt="" src="https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Create%20Database/images/image6.png?raw=true"
                 style="width: 624.00px; height: 42.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -403,7 +403,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 77.33px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Create%20Database/images/image2.png?raw=true"
                 style="width: 624.00px; height: 77.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -413,30 +413,20 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
     <p class="c1 c3"><span class="c0"></span></p>
     <p class="c1 c3"><span class="c0"></span></p>');
 
--- insert into portfolio_post.post(title,post_img, post_date, post_content) 
--- VALUES ('Database Design','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54',
--- ``);
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('Database Design','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54',
+'<p>We often have ideas for web sites that we want to build, some of which handle data in databases or elsewhere. In this portfolio post, I want a database that will handle all of my portfolio posts that live on my portfolio site. Having never designed a database for anything like a portfolio site, I first started with the most basic pieces, the text and image content. Having never dealt with a database that stored pictures, I needed to know how to actually get images to appear on my portfolio site. After doing some research and thinking, I determined I wanted to store a reference to an image. Then came the challenge of figuring out how to order all of my content.</p>
+<img alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20design/images/image1.png?raw=true" style="width: 624.00px; height: 298.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+<p>This ERD is the solution that I came up with to handle images as well as post positioning. Each post has text and image content, as well as tag and category classifications. The position table and the post_position association table serve to link everything together. You may also notice the post_category and post_tag association tables are optional.</p>
+<img alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20design/images/image3.png?raw=true" style="width: 624.00px; height: 802.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+    translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+<img alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20design/images/image2.png?raw=true" style="width: 624.00px; height: 566.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
+    translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+<p>Here we can see what the sql file looks like. It was a little bit tricky to write the check for the post position table that enforces post_text_id or post_image_id isn''t null for a given database entry. This could be fleshed out some more, but it will work to get my database up and running.</p>
+<p>You may also notice the use of serial with each of my primary keys, this serves to create a sequence of id''s that automatically increments when a new entry is inserted into a table.</p>
+');
 
--- INSERT INTO portfolio_post.text(text_content) VALUES ('<p>We often have ideas for web sites that we want to build, some of which handle data in databases or elsewhere. In this portfolio post, I want a database that will handle all of my portfolio posts that live on my portfolio site. Having never designed a database for anything like a portfolio site, I first started with the most basic pieces, the text and image content. Having never dealt with a database that stored pictures, I needed to know how to actually get images to appear on my portfolio site. After doing some research and thinking, I determined I wanted to store a reference to an image. Then came the challenge of figuring out how to order all of my content.</p>');
--- INSERT INTO portfolio_post.text(text_content) VALUES ('<p>This ERD is the solution that I came up with to handle images as well as post positioning. Each post has text and image content, as well as tag and category classifications. The position table and the post_position association table serve to link everything together. You may also notice the post_category and post_tag association tables are optional.</p>');
--- INSERT INTO portfolio_post.text(text_content) VALUES ('<p>Here we can see what the sql file looks like. It was a little bit tricky to write the check for the post position table that enforces post_text_id or post_image_id isn’t null for a given database entry. This could be fleshed out some more, but it will work to get my database up and running.</p>');
--- INSERT INTO portfolio_post.text(text_content) VALUES ('<p>You may also notice the use of serial with each of my primary keys, this serves to create a sequence of id’s that automatically increments when a new entry is inserted into a table.</p>');
 
--- Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img alt="" src="images/image1.png" style="width: 624.00px; height: 298.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">');
--- Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img alt="" src="images/image3.png" style="width: 624.00px; height: 802.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
---     translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">');
--- Insert into portfolio_post.image(title, image_url) VALUES ('image2', '<img alt="" src="images/image2.png" style="width: 624.00px; height: 566.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
---     translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">');
-
--- INSERT INTO portfolio_post.post_position(post_text_id, post_image_id, post_position_id, portfolio_post_id) 
--- VALUES 
--- (36, null, 1, 5),
--- (null, 35, 2, 5), 
--- (37, null, 3, 5), 
--- (null, 36, 4, 5), 
--- (null, 37, 5, 5),
--- (38, null, 6, 5), 
--- (39, null, 7, 5); 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.png', '2021-11-21 10:23:54',
@@ -447,7 +437,7 @@ VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 300.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Docker/images/image4.png?raw=true"
                 style="width: 362.00px; height: 300.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -461,7 +451,7 @@ VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 227.00px; height: 171.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Docker/images/image1.png?raw=true"
                 style="width: 227.00px; height: 171.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -474,7 +464,7 @@ VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 284.00px;"><img
-                alt="" src="images/image8.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Docker/images/image8.png?raw=true"
                 style="width: 624.00px; height: 284.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -487,14 +477,14 @@ VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 161.33px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Docker/images/image2.png?raw=true"
                 style="width: 624.00px; height: 161.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 340.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Docker/images/image5.png?raw=true"
                 style="width: 624.00px; height: 340.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -503,7 +493,7 @@ VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 36.00px;"><img
-                alt="" src="images/image6.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Docker/images/image6.png?raw=true"
                 style="width: 624.00px; height: 36.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -516,7 +506,7 @@ VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 197.33px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Docker/images/image3.png?raw=true"
                 style="width: 624.00px; height: 197.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -524,7 +514,7 @@ VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 289.33px;"><img
-                alt="" src="images/image7.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Docker/images/image7.png?raw=true"
                 style="width: 624.00px; height: 289.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -542,7 +532,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 390.00px; height: 426.00px;"><img
-                alt="" src="images/image6.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image6.png?raw=true"
                 style="width: 390.00px; height: 426.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -551,7 +541,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 321.33px;"><img
-                alt="" src="images/image9.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image9.png?raw=true"
                 style="width: 624.00px; height: 321.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -562,7 +552,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 437.00px; height: 253.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image1.png?raw=true"
                 style="width: 437.00px; height: 253.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -572,7 +562,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 345.33px;"><img
-                alt="" src="images/image15.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image15.png?raw=true"
                 style="width: 624.00px; height: 345.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -582,7 +572,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 566.00px; height: 478.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image3.png?raw=true"
                 style="width: 566.00px; height: 478.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -592,7 +582,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 474.00px; height: 283.00px;"><img
-                alt="" src="images/image7.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image7.png?raw=true"
                 style="width: 474.00px; height: 283.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -602,7 +592,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 326.67px;"><img
-                alt="" src="images/image8.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image8.png?raw=true"
                 style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -611,7 +601,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 640.00px;"><img
-                alt="" src="images/image14.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image14.png?raw=true"
                 style="width: 624.00px; height: 640.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -622,7 +612,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 432.00px; height: 112.00px;"><img
-                alt="" src="images/image13.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image13.png?raw=true"
                 style="width: 432.00px; height: 112.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -631,7 +621,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 260.00px;"><img
-                alt="" src="images/image10.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image10.png?raw=true"
                 style="width: 624.00px; height: 260.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -640,7 +630,7 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 480.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image5.png?raw=true"
                 style="width: 624.00px; height: 480.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -653,28 +643,28 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 173.33px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image4.png?raw=true"
                 style="width: 624.00px; height: 173.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span>Here we can see that it made our two EC2 instances<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 13.33px;"><img
-                alt="" src="images/image11.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image11.png?raw=true"
                 style="width: 624.00px; height: 13.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span class="c1"><br>Now the vpc</span></p>
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 13.33px;"><img
-                alt="" src="images/image12.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image12.png?raw=true"
                 style="width: 624.00px; height: 13.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span class="c1"><br>The route table with two associated subnets</span></p>
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 10.67px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Terraform/images/image2.png?raw=true"
                 style="width: 624.00px; height: 10.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -709,7 +699,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
     <p class="c3"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) 
             translateZ(0px); width: 561.00px; height: 356.00px;"><img
-                alt="" src="images/image7.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image7.png?raw=true"
                 style="width: 561.00px; height: 356.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -718,7 +708,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
             allow you to import in the same basic manner as in React.</span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 495.00px; height: 205.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image3.png?raw=true"
                 style="width: 495.00px; height: 205.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span class="c1"><br>You&rsquo;ll see the express import to use express and the users
@@ -726,7 +716,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
     <p class="c3"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 480.00px; height: 270.00px;"><img
-                alt="" src="images/image10.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image10.png?raw=true"
                 style="width: 480.00px; height: 270.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -736,7 +726,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
     <p class="c3"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 495.00px; height: 205.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image3.png?raw=true"
                 style="width: 495.00px; height: 205.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -745,7 +735,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
             function that takes in res and req. Req stands for request, res stands for response. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 300.00px; height: 22.00px;"><img
-                alt="" src="images/image9.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image9.png?raw=true"
                 style="width: 300.00px; height: 22.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -754,7 +744,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
     <p class="c3"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 504.00px; height: 59.00px;"><img
-                alt="" src="images/image8.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image8.png?raw=true"
                 style="width: 504.00px; height: 59.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -762,7 +752,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
             blob.<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 408.00px; height: 79.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image5.png?raw=true"
                 style="width: 408.00px; height: 79.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -771,14 +761,14 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
             success.<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 578.00px; height: 140.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image1.png?raw=true"
                 style="width: 578.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span><br> On line 29 is where you can find a user by id by filtering the list of users
             by id. &nbsp;<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 78.67px;"><img
-                alt="" src="images/image11.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image11.png?raw=true"
                 style="width: 624.00px; height: 78.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span class="c1"><br>Line 34 is where we can update a user by id, using request
@@ -787,7 +777,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
     <p class="c3"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 89.33px;"><img
-                alt="" src="images/image6.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image6.png?raw=true"
                 style="width: 624.00px; height: 89.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -796,7 +786,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
     <p class="c3"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 587.00px; height: 85.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image4.png?raw=true"
                 style="width: 587.00px; height: 85.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -808,7 +798,7 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
     <p class="c3"><span>Here is what we see when we look at the users endpoint. &nbsp;<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 208.00px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/node%20api/images/image2.png?raw=true"
                 style="width: 624.00px; height: 208.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -822,7 +812,7 @@ VALUES ('Creating A Node/Express API With Database Interaction','https://logodix
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 508.00px; height: 420.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Portfolio%20API/images/image4.png?raw=true"
                 style="width: 508.00px; height: 420.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -832,7 +822,7 @@ VALUES ('Creating A Node/Express API With Database Interaction','https://logodix
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 599.00px; height: 797.00px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Portfolio%20API/images/image2.png?raw=true"
                 style="width: 599.00px; height: 797.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -844,7 +834,7 @@ VALUES ('Creating A Node/Express API With Database Interaction','https://logodix
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 377.00px; height: 280.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Portfolio%20API/images/image3.png?raw=true"
                 style="width: 377.00px; height: 280.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -855,7 +845,7 @@ VALUES ('Creating A Node/Express API With Database Interaction','https://logodix
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 400.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Portfolio%20API/images/image1.png?raw=true"
                 style="width: 624.00px; height: 400.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -866,7 +856,7 @@ VALUES ('Creating A Node/Express API With Database Interaction','https://logodix
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 333.33px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Portfolio%20API/images/image5.png?raw=true"
                 style="width: 624.00px; height: 333.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -896,7 +886,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 154.91px; height: 511.50px;"><img
-                alt="" src="images/image9.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image9.png?raw=true"
                 style="width: 154.91px; height: 511.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -906,7 +896,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 560.00px; height: 485.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image4.png?raw=true"
                 style="width: 560.00px; height: 485.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -923,7 +913,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 590.00px; height: 371.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image5.png?raw=true"
                 style="width: 590.00px; height: 371.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -934,7 +924,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 440.00px; height: 281.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image1.png?raw=true"
                 style="width: 440.00px; height: 281.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -943,7 +933,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 201.33px;"><img
-                alt="" src="images/image10.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image10.png?raw=true"
                 style="width: 624.00px; height: 201.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -953,7 +943,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 326.67px;"><img
-                alt="" src="images/image6.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image6.png?raw=true"
                 style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -964,7 +954,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 334.67px;"><img
-                alt="" src="images/image13.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image13.png?raw=true"
                 style="width: 624.00px; height: 334.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -975,7 +965,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 338.67px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image3.png?raw=true"
                 style="width: 624.00px; height: 338.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -987,7 +977,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 486.67px;"><img
-                alt="" src="images/image14.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image14.png?raw=true"
                 style="width: 624.00px; height: 486.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1002,7 +992,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 338.67px;"><img
-                alt="" src="images/image11.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image11.png?raw=true"
                 style="width: 624.00px; height: 338.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1013,7 +1003,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 354.67px;"><img
-                alt="" src="images/image12.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image12.png?raw=true"
                 style="width: 624.00px; height: 354.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1027,7 +1017,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 305.00px; height: 147.00px;"><img
-                alt="" src="images/image8.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image8.png?raw=true"
                 style="width: 305.00px; height: 147.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span class="c0">&nbsp;</span></p>
@@ -1037,7 +1027,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 368.00px; height: 307.00px;"><img
-                alt="" src="images/image7.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image7.png?raw=true"
                 style="width: 368.00px; height: 307.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1050,7 +1040,7 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad)
              translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 342.00px; height: 285.00px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/React%20field%20validation/images/image2.png?raw=true"
                 style="width: 342.00px; height: 285.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1067,7 +1057,7 @@ VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 484.00px; height: 364.00px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image2.png?raw=true"
                 style="width: 484.00px; height: 364.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1078,7 +1068,7 @@ VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 596.00px; height: 635.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image1.png?raw=true"
                 style="width: 596.00px; height: 635.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1095,7 +1085,7 @@ VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 349.33px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image3.png?raw=true"
                 style="width: 624.00px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1111,7 +1101,7 @@ VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 392.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image5.png?raw=true"
                 style="width: 624.00px; height: 392.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1123,7 +1113,7 @@ VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
             translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 342.67px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/react%20routing/images/image4.png?raw=true"
                 style="width: 624.00px; height: 342.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
@@ -1259,31 +1249,31 @@ VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solution
     <p class="c0"><span>You&rsquo;ll first start by making a new project and selecting an ASP.Net Core Web API that will
             scaffold an API for you. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 81.33px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image2.png?raw=true"
                 style="width: 624.00px; height: 81.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span>You can name your project and solution whatever is appropriate for your use case. My api is a
             car tracker that just tracks some information about cars. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 308.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image4.png?raw=true"
                 style="width: 624.00px; height: 308.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span>Once you move onto the next page of the creation wizard, you&rsquo;ll just want to make sure you
             have the default options selected. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 316.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image5.png?raw=true"
                 style="width: 624.00px; height: 316.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span class="c1"><br></span></p>
     <p class="c0"><span>Now you should have your API project scaffolded. I&rsquo;ll first start by defining the kind of
             information about a car that I want to keep track of. For doing that, I&rsquo;ll create a models folder in
             my project and make a model file that will have all of the information that I want. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 300.00px; height: 304.00px;"><img
-                alt="" src="images/image7.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image7.png?raw=true"
                 style="width: 300.00px; height: 304.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span><br>Inside my model, I decided I wanted to keep track of basic car information
             like the year, make, model, engine, and transmission along with an Id. <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 431.00px; height: 269.00px;"><img
-                alt="" src="images/image6.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image6.png?raw=true"
                 style="width: 431.00px; height: 269.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1">Now that I have a model in place I can create a controller that will do CRUD
@@ -1292,7 +1282,7 @@ VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solution
         </span></p>
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 126.67px;"><img
-                alt="" src="images/image11.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image11.png?raw=true"
                 style="width: 624.00px; height: 126.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span>In this project I&rsquo;m not connecting to a database, so I have a list that I created in my
@@ -1302,7 +1292,7 @@ VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solution
             attribute here because it&rsquo;s fairly complicated, but the [Route] attribute helps you be able to route
             to and call the correct CRUD methods. &nbsp;<br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 508.00px; height: 429.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image1.png?raw=true"
                 style="width: 508.00px; height: 429.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1">Here are all of the methods responsible for CRUD operations, all with the appropriate
@@ -1310,19 +1300,19 @@ VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solution
             car, and DELETE to remove a car from the list. </span></p>
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 428.00px;"><img
-                alt="" src="images/image10.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image10.png?raw=true"
                 style="width: 624.00px; height: 428.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span><span><br>You may also need to add a Cross-Origin Resource Sharing (CORS) policy, I did
             because I couldn&rsquo;t communicate with my API without one. You&rsquo;ll create the policy in your
             ConfigureServices method of your Startup.cs file. </span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 184.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image3.png?raw=true"
                 style="width: 624.00px; height: 184.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span>You then have to specify the policy that you want to use in the Configure method of Startup.cs.
             <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 301.33px;"><img
-                alt="" src="images/image8.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image8.png?raw=true"
                 style="width: 624.00px; height: 301.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1">You may have issues with HTTPS causing problem with hitting your API, I had issues so
@@ -1330,7 +1320,7 @@ VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solution
             launchSettings.json file so it looks like this:</span></p>
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 441.00px; height: 149.00px;"><img
-                alt="" src="images/image12.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image12.png?raw=true"
                 style="width: 441.00px; height: 149.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span>This is all you really have to do to set up the API portion of your project. When you run your
@@ -1338,7 +1328,7 @@ VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solution
             perform all of your CRUD operations here to make sure your API has all of the functionality that it needs.
             <br></span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 305.33px;"><img
-                alt="" src="images/image9.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/write%20dotnet%20api/images/image9.png?raw=true"
                 style="width: 624.00px; height: 305.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>');
 
@@ -1350,7 +1340,7 @@ VALUES ('Changing Your Favicon and Page Title in React','https://upload.wikimedi
     <p class="c0"><span class="c1"></span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 186.00px; height: 198.00px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ChangingPageFaviconReact/images/image1.png?raw=true"
                 style="width: 186.00px; height: 198.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1"></span></p>
@@ -1360,7 +1350,7 @@ VALUES ('Changing Your Favicon and Page Title in React','https://upload.wikimedi
     <p class="c0"><span class="c1"></span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 436.00px; height: 33.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ChangingPageFaviconReact/images/image4.png?raw=true"
                 style="width: 436.00px; height: 33.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1"></span></p>
@@ -1369,7 +1359,7 @@ VALUES ('Changing Your Favicon and Page Title in React','https://upload.wikimedi
     <p class="c0"><span class="c1"></span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 381.00px; height: 495.00px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ChangingPageFaviconReact/images/image2.png?raw=true"
                 style="width: 381.00px; height: 495.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1"></span></p>
@@ -1384,7 +1374,7 @@ VALUES ('Changing Your Favicon and Page Title in React','https://upload.wikimedi
     <p class="c0"><span class="c1"></span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 211.00px; height: 32.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ChangingPageFaviconReact/images/image3.png?raw=true"
                 style="width: 211.00px; height: 32.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1"></span></p>
@@ -1401,14 +1391,14 @@ VALUES ('Testing in React with Jest','https://upload.wikimedia.org/wikipedia/com
             where we can just run: </span></p>
     <p class="c1 c3"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 523.00px; height: 28.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ReactTesting/images/image5.png?raw=true"
                 style="width: 523.00px; height: 28.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1"><span class="c0">The next package that needs to be installed is the React Testing Library. It is
             installed using the following command:</span></p>
     <p class="c1"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 26.67px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ReactTesting/images/image1.png?raw=true"
                 style="width: 624.00px; height: 26.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
@@ -1416,7 +1406,7 @@ VALUES ('Testing in React with Jest','https://upload.wikimedia.org/wikipedia/com
             Library handles allowing us to render components for testing purposes. </span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 245.00px; height: 650.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ReactTesting/images/image4.png?raw=true"
                 style="width: 245.00px; height: 650.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
@@ -1427,7 +1417,7 @@ VALUES ('Testing in React with Jest','https://upload.wikimedia.org/wikipedia/com
             component. </span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 567.00px; height: 852.00px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ReactTesting/images/image2.png?raw=true"
                 style="width: 567.00px; height: 852.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1"><span class="c0">Here is the test for my home component, importing everything from the react testing
@@ -1455,7 +1445,7 @@ VALUES ('Testing in React with Jest','https://upload.wikimedia.org/wikipedia/com
     <p class="c1 c2"><span class="c0"></span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 164.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/ReactTesting/images/image3.png?raw=true"
                 style="width: 624.00px; height: 164.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
