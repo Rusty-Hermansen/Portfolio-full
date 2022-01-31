@@ -22,12 +22,12 @@ const addConfig = async (config) => {
     );
     const data =  res.rows[0];
     return {
-        name: data.name,
-        ipAddress: data.ipAddress,
-        ipRange: data.ipRange,
-        publicKey: data.publicKey,
-        privateKey: data.privateKey,
-        date: data.date
+        name: data.client_name,
+        ipAddress: data.client_ip_address,
+        ipRange: data.client_allowed_ip_address_range,
+        publicKey: data.client_public_key,
+        privateKey: data.client_private_key,
+        date: data.client_date_added
     }
 }
 

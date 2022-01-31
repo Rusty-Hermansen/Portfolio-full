@@ -17,7 +17,7 @@ const genConfig = async (body) => {
    
   
     clientConfig['vmIpAddress']= '45.33.5.185:51820'
-    clientConfig['vmPublicKey']=getVmPublicKey();
+    clientConfig['vmPublicKey']=getVmPublicKey().toString().trim();
     return clientConfig;
 
 }
@@ -77,7 +77,7 @@ const getPeers = () => {
 }
 
 const genConfigFile = (config) => {
-    const path = `/home/rusty/adminBackend/${config.name}/vpnconfig.conf`;
+    const path = `/home/rusty/clients/${config.name}/vpnconfig.conf`;
     const cmd =  `echo "[Interface]"\
     PrivateKey = ${config.privateKey}
     Address = ${config.ipAddress}/24
@@ -86,7 +86,7 @@ const genConfigFile = (config) => {
     [Peer]
     PublicKey = ${config.vmPublicKey}
     AllowedIPs = ${config.ipRange}/0
-    Endpoint = 45.33.5.185:51820" /home/rusty/adminBackend/clients/${config.name}/vpnconfig.conf`
+    Endpoint = 45.33.5.185:51820" /home/rusty/clients/${config.name}/vpnconfig.conf`
 
     execSync(
         cmd, {uid: 1000 }

@@ -34,10 +34,6 @@ const SinglePost = () => {
     return (
         <div className="bg-fixed bg-cover" style={{ backgroundImage: `url(${image})` }}>
             <section className="justify-center min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
-
-                {dbPost && dbPost.map((post) => {
-
-                    return (
                         <div className=" container text-white">
                             <div className="row">
                                 <div className="col-12 p-5 bg-white bg-opacity-50">
@@ -45,11 +41,6 @@ const SinglePost = () => {
                                 </div>
                             </div>
                         </div>
-                    )
-                })
-                }
-
-
             </section>
         </div>
     )
