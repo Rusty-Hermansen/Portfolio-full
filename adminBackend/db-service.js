@@ -38,7 +38,7 @@ const getConfigByName = async(name) => {
     )
     return res.rows;
 }
-const removeConfig = async = (publicKey) =>{
+const removeConfig = async (publicKey) =>{
     const res = await pool.query(`
     DELETE FROM wireguard.client 
     WHERE client_public_key= $1` , [publicKey])

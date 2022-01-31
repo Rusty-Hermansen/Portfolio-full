@@ -10,7 +10,11 @@ app.get('/' , async (req, res) => {
     res.send("hello!")
 })
 app.get('/api/posts/:postid', async (req, res)=>{
-    res.json(await queries.getPostById(req.params.postid))
+    console.log(req.params.postid);
+    const response= await queries.getPostById(req.params.postid)
+    console.log(response)
+    res.json(response)
+    
 })
 
 app.get('/api/posts', async (req, res)=>{
