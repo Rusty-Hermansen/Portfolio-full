@@ -5,9 +5,9 @@ const genConfig = async (body) => {
     execSync(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/clientssh.bash ${body.name}`, {uid: 1000})
    
     const config = {
-        name: body.name,
-        ipAddress: body.ipAddress,
-        ipRange: body.ipRange,
+        name: body.name.trim(),
+        ipAddress: body.ipAddress.trim(),
+        ipRange: body.ipRange.trim(),
         publicKey: getPublicKey(body.name).toString().trim(),
         privateKey: getPrivateKey(body.name).toString().trim(),
         dateAdded: new Date()
