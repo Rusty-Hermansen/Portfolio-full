@@ -27,8 +27,8 @@ services:
     build: ./React
     # image: rusty23/portfolio
     stdin_open: true
-    ports: 
-      - "80:80"
+    # ports: 
+    #   - "80:80"
     volumes:
       - ./React/default.conf:/etc/nginx/conf.d/default.conf 
 
