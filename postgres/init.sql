@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS portfolio_post.post_tag(
 );
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-logo_0.jpg', '2021-11-21 10:23:54',`<body class="c3">
+VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-logo_0.jpg', '2021-11-21 10:23:54','<body class="c3">
         <p class="c1"><span class="c0">Progressing toward earning my Bachelors degree and being immersed in the world of
                 tech, I have learned and heard about all sorts of different technologies. One of those technologies that has
                 caught my attention is kubernetes, or as it is commonly known, k8s. Working as a DevOps engineer intern for
@@ -152,12 +152,12 @@ VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-l
                     style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
         <p class="c1"><span class="c0">Here is the running app that lives in each pod of my cluster. </span></p>
-    </body>`);
+    </body>');
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechnologies.com/img/solutions/dotnet.png', '2021-11-21 10:23:54', 
-`<p class="c0"><span>Consuming an API has never been easier in dotnet than when you use Refit and a Blazor front end.
+'<p class="c0"><span>Consuming an API has never been easier in dotnet than when you use Refit and a Blazor front end.
             In this post, I&rsquo;ll show you how simple it can be. In this article I&rsquo;ll be using an API that I
             wrote but the process still applies for any API you want to consume. To begin, you&rsquo;ll need to start a
             new Blazor WebAssembly Application.<br></span><span
@@ -241,12 +241,12 @@ VALUES ('Consuming an API with Dotnet, Blazor, and Refit','https://www.ynvtechno
                 style="width: 624.00px; height: 304.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
-`);
+');
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Consuming an APi with React','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
-`<p class="c1 c2"><span class="c0"></span></p>
+'<p class="c1 c2"><span class="c0"></span></p>
     <p class="c1"><span class="c0">Creating a react app that consumes an API with a key is simple and straightforward.
             In this post you&rsquo;ll see what that process looks like. Starting this application will assume you have
             React and NPM installed. To begin consuming an API, let&rsquo;s make a new React app by opening up a
@@ -316,11 +316,11 @@ VALUES ('Consuming an APi with React','https://upload.wikimedia.org/wikipedia/co
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
-`);
+');
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54', 
-` <p class="c1"><span class="c0">These days, it is more than likely that just about every web site that you use has
+'<p class="c1"><span class="c0">These days, it is more than likely that just about every web site that you use has
             some form of database interaction. In this post, I&rsquo;m creating a postgres database in a docker
             container and creating tables inside of it. </span></p>
     <p class="c1"><span
@@ -411,7 +411,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
             but this is how the text, image, post position, and post ids are used in order to form a full portfolio
             post. </span></p>
     <p class="c1 c3"><span class="c0"></span></p>
-    <p class="c1 c3"><span class="c0"></span></p>`);
+    <p class="c1 c3"><span class="c0"></span></p>');
 
 -- insert into portfolio_post.post(title,post_img, post_date, post_content) 
 -- VALUES ('Database Design','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54',
@@ -440,7 +440,7 @@ VALUES ('Creating and Inserting Into a Postgres Database','https://cdn-icons-png
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.png', '2021-11-21 10:23:54',
-`<p class="c1"><span class="c2">Docker is a commonly used technology in todays world of rapid deployment of
+'<p class="c1"><span class="c2">Docker is a commonly used technology in todays world of rapid deployment of
             applications. Having used docker to some degree in the past, I thought it time to refresh and supplement my
             docker knowledge by starting with a react application and containerizing it. </span></p>
     <p class="c0"><span class="c2"></span></p>
@@ -528,10 +528,10 @@ VALUES ('Creating and Building a Docker Image','https://logodix.com/logo/826618.
                 style="width: 624.00px; height: 289.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
-    <p class="c1"><span class="c2">...and here is the running application!</span></p>`);
+    <p class="c1"><span class="c2">...and here is the running application!</span></p>');
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1686026.png', '2021-11-21 10:23:54',`
+VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1686026.png', '2021-11-21 10:23:54','
 <p class="c0"><span class="c1">Infrastructure-as-code is todays modern, declarative way to set up cloud
             infrastructure. It gives us an easy, repeatable way to set that infrastructure up and is designed to be
             readable. Todays adventure is learning a bit about an infrastructure-as-code tool called Terraform and using
@@ -680,12 +680,12 @@ VALUES ('Provisioning Infrastructure With Terraform','https://logodix.com/logo/1
                 title=""></span></p>
     <p class="c0"><span class="c1">...and the elastic load balancer. </span></p>
     <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>`);
+    <p class="c0 c3"><span class="c1"></span></p>');
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Creating an API with Node and Express','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54',
-`<p class="c3"><span class="c1">Writing an API in Node and Express is simple and easy. In this post, I&rsquo;ll show
+'<p class="c3"><span class="c1">Writing an API in Node and Express is simple and easy. In this post, I&rsquo;ll show
             you how to create your own API with node and express. </span></p>
     <p class="c0"><span class="c1"></span></p>
     <p class="c3"><span class="c1">To start out, you&rsquo;ll create a folder in the desired directory, and make a new
@@ -812,11 +812,11 @@ VALUES ('Creating an API with Node and Express','https://logodix.com/logo/176483
                 style="width: 624.00px; height: 208.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) 
                 translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
-    <p class="c0"><span class="c1"></span></p>`);
+    <p class="c0"><span class="c1"></span></p>');
 
 insert into portfolio_post.post(title,post_img, post_date,post_content) 
 VALUES ('Creating A Node/Express API With Database Interaction','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54',
-` <p class="c1"><span class="c0">When it comes to securely interacting with a database for a react app, database
+'<p class="c1"><span class="c0">When it comes to securely interacting with a database for a react app, database
             interactions need to take place through an api. In this post I will go over the api that I wrote that
             interacts with my database on behalf of my react frontend. </span></p>
     <p class="c1"><span
@@ -873,24 +873,24 @@ VALUES ('Creating A Node/Express API With Database Interaction','https://logodix
     <p class="c1"><span class="c0">Here is an example of a tile that is built using data that comes from the database.
         </span></p>
     <p class="c1 c2"><span class="c0"></span></p>
-    <p class="c1 c2"><span class="c0"></span></p>`);
+    <p class="c1 c2"><span class="c0"></span></p>');
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Postgres Joins','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54',
-`<p>When I first started learning sql, I was taking a databases class using postgresql. When learning about joins, I had a hard time envisioning when I would use something like a left or a right join. In this post I will go over the three different joins and why I use them.</p>
+'<p>When I first started learning sql, I was taking a databases class using postgresql. When learning about joins, I had a hard time envisioning when I would use something like a left or a right join. In this post I will go over the three different joins and why I use them.</p>
 <img
                 alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/Postgres%20Complex%20Queries/images/image1.png?raw=true"
                 style="width: 604.00px; height: 237.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad)
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title="">
-                <p>The object of this query is to return all of the content in a portfolio post. In order to do so, I had to carefully choose the type of joins that I use so all of the data could be displayed. When I first started writing this query, I did all inner joins and my query returned nothing. I was stumped for a bit until I came to the realization that, when a text has a value an image is null and when text is null and an image has a value. That means that an inner join can’t be used to get a complete portfolio post. All of the other tables can use simple inner joins because they all exist at the same time. It turned out using left joins on the text and image tables allowed me to get all of the content for a complete post.</p>`
+                <p>The object of this query is to return all of the content in a portfolio post. In order to do so, I had to carefully choose the type of joins that I use so all of the data could be displayed. When I first started writing this query, I did all inner joins and my query returned nothing. I was stumped for a bit until I came to the realization that, when a text has a value an image is null and when text is null and an image has a value. That means that an inner join can’t be used to get a complete portfolio post. All of the other tables can use simple inner joins because they all exist at the same time. It turned out using left joins on the text and image tables allowed me to get all of the content for a complete post.</p>'
                 );
 
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54'.
-`<p class="c1"><span class="c0">Being relatively new to the world of React.js and Javascript as well as an avid
+'<p class="c1"><span class="c0">Being relatively new to the world of React.js and Javascript as well as an avid
             browser of the internet, I thought I&rsquo;d take a stab at making some good, basic form validation in React
             using useReducer, useEffect, and useContext. </span></p>
     <p class="c1"><span
@@ -1058,11 +1058,11 @@ VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons
             and our submit button is finally not disabled, allowing us to submit a car. Awesome!</span></p>
     <div>
         <p class="c1 c3"><span class="c0"></span></p>
-    </div>`);
+    </div>');
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
-` <p class="c0"><span class="c2">In this.In this post I&rsquo;ll be covering how you make a React application appear
+'<p class="c0"><span class="c2">In this.In this post I&rsquo;ll be covering how you make a React application appear
             as though there are multiple pages using react-router-dom. </span></p>
     <p class="c0"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) 
@@ -1129,13 +1129,13 @@ VALUES ('React Routing','https://upload.wikimedia.org/wikipedia/commons/thumb/a/
                 title=""></span></p>
     <p class="c0"><span class="c2">In this SinglePost component, I use useParams to pass down the index and I use that
             index to load the correct post from my locally stored posts array on lines 9 and 11. Here you have it, the
-            complete picture of how the routing works in this very portfolio that you view at this moment. </span></p>`);
+            complete picture of how the routing works in this very portfolio that you view at this moment. </span></p>');
 
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('My React Portfolio','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
-` <p class="c0"><span class="c2">In our modern tech world, it seems that many software engineers have their own
+'<p class="c0"><span class="c2">In our modern tech world, it seems that many software engineers have their own
             portfolio. In this post I will show you my first stab at making my own portfolio and how it didn&rsquo;t go
             quite as smoothly as I wanted. I started with grand plans of using a node api that interacts with a database
             but I found myself too short on time to be able to do that just yet. Here is the start of what is my
@@ -1247,12 +1247,12 @@ VALUES ('My React Portfolio','https://upload.wikimedia.org/wikipedia/commons/thu
                  translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0 c1"><span class="c2"></span></p>
-    <p class="c0 c1"><span class="c2"></span></p>`);
+    <p class="c0 c1"><span class="c2"></span></p>');
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solutions/dotnet.png', '2021-11-21 10:23:54',
-`<p class="c0"><span class="c1">If you&rsquo;re new to writing web applications in dotnet, the thought of writing
+'<p class="c0"><span class="c1">If you&rsquo;re new to writing web applications in dotnet, the thought of writing
             your own API might be a bit intimidating. The purpose of this post is to show you how to write your own
             simple API in dotnet to see that it&rsquo;s not so intimidating. </span></p>
     <p class="c0 c3"><span class="c1"></span></p>
@@ -1340,11 +1340,11 @@ VALUES ('Writing an API in Dotnet','https://www.ynvtechnologies.com/img/solution
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 305.33px;"><img
                 alt="" src="images/image9.png"
                 style="width: 624.00px; height: 305.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>`);
+                title=""></span></p>');
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Changing Your Favicon and Page Title in React','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
-`  <p class="c2"><span class="c1">I find that when I build a React application that I always forget to switch out the
+'<p class="c2"><span class="c1">I find that when I build a React application that I always forget to switch out the
             generic &lsquo;React App&rsquo; page title and favicon image. In this post, it&rsquo;s time to change that
             for my portfolio web page. I&rsquo;ll start with changing the title first. </span></p>
     <p class="c0"><span class="c1"></span></p>
@@ -1388,11 +1388,11 @@ VALUES ('Changing Your Favicon and Page Title in React','https://upload.wikimedi
                 style="width: 211.00px; height: 32.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c0"><span class="c1"></span></p>
-    <p class="c2"><span class="c1">I&rsquo;d say this is much better!</span></p>`);
+    <p class="c2"><span class="c1">I&rsquo;d say this is much better!</span></p>');
 
     insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Testing in React with Jest','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
-`<p class="c1"><span class="c0">When it comes to building frontend applications with Javascript frameworks like
+'<p class="c1"><span class="c0">When it comes to building frontend applications with Javascript frameworks like
             React, writing tests and doing testing doesn&rsquo;t seem very intuitive compares to testing in a language
             like C#. In this post I&rsquo;m going to cover introductory testing in React using Jest and the React
             Testing Library. </span></p>
@@ -1465,7 +1465,7 @@ VALUES ('Testing in React with Jest','https://upload.wikimedia.org/wikipedia/com
             I was forced to remove it. It requires that specific component to have a test-id=&rsquo;linkedin&rsquo; prop
             that the screen.getByTestId(&lsquo;linkedin&rsquo;) finds in order to test the piece of html that is
             returned. The last line in the shot shows that we are looking for the document/page/component to have that
-            specific block of HTML. </span></p>`);
+            specific block of HTML. </span></p>');
 
 
 
