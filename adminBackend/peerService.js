@@ -39,6 +39,7 @@ const getPrivateKey = (clientName) => {
 
 const addConfig = async (body) => {
     const config = await genConfig(body);
+    console.log(config)
     exec(
         `sudo wg set wgvpn peer ${config.publicKey} allowed-ips ${config.ipRange}`, {uid: 1000}
     )

@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS portfolio_post.post_tag(
 );
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-logo_0.jpg', '2021-11-21 10:23:54','<body class="c3">
+VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-logo_0.jpg', '2021-11-21 10:23:54',`<body class="c3">
         <p class="c1"><span class="c0">Progressing toward earning my Bachelors degree and being immersed in the world of
                 tech, I have learned and heard about all sorts of different technologies. One of those technologies that has
                 caught my attention is kubernetes, or as it is commonly known, k8s. Working as a DevOps engineer intern for
@@ -152,7 +152,7 @@ VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-l
                     style="width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
         <p class="c1"><span class="c0">Here is the running app that lives in each pod of my cluster. </span></p>
-    </body>');
+    </body>`);
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
