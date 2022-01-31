@@ -7,7 +7,7 @@ import ClientConfig from "../Models/clientConfig";
 import apiService from "../services/apiService";
 
 interface ClientConfigState {
-    configs: ClientConfig[];
+    configs: Blob[];
     peers: string[];
     wg_status: string;
 }

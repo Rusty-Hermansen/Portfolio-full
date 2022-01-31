@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { ChangeEvent, useEffect,useState } from 'react';
 import { useDispatch } from 'react-redux';
 import ClientConfig from './Models/clientConfig';
 import apiService from './services/apiService';
 import './App.css';
 import { StoreDistpatch } from './store';
-import { addConfig, getStatus, restartService} from './store/client-config-slice'
+import { addConfig, getStatus, restartService, removePeer} from './store/client-config-slice'
 import Registration from './Components/Registration';
 import { useStoreSelector} from './store';
 
 
 function App() {
- 
+ const [peer, SetPeer]= useState("");
 
   const dispatch = useDispatch<StoreDistpatch>();
  useEffect(()=>{
@@ -26,11 +26,23 @@ function App() {
     const submitConfigHandler = (config: ClientConfig) =>{
       dispatch(addConfig(config))
       }
+
+    const peerChangeHandler = (e: ChangeEvent<HTMLInputElement>) =>{
+      SetPeer(e.target.value)
+    }
+    const removePeerHandler = ()=>{
+      dispatch(removePeer(peer))
+    }
+
   return (
     <>
     <Registration onSubmit={submitConfigHandler}/>
     <pre>{state}</pre>
     <button type="button" onClick={restartClicked}>Restart Service</button>
+
+    <label>Enter the public key you want to remove from VPN:</label>
+    <input type="text" onChange={peerChangeHandler}></input>
+    <button type="button" onClick={removePeerHandler}>Submit</button>
     </>
     
   );

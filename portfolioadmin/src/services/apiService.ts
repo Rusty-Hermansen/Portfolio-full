@@ -5,7 +5,7 @@ import fileDownload from "js-file-download";
 const apiUrl= '/api';
 
 const addConfig = async (config: ClientConfig): Promise<Blob> => {
-    const res = await axios.post<ClientConfig>(apiUrl +'/addConfig', config, {responseType: 'blob'});
+    const res = await axios.post<Blob>(apiUrl +'/addConfig', config, {responseType: 'blob'});
     fileDownload(res.data, 'vpnconfig.conf')
     return res.data;
 }
@@ -28,9 +28,8 @@ const getPeers = async(): Promise<string[]> => {
     const res = await axios.get<string[]>(apiUrl + '/wgservice/peers');
     return res.data;
 }
-const removePeer = async(publicKey: string) : Promise<string[]> =>{
+const removePeer = async(publicKey: string) =>{
     await axios.post(apiUrl + '/wgservice/removeconfig', {publicKey})
-    return await removeConfig(publicKey)
 }
 
 const apiService = {
@@ -39,6 +38,7 @@ const apiService = {
     getStatus,
     restartService,
     getPeers,
+    removePeer
     
 }
 
