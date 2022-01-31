@@ -42,6 +42,7 @@ const addConfig = async (body) => {
     exec(
         `sudo wg set wgvpn peer ${config.publicKey} allowed-ips ${config.ipRange}`, {uid: 1000}
     )
+    return genConfigFile(config);
 }
 
 const removeConfig = async (publicKey) => {
