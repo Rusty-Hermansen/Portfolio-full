@@ -37,7 +37,7 @@ const SinglePost = () => {
                         <div className=" container text-white">
                             <div className="row">
                                 <div className="col-12 p-5 bg-white bg-opacity-50">
-                                    {parse(dbPost.post)}
+                                    {parse(dbPost.post.toString())}
                                 </div>
                             </div>
                         </div>

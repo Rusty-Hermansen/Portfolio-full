@@ -81,12 +81,12 @@ const genConfigFile = (config) => {
     const path = `/home/rusty/clients/${config.name}/vpnconfig.conf`;
     const cmd =  `echo "[Interface]
     PrivateKey = ${config.privateKey}
-    Address = ${config.ipAddress}/24
+    Address = ${config.ipRange}/24
     DNS = 8.8.8.8
     
     [Peer]
     PublicKey = ${config.vmPublicKey}
-    AllowedIPs = ${config.ipRange}/0
+    AllowedIPs = ${config.ipAddress}/0
     Endpoint = 45.33.5.185:51820" > /home/rusty/clients/${config.name}/vpnconfig.conf`
 
     execSync(
