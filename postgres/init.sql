@@ -1466,7 +1466,7 @@ VALUES ('Database Revision','https://cdn-icons-png.flaticon.com/512/20/20093.png
     <p class="c1 c2"><span class="c0"></span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 296.00px;"><img
-                alt="" src="images/image6.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20revision/images/image6.png?raw=true"
                 style="width: 624.00px; height: 296.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
@@ -1477,14 +1477,14 @@ VALUES ('Database Revision','https://cdn-icons-png.flaticon.com/512/20/20093.png
             out whatever is going on. Here are my original tables:</span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 593.00px; height: 696.00px;"><img
-                alt="" src="images/image5.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20revision/images/image5.png?raw=true"
                 style="width: 593.00px; height: 696.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
     <p class="c1"><span class="c0">Here is my new table:</span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 393.00px; height: 146.00px;"><img
-                alt="" src="images/image4.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20revision/images/image4.png?raw=true"
                 style="width: 393.00px; height: 146.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
@@ -1497,14 +1497,14 @@ VALUES ('Database Revision','https://cdn-icons-png.flaticon.com/512/20/20093.png
             code is commented out above the new code:</span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 608.00px; height: 482.00px;"><img
-                alt="" src="images/image3.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20revision/images/image3.png?raw=true"
                 style="width: 608.00px; height: 482.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1"><span class="c0">&nbsp;As you can see, the new query is much more palatable. I also had to make some
             changes to the frontend. Here is my original code JSX that displays the content of a post:</span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 412.00px;"><img
-                alt="" src="images/image2.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20revision/images/image2.png?raw=true"
                 style="width: 624.00px; height: 412.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
@@ -1513,7 +1513,7 @@ VALUES ('Database Revision','https://cdn-icons-png.flaticon.com/512/20/20093.png
     <p class="c1 c2"><span class="c0"></span></p>
     <p class="c1"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 213.33px;"><img
-                alt="" src="images/image1.png"
+                alt="" src="https://github.com/Rusty-Hermansen/Portfolio-full/blob/main/React/src/posts/database%20revision/images/image1.png?raw=true"
                 style="width: 624.00px; height: 213.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1 c2"><span class="c0"></span></p>
@@ -1523,6 +1523,37 @@ VALUES ('Database Revision','https://cdn-icons-png.flaticon.com/512/20/20093.png
             easier to add posts and to find and fix any issues any post may have and will allow me to have greater
             velocity in the future. </span></p>
 ');
+
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('Adding a background image with a div in React','https://cdn-icons-png.flaticon.com/512/20/20093.png', '2021-11-21 10:23:54',
+'<p class="c1"><span class="c0">There are a number of ways of adding background images to your web pages or react
+            components. In this post I&rsquo;m going to go over how to easily do so using a div with inline CSS. </span>
+    </p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 453.33px;"><img
+                alt="" src="images/image2.png"
+                style="width: 624.00px; height: 453.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">Here is the snippet of code that I wanted to add a background image to this
+            particular page/component of my React portfolio application. The background image is added on line 35 with
+            Tailwind css classes that make the background fixed so it doesn&rsquo;t move as the user scrolls and that
+            also make it cover the entire viewport screen. </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 322.67px;"><img
+                alt="" src="images/image1.png"
+                style="width: 624.00px; height: 322.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">Here we can see in my Creating a Node/Express API with Database interaction post that
+            there is a nice background image with an opaque black overlay. </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1"><span class="c0">And there you have it, an easy way to add a background image to a page using a div
+            and inline CSS. </span></p>
+');
+
 
 
 
