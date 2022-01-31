@@ -46,5 +46,5 @@ const removeConfig = async (publicKey) =>{
 
 
 module.exports.dbService= {
-    addConfig, getConfigByName
+    addConfig, getConfigByName, removeConfig
 }
