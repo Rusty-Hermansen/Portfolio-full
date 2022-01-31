@@ -879,7 +879,7 @@ VALUES ('Postgres Joins','https://cdn-icons-png.flaticon.com/512/20/20093.png', 
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54'.
+VALUES ('React Input Validation','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
 '<p class="c1"><span class="c0">Being relatively new to the world of React.js and Javascript as well as an avid
             browser of the internet, I thought I&rsquo;d take a stab at making some good, basic form validation in React
             using useReducer, useEffect, and useContext. </span></p>
