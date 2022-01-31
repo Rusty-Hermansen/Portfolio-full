@@ -79,7 +79,7 @@ const getPeers = () => {
 
 const genConfigFile = (config) => {
     const path = `/home/rusty/clients/${config.name}/vpnconfig.conf`;
-    const cmd =  `echo "[Interface]"\
+    const cmd =  `echo "[Interface]
     PrivateKey = ${config.privateKey}
     Address = ${config.ipAddress}/24
     DNS = 8.8.8.8
@@ -87,7 +87,7 @@ const genConfigFile = (config) => {
     [Peer]
     PublicKey = ${config.vmPublicKey}
     AllowedIPs = ${config.ipRange}/0
-    Endpoint = 45.33.5.185:51820" /home/rusty/clients/${config.name}/vpnconfig.conf`
+    Endpoint = 45.33.5.185:51820" > /home/rusty/clients/${config.name}/vpnconfig.conf`
 
     execSync(
         cmd, {uid: 1000 }
