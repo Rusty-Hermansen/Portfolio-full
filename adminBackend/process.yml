@@ -3,10 +3,10 @@ apps:
     exec_mode: 'fork'
     name: 'admin'
     env:
-      DB_USER: "postgres"
+      DB_USER: "wg_admin"  #
       DB_HOST: "localhost"
       DB_NAME: "postgres"
-      DB_PASSWORD: "password"
+      DB_PASSWORD: "sleepyjackthefiredrill"
       DB_PORT: 5432
       API_PORT: 3000
 
