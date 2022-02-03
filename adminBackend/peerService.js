@@ -7,7 +7,7 @@ const genConfig = async (body) => {
     const config = {
         name: body.name.trim(),
         ipAddress: body.ipAddress.trim(),
-        ipRange: body.ipRange.trim(),
+        ipRange: '0.0.0.0/0'.trim(),
         publicKey: getPublicKey(body.name).toString().trim(),
         privateKey: getPrivateKey(body.name).toString().trim(),
         dateAdded: new Date()
