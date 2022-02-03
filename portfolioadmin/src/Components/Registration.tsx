@@ -8,14 +8,11 @@ type Props = {
 const Registration: FC<Props> = (props): JSX.Element => {
     const [name, setName] = useState<string>("");
     const [ipAddress, setIpAddress] = useState<string>("");
-    const [ipRange, setIpRange] = useState<string>("");
-    const [publicKey, setPublicKey] = useState<string>("");
-    const [privateKey, setPrivateKey] = useState<string>("");
+   
 
     const isFormValid = (
         name.trim().length > 0 && 
-        ipAddress.trim().length > 0 &&
-        ipRange.trim().length> 0 
+        ipAddress.trim().length > 0
      
     )
     
@@ -26,9 +23,7 @@ const Registration: FC<Props> = (props): JSX.Element => {
     const ipAddressChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
         setIpAddress(event.target.value);
     }
-    const ipRangeChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-        setIpRange(event.target.value);
-    }
+
 
     
 
@@ -39,7 +34,7 @@ const Registration: FC<Props> = (props): JSX.Element => {
                 name,
                 ipAddress,
                 dateAdded: new Date(),
-                ipRange
+                
                 
             }
             props.onSubmit(config);
@@ -54,9 +49,6 @@ const Registration: FC<Props> = (props): JSX.Element => {
         <br/>
         <label>IP Address</label>
         <input type="text" onChange={ipAddressChangeHandler} />
-        <br/>
-        <label>Allowed IP Range</label>
-        <input type="text" onChange={ipRangeChangeHandler} />
         <br/>
         <button type='submit'>Submit</button>
     </form>
