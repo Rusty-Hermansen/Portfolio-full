@@ -36,6 +36,8 @@ CREATE TABLE IF NOT EXISTS portfolio_post.post_tag(
     FOREIGN KEY (tag_id) REFERENCES portfolio_post.tag(id)
 );
 
+
+
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-logo_0.jpg', '2021-11-21 10:23:54','
         <p class="c1"><span class="c0">Progressing toward earning my Bachelors degree and being immersed in the world of

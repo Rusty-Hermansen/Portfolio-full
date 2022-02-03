@@ -74,6 +74,7 @@ services:
       POSTGRES_PASSWORD: password
     volumes:
       - ./postgres/admininit.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./postgres/newuser.sql:/docker-entrypoint-initdb.d/newuser.sql
 
 
  
