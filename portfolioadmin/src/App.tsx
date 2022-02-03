@@ -38,10 +38,13 @@ function App() {
     <>
     <Registration onSubmit={submitConfigHandler}/>
     <pre>{state}</pre>
+    <br/>
     <button type="button" onClick={restartClicked}>Restart Service</button>
-
+    <br/>
+    <hr/>
     <label>Enter the public key you want to remove from VPN:</label>
     <input type="text" onChange={peerChangeHandler}></input>
+    <br/>
     <button type="button" onClick={removePeerHandler}>Submit</button>
     </>
     

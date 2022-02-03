@@ -15,9 +15,8 @@ const Registration: FC<Props> = (props): JSX.Element => {
     const isFormValid = (
         name.trim().length > 0 && 
         ipAddress.trim().length > 0 &&
-        ipRange.trim().length> 0 &&
-        publicKey.trim().length>0 &&
-        privateKey.trim().length>0
+        ipRange.trim().length> 0 
+     
     )
     
 
@@ -30,12 +29,7 @@ const Registration: FC<Props> = (props): JSX.Element => {
     const ipRangeChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
         setIpRange(event.target.value);
     }
-    const publicKeyChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-        setPublicKey(event.target.value);
-    }
-    const privateKeyChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-        setPrivateKey(event.target.value);
-    }
+
     
 
     const submitHandler = (event: FormEvent) =>{
@@ -45,9 +39,8 @@ const Registration: FC<Props> = (props): JSX.Element => {
                 name,
                 ipAddress,
                 dateAdded: new Date(),
-                ipRange,
-                publicKey,
-                privateKey, 
+                ipRange
+                
             }
             props.onSubmit(config);
         }
@@ -58,14 +51,13 @@ const Registration: FC<Props> = (props): JSX.Element => {
     <form onSubmit={submitHandler}>
         <label>Client Name</label>
         <input type="text" onChange={nameChangeHandler}/>
+        <br/>
         <label>IP Address</label>
         <input type="text" onChange={ipAddressChangeHandler} />
+        <br/>
         <label>Allowed IP Range</label>
         <input type="text" onChange={ipRangeChangeHandler} />
-        <label>Client public key</label>
-        <input type="text" onChange={publicKeyChangeHandler} />
-        <label>Client private key</label>
-        <input type="text" onChange={privateKeyChangeHandler} />
+        <br/>
         <button type='submit'>Submit</button>
     </form>
     )
