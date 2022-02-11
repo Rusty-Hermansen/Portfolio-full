@@ -36,7 +36,7 @@ const SinglePost = () => {
             <section className="justify-center min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
                         <div className=" container text-white">
                             <div className="row">
-                            <h1 className="text-2xl text-white font-bold leading-none lg:leading-snug home-name">
+                            <h1 className="text-3xl text-white font-bold leading-none lg:leading-snug home-name">
                    <span className="text-yellow-600">{dbPost?.title?? ""}</span>
                 </h1>
                                
