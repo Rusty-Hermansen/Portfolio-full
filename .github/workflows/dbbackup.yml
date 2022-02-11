@@ -12,7 +12,7 @@ on:
 
 jobs:
   build: 
-    name: db_make_gibackup
+    name: db_make_backup
     runs-on: [self-hosted, db_make]
     steps: 
       - name: backup_database
