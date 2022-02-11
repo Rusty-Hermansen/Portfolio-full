@@ -6,6 +6,7 @@ const About = () => {
 
     return (
         <div className="bg-fixed bg-cover" style={{ backgroundImage: `url(${image})` }}>
+             <section className="relative flex justify-center min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
             <h2 className="text-yellow-600 pt-32">About Me</h2>
            
             <p className="text-gray-400 pt-10">
@@ -33,8 +34,7 @@ const About = () => {
 
 
             </p>
-
-            
+           </section>
 
         </div>
     )
