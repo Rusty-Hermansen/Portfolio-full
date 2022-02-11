@@ -11,7 +11,7 @@ on:
 jobs:
   build: 
     name: db_make_backup
-    runs-on: [self-hosted, db_make]
+    runs-on: [self-hosted, db_make_backup]
     steps: 
       - name: backup_database
         run: |
