@@ -19,6 +19,7 @@ jobs:
           docker exec portfolio_database pg_dumpall -c -U rusty > dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
   pull_backup:
     runs-on: [self-hosted, pull_backup]
+    needs: db_backup
     steps: 
       - name: pull backup
         run: |
@@ -28,6 +29,7 @@ jobs:
   cleanse:
     name: cleanse
     runs-on: [self-hosted, db_make_backup]
+    needs: pull_backup
     steps: 
       - name: cleanse
         run: |
