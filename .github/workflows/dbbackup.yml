@@ -1,4 +1,4 @@
-name: "db_backup"
+name: "db_make_backup"
 
 # on:
 #   schedule:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   build: 
-    name: db_backup
+    name: db_make_gibackup
     runs-on: [self-hosted, db_make]
     steps: 
       - name: backup_database
