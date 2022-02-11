@@ -7,8 +7,8 @@ const About = () => {
     return (
         <div className="bg-fixed bg-cover" style={{ backgroundImage: `url(${image})` }}>
              <section className="relative flex justify-center min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
-                 <div className="container">
-                      <h2 className="text-yellow-600 pt-32">About Me</h2>
+                 <div className="container bg-black bg-opacity-50">
+                      <h2 className="text-yellow-600 text-3xl">About Me</h2>
            
             <p className="text-gray-400 pt-10">
                 Ever since I was a small boy I have had a fascination with machines and cars in specific. I

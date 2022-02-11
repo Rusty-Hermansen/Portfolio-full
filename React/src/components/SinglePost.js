@@ -36,7 +36,10 @@ const SinglePost = () => {
             <section className="justify-center min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
                         <div className=" container text-white">
                             <div className="row">
-                                <h1>{dbPost?.title?? ""}</h1>
+                            <h1 className="text-2xl text-white font-bold leading-none lg:leading-snug home-name">
+                   <span className="text-yellow-600">{dbPost?.title?? ""}</span>
+                </h1>
+                               
                                 <div className="col-12 p-5 bg-white bg-opacity-50">
                                     {parse(dbPost?.post ?? "")}
                                 </div>
