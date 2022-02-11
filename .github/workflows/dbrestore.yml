@@ -1,0 +1,24 @@
+name: "restore_db"
+
+on: 
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Enter date of backup to restore"
+        required: true
+
+jobs: 
+  get_restore_file: 
+    name: get_backup_file
+    runs-on: [self-hosted, pull_backup]
+    steps:
+      - name: get_file
+        run: |
+          scp /home/rusty/backups/dump_${{github.event.inputs.date}}.sql rusty@10.200.30.1:/home/rusty/backups/restore.sql
+  db_restore:
+    name: restore
+    runs-on: [self-hosted, backup]
+    steps:
+      - name: restore
+        run: |
+          docker exec -i portfolio_database pg_restore -U rusty -c -v -d postgres < /home/rusty/restore/restore.sql
