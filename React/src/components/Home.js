@@ -27,21 +27,18 @@ const Home = () =>{
                 abilities and taking pride in my work. I also believe that we as people lift each other up, we all have our own individual 
                 strengths and we can help each other become stronger in areas that we may be weak in. If we all lift those around us, we all become excellent together. 
                     </p>
-
-            
                     </div>
-                
                </div>
            
                
-                
-            </section>
-               <div data-testid="resume" className="flex justify-center pt-8 bg-opacity-75 min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
+                 <div data-testid="resume" className="flex justify-center pt-8 bg-opacity-75 min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
                 <Document file={resume} onItemClick={onItemClick}>
                     <Outline onItemClick={onItemClick} />
                     <Page pageNumber={page || 1} />
                 </Document>
             </div>
+            </section>
+              
         </div>
     )
 }
