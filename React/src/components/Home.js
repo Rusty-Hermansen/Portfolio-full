@@ -14,7 +14,7 @@ const Home = () =>{
     return(
         <div className="bg-fixed bg-cover" style={{backgroundImage: `url(${image})`}}>
             <section className="relative flex justify-center min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
-                <div className="container">
+                <div className="container bg-black bg-opacity-75">
                     <div className="col-12">
                         <h1 className="text-6xl text-white font-bold leading-none lg:leading-snug home-name">
                     Hi, I'm <span className="text-yellow-600">Rusty!</span>
