@@ -15,7 +15,7 @@ jobs:
     runs-on: [self-hosted, pull_backup]
     steps: 
       - name: pull backup
-        run: 
+        run: |
           sudo wg-quick up rustyvpn
           file_to_copy =`ssh`
           sudo scp root@10.200.30.1:/home/rusty/backups/* /home/rusty/backups
