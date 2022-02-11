@@ -8,9 +8,9 @@ const About = () => {
         <div className="bg-fixed bg-cover" style={{ backgroundImage: `url(${image})` }}>
              <section className="relative flex justify-center min-h-screen pt-12 lg:pt-36 px-8 bg-black bg-opacity-75">
                  <div className="container bg-black bg-opacity-50">
-                      <h2 className="text-yellow-600 text-3xl">About Me</h2>
+                      <h2 className="text-yellow-600 text-3xl py-2 px-3 font-bold">About Me</h2>
            
-            <p className="text-gray-400 pt-10">
+            <p className="text-gray-400 px-3 pt-10">
                 Ever since I was a small boy I have had a fascination with machines and cars in specific. I
                 got my very first car right after high school, a beautiful 1990 Mustang GT. That was the fastest
                 car that I had ever been in. After I got a good taste of the performance that it had to offer I
