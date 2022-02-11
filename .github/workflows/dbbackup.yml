@@ -1,0 +1,14 @@
+name: "db_backup"
+
+on:
+  schedule:
+    - cron: "0 10 * * 1" 
+
+jobs:
+  build: 
+    name: db_backup
+    runs-on: self-hosted
+    steps: 
+      - name: backup database
+        run: 
+          docker exec -t portfolio_database pg_dumpall -c -U postgres  dump_`date +`%m-%d-%Y"_"%H_%M_%S`.sql
