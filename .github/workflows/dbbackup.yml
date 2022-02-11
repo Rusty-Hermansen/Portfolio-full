@@ -9,7 +9,7 @@ on:
     branches: [main]
 
 jobs:
-  build: 
+  db_make_backup: 
     name: db_make_backup
     runs-on: [self-hosted, db_make_backup]
     steps: 
