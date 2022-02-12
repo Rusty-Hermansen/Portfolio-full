@@ -18,7 +18,7 @@ jobs:
   db_restore:
     name: restore
     runs-on: [self-hosted, backup]
-    needs: [get_backup_file]
+    needs: [get_restore_file]
     steps:
       - name: restore
         run: |
