@@ -14,7 +14,9 @@ jobs:
     steps:
       - name: get_file
         run: |
+          sudo wg-quick up rustyvpn
           scp /home/rusty/backups/dump_${{github.event.inputs.date}}.sql root@10.200.30.1:/home/rusty/restore/restore.sql
+          sudo wg-quick down rustyvpn
   db_restore:
     name: restore
     runs-on: [self-hosted, backup]
