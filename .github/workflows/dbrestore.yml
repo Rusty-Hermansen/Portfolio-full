@@ -18,7 +18,9 @@ jobs:
   db_restore:
     name: restore
     runs-on: [self-hosted, backup]
+    needs: [get_backup_file]
     steps:
       - name: restore
         run: |
           docker exec -i portfolio_database pg_restore -U rusty -c -v -d postgres < /home/rusty/restore/restore.sql
+
