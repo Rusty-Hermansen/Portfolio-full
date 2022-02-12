@@ -1,8 +1,13 @@
 name: "db_make_backup"
 
-on:
-  schedule:
-    - cron: "*/1 * * * *" 
+# on:
+#   schedule:
+#     - cron: "*/1 * * * *" 
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   db_backup: 
