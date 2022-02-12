@@ -1,12 +1,8 @@
 name: "db_make_backup"
 
-# on:
-#   schedule:
-#     - cron: "*/1 * * * *" 
-
-on: 
-  push:
-    branches: [main]
+on:
+  schedule:
+    - cron: "*/1 * * * *" 
 
 jobs:
   db_backup: 
@@ -23,6 +19,7 @@ jobs:
     steps: 
       - name: pull backup
         run: |
+          find /home/rusty/backups/ -mtime +30 -name '*.sql' -exec rm -rf {} \;
           sudo wg-quick up rustyvpn
           scp root@10.200.30.1:/home/rusty/backups/* /home/rusty/backups
           sudo wg-quick down rustyvpn

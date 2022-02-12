@@ -24,5 +24,4 @@ jobs:
     steps:
       - name: restore
         run: |
-          docker exec -i portfolio_database pg_restore -U rusty -c -v -d postgres < /home/rusty/restore/restore.sql
-
+          docker exec -i portfolio_database pg_restore -U rusty -c -v -d -Ft postgres < /home/rusty/restore/restore.sql
