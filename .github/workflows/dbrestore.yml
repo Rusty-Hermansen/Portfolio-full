@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: get_file
         run: |
-          scp /home/rusty/backups/dump_${{github.event.inputs.date}}.sql root@10.200.30.1:/home/rusty/backups/restore.sql
+          scp /home/rusty/backups/dump_${{github.event.inputs.date}}.sql root@10.200.30.1:/home/rusty/restore/restore.sql
   db_restore:
     name: restore
     runs-on: [self-hosted, backup]
