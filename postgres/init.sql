@@ -1556,6 +1556,22 @@ VALUES ('Adding a background image with a div in React','https://upload.wikimedi
             and inline CSS. </span></p>
 ');
 
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('Using Google for Authentification in React','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
+'
+');
+
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('Combatting SQL Injection With Parameterized Queries in Postgres','https://wiki.postgresql.org/images/3/30/PostgreSQL_logo.3colors.120x120.png', '2021-11-21 10:23:54',
+'
+');
+
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('Uploading and Displaying Image From an S3 Bucket in React','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
+'
+');
+
+
 
 
 
