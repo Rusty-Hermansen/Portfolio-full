@@ -1,8 +1,7 @@
-import React, { ChangeEvent, useEffect,useState } from 'react';
+import { ChangeEvent, useEffect,useState } from 'react';
 import { useDispatch } from 'react-redux';
 import ClientConfig from '../Models/clientConfig';
-import apiService from '../services/apiService';
-import './App.css';
+
 import { StoreDistpatch } from '../store';
 import { addConfig, getStatus, restartService, removePeer} from '../store/client-config-slice'
 import Registration from '../Components/Registration';
