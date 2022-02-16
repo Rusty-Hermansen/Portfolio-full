@@ -9,8 +9,8 @@ const pool = new Pool({
 })
 
 const addConfig = async (config) => {
-    const res= await pool.query(
-    `INSERT INTO wireguard.client (
+    const res = await pool.query(
+        `INSERT INTO wireguard.client (
         client_name, 
         client_ip_address, 
         client_allowed_ip_address_range, 
@@ -20,7 +20,7 @@ const addConfig = async (config) => {
         RETURNING *`,
         [config.name, config.ipAddress, config.ipRange, config.publicKey, config.privateKey, config.dateAdded]
     );
-    const data =  res.rows[0];
+    const data = res.rows[0];
     return {
         name: data.client_name,
         ipAddress: data.client_ip_address,
@@ -31,20 +31,30 @@ const addConfig = async (config) => {
     }
 }
 
-const getConfigByName = async(name) => {
+const getConfigByName = async (name) => {
     const res = await pool.query(
         `select * from wireguard.client where name=$1;`,
         [config.name]
     )
     return res.rows;
 }
-const removeConfig = async (publicKey) =>{
+const removeConfig = async (publicKey) => {
     const res = await pool.query(`
     DELETE FROM wireguard.client 
     WHERE client_public_key= $1` , [publicKey])
 }
 
+const addUser = async (username, hash, saltrounds) => {
+    await pool.query(`
+    INSERT INTO wireguard.user(
+        user_username,
+        user_password,
+        user_salt)
+        VALUES ($1, $2, $3)`,
+        [username, hash, salt])
+}
 
-module.exports.dbService= {
-    addConfig, getConfigByName, removeConfig
+
+module.exports.dbService = {
+    addConfig, getConfigByName, removeConfig, addUser
 }

@@ -63,6 +63,18 @@ app.get('api/wgservice/peers', (req,res) => {
     }
 })
 
+app.post('api/user/adduser', async (req, res) => {
+    try {
+        console.log(req.body);
+        userService.addUser(req.body.user)
+    }
+    catch(ex){
+        res.sendStatus(500)
+    }
+})
+
+
+
 app.listen(process.env.API_PORT, () => {
     console.log("runnign at wireguard:3000")
 })
