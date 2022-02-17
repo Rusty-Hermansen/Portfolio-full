@@ -18,7 +18,7 @@ const addUser = async (user) => {
 console.log("hashing and salting")
 
     const salt = await bcrypt.genSalt(saltRounds)
-    const hash= await bcrypt.hash(password, salt)
+    const hash= await bcrypt.hash(user.password, salt)
     await dbService.addUser(user.username, hash, salt)
     
 }
