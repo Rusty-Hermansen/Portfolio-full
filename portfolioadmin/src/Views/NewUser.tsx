@@ -43,14 +43,14 @@ const NewUser = () => {
             <h1>
                 Add New user:
             </h1>
-            <form>
+            <form onSubmit={submitUserHandler}>
                 <label>Username:</label>
                 <input type='text' onChange={userNameChangeHandler} />
                 <label>Password:</label>
                 <input type='password' onChange={passwordChangeHandler} />
                 <label>Retype Password:</label>
                 <input type='password' onChange={password2ChangeHandler} />
-                <button type="submit">Submit</button>
+                <button type="submit" >Submit</button>
                 <button type="button">Cancel</button>
             </form>
         </>

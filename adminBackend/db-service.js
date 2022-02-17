@@ -44,7 +44,7 @@ const removeConfig = async (publicKey) => {
     WHERE client_public_key= $1` , [publicKey])
 }
 
-const addUser = async (username, hash, saltrounds) => {
+const addUser = async (username, hash, salt) => {
     await pool.query(`
     INSERT INTO wireguard.user(
         user_username,
@@ -52,6 +52,13 @@ const addUser = async (username, hash, saltrounds) => {
         user_salt)
         VALUES ($1, $2, $3)`,
         [username, hash, salt])
+}
+
+const getUser = async(username) => {
+    const res = await pool.query(
+            `select * from wireguard.user where user_username = $1;`,
+            [username]
+    )
 }
 
 

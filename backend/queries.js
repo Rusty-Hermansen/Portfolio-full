@@ -56,4 +56,5 @@ const deletePost = (request, response) => {
 
 }
 
+
 module.exports.queries = { getPostById, getPosts, addPost, updatePost, deletePost };

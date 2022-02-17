@@ -20,7 +20,7 @@ const addUser = async (user) => {
         })
     })
 
-
+    
 }
 
 module.exports.userService = {

@@ -20,6 +20,7 @@ function App() {
         <Route component={About} path='/about'></Route>
         <Route component={SinglePost} path='/singlepost/:id'></Route>
         <Route component={Post} path='/posts'></Route>
+        <Route component={} path='/login'></Route>
       </Switch>
 
     </Suspense>
