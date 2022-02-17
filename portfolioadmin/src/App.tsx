@@ -8,12 +8,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element = {Wireguard}/>      
-        <Route path='/newuser' element={NewUser}/>
+        <Route path='/' element = {<Wireguard/>}/>      
+        <Route path='/newuser' element={<NewUser/>}/>
     </Routes>
-
-    <Wireguard/>
-    <NewUser/>
+    
     </div>
     
   );
