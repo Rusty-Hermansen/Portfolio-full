@@ -21,6 +21,13 @@ app.get('/api/posts', async (req, res)=>{
     res.json(await queries.getPosts())
 })
 
+app.post('/api/auth/login', async(req, res) => {
+    res.cookie("auth", "test", {sameSite: 'strict', httpOnly: true})
+    res.sendStatus(200);
+  
+
+})
+
 app.listen(5000, ()=>{
     console.log("Listening on port 5000")
 });
