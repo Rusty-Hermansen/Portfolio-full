@@ -4,7 +4,7 @@ const saltRounts = 100;
 
 
 const addUser = async (user) => {
-    console.log("in adduser")
+    console.log("in addUser service")
     if (
         !user ||
         !user.username ||
