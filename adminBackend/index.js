@@ -55,7 +55,7 @@ app.get('/api/wgservice/restart', async (req, res) => {
     }
 })
 
-app.get('api/wgservice/peers', (req,res) => {
+app.get('/api/wgservice/peers', (req,res) => {
     try {
         res.send(peerService.getPeers());
     }
@@ -64,7 +64,7 @@ app.get('api/wgservice/peers', (req,res) => {
     }
 })
 
-app.post('api/user/adduser', async (req, res) => {
+app.post('/api/user/adduser', async (req, res) => {
     console.log("in index");
     try {
         console.log(req.body);
