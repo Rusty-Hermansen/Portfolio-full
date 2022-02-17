@@ -68,7 +68,7 @@ app.post('api/user/adduser', async (req, res) => {
     console.log("attempting to adduser");
     try {
         console.log(req.body);
-        userService.addUser(req.body.user)
+        await userService.addUser(req.body.user)
     }
     catch(ex){
         res.sendStatus(500)
