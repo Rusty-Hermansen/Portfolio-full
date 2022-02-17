@@ -64,7 +64,7 @@ app.get('api/wgservice/peers', (req,res) => {
     }
 })
 
-app.post('api/user/adduser', async (req, res) => {
+app.post('/api/user/adduser', async (req, res) => {
     console.log("attempting to adduser");
     try {
         console.log(req.body);
