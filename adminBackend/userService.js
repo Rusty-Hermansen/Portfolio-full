@@ -7,10 +7,10 @@ const addUser = async (user) => {
     console.log("in addUser service")
     if (
         !user ||
-        !user.username ||
-        !user.password ||
-        !user.password2 ||
-        user.userName.trim().length < 5 ||
+        !(user.username) ||
+        !(user.password) ||
+        !(user.password2) ||
+        user.username.trim().length < 5 ||
         user.password.trim().length < 8 ||
         user.passowrd !== user.password2) {
         throw 400;
