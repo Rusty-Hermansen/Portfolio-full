@@ -4,6 +4,7 @@ const saltRounts = 100;
 
 
 const addUser = async (user) => {
+    console.log("in adduser")
     if (
         !user?.username ||
         !user?.password ||
@@ -13,9 +14,10 @@ const addUser = async (user) => {
         user.passowrd !== user.password2) {
         throw 400;
     }
-
+console.log("hashing and salting")
     bcrypt.genSalt(saltRounds, (err, salt) => {
         bcrypt.hash(password, salt, (err, hash) => {
+            console.log("attempting to add user to the database")
             dbService.addUser(user.username, hash, salt )
         })
     })
