@@ -11,4 +11,4 @@ const authService = {
     signIn
 }
 
-export const authService
+export default authService;
