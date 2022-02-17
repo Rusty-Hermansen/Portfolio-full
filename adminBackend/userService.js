@@ -4,7 +4,7 @@ const saltRounts = 100;
 
 
 const addUser = async (user) => {
-    console.log("in addUser service")
+    console.log("in addUser service ", user)
     if (
         !user ||
         !(user.username) ||
@@ -12,7 +12,7 @@ const addUser = async (user) => {
         !(user.password2) ||
         user.username.trim().length < 5 ||
         user.password.trim().length < 8 ||
-        user.passowrd !== user.password2) {
+        user.passowrd != user.password2) {
         throw 400;
     }
 console.log("hashing and salting")
