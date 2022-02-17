@@ -72,6 +72,7 @@ app.post('/api/user/adduser', async (req, res) => {
     }
     catch(ex){
         res.sendStatus(500)
+        console.error("exception", ex)
     }
 })
 
