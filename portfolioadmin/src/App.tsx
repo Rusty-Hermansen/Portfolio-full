@@ -9,7 +9,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element = {Wireguard}
-/>      <Route path='/'element={NewUser}/>
+/>      <Route path='/newuser'element={NewUser}/>
     </Routes>
     </div>
     

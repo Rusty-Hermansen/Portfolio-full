@@ -79,13 +79,3 @@ app.post('api/user/adduser', async (req, res) => {
 app.listen(process.env.API_PORT, () => {
     console.log("runnign at wireguard:3000")
 })
-//TODO
-//get last config.name and return result.rows[0]
-//wg set wgvpn.conf peer pulled.publickey allowed ips pulled.allowedips
-//wg set wgvpn.conf peer --remove pulled.publickey allowed ips pulled.allowedips
-//generate client config file for download
-//vpn_ip = process.env.whatevs
-//Handlebars.compile(template file)
-//template({VPN_IP: procaess.whetevs})
-// /peer.name/config
-//res.sendfile(peer.name/config)
