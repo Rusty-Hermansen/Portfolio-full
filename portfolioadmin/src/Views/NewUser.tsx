@@ -57,4 +57,4 @@ const NewUser = () => {
     )
 
 }
-export default NewUser
+export default NewUser;
