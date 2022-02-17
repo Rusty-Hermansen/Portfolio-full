@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const { dbService } = require('./db-service');
-const saltRounts = 100;
+const saltRounds = 17;
 
 
 const addUser = async (user) => {
