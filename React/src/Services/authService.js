@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = '/api/auth'
+const apiUrl = '/api/auth'
 
 const signIn = async(username, password) => {
     const res = await axios.post(apiUrl + '/validate', {username, password})
