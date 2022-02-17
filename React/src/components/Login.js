@@ -1,5 +1,5 @@
 import { FC, useState, FormEvent, ChangeEvent } from 'react';
-import { authService } from '../Services/authService';
+import  authService from '../Services/authService';
 
 
 
