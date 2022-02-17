@@ -4,8 +4,8 @@ import  authService from '../Services/authService';
 
 
 const Login = () => {
-    const [username, setUserName] = useState<string>('');
-    const [password, setPassword] = useState<string>('');
+    const [username, setUserName] = useState('');
+    const [password, setPassword] = useState('');
   
 
 
