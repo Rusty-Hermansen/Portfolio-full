@@ -13,6 +13,7 @@ const getUser = async(username) => {
             `select * from wireguard.user where user_username = $1;`,
             [username]
     )
+    return res.rows[0];
 }
 
 
