@@ -46,10 +46,10 @@ app.post('/api/auth/login', async (req, res) => {
     var user_id = req.body.user_id;
 
     const dbResult = await authDbService.getUser(username)
-
+    console.log(dbResult)
     const isVerified = bcrypt.compare(password, dbResult.password)
     if (isVerified) {
-        const session_user = await queries.storeSession(sid, user_id);
+        const session_user = await queries.storeSession(sid, dbResult.user_id);
         current_session.secret = sid;
         app.use(session(current_session))
         res.username = session_user
