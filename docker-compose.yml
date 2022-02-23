@@ -50,6 +50,11 @@ services:
     environment: 
       DB_HOST: db
       DB_PORT: 5432
+      PF_USER: pf_user
+      PF_PASSWORD: iliveinspaceomicron
+      WG_DB_HOST: localhost
+      WG_DB: rusty
+      WG_PORT: 7000
     env_file:
       - ./backend/.env
     depends_on: 
