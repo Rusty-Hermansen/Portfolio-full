@@ -30,7 +30,7 @@ const Login = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         authService.signIn(username, password)
-        axios.post('/api/auth.login', {username, password})
+        axios.post('/api/auth/login', {username, password})
         .then (r => console.log('success', r))
         .catch(err => console.error(err))
     }
