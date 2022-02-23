@@ -1,6 +1,7 @@
 const express = require('express')
 const { queries } = require('./queries')
 const dotenv = require('dotenv')
+var bcrypt = require('bcrypt')
 var cookieParser = require('cookie-parser')
 var session = require('express-session')
 const { authDbService } = require('./authDbService')
