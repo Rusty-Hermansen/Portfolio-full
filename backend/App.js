@@ -47,7 +47,7 @@ app.post('/api/auth/login', async (req, res) => {
 
     const dbResult = await authDbService.getUser(username)
     console.log(dbResult)
-    const hash = bcrypt.hash(password, dbResult.user_salt)
+    const hash = await bcrypt.hash(password, dbResult.user_salt)
     console.log(hash)
     if (hash === dbResult.user_password) {
         const session_user = await queries.storeSession(sid, dbResult.user_id);
