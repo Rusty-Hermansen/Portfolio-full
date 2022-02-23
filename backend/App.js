@@ -45,7 +45,6 @@ app.post('/api/auth/login', async (req, res) => {
     var sid = req.sessionID;
     var user_id = req.body.user_id;
 
-    res.sendStatus(200);
     const dbResult = await authDbService.getUser(username)
 
     const isVerified = bcrypt.compare(password, dbResult.password)
@@ -55,6 +54,7 @@ app.post('/api/auth/login', async (req, res) => {
         app.use(session(current_session))
         res.username = session_user
         ///more session stuff
+        res.send(200)
 
     }
     else {
