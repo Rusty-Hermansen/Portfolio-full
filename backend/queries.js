@@ -59,21 +59,22 @@ const deletePost = (request, response) => {
 
 
 
-const storeSession = async (request, response) => {
+const storeSession = async (session_id, user_id) => {
     const res = await pool.query(`
     INSERT INTO portfolio_post.session(session_id, user_id) VALUES ($1, $2) returning user_id;`,
     [session_id, user_id])
 }
 
-const deleteSession = async (request, response) => {
+const deleteSession = async (user_id) => {
     const res = await pool.query(`
     DELETE FROM portfolio_post.session WHERE user_id = $1;
     `,[user_id])
 }
 
-const getSession = async (request, response) => {
+const getSession = async (user_id) => {
     const res = await pool.query(
-        `SELECT * FROM portfolio_post.session WHERE user_id = $1;`
+        `SELECT * FROM portfolio_post.session WHERE user_id = $1;`,
+        [user_id]
     )
 }
 module.exports.queries = { getPostById, getPosts, storeSession, deleteSession, getSession };
