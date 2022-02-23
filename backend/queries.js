@@ -56,7 +56,7 @@ const deletePost = (request, response) => {
 
 }
 
-const getPassword = (request, resp)
+
 
 
 const storeSession = async (request, response) => {
