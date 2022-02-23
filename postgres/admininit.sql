@@ -18,5 +18,5 @@ CREATE TABLE IF NOT EXISTS wireguard.user (
     user_id SERIAL PRIMARY KEY, 
     user_username VARCHAR(80) UNIQUE NOT NULL,
     user_password TEXT NOT NULL,
-    user_salt TEXT NOT NULL
+    user_salt TEXT NOT NULL,
 );

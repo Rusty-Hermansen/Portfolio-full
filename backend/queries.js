@@ -56,5 +56,24 @@ const deletePost = (request, response) => {
 
 }
 
+const getPassword = (request, resp)
 
-module.exports.queries = { getPostById, getPosts, addPost, updatePost, deletePost };
+
+const storeSession = (request, response) => {
+    const res = await pool.query(`
+    INSERT INTO portfolio_post.session(session_id, user_id) VALUES ($1, $2) returning user_id;`,
+    [session_id, user_id])
+}
+
+const deleteSession = (request, response) => {
+    const res = await pool.query(`
+    DELETE FROM portfolio_post.session WHERE user_id = $1;
+    `,[user_id])
+}
+
+const getSession = (request, response) => {
+    const res = pool.query(
+        `SELECT * FROM portfolio_post.session WHERE user_id = $1;`
+    )
+}
+module.exports.queries = { getPostById, getPosts, storeSession, deleteSession, getSession };

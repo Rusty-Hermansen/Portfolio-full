@@ -10,31 +10,37 @@ CREATE TABLE IF NOT EXISTS portfolio_post.post(
     post_content TEXT
 );
 
-CREATE TABLE IF NOT EXISTS portfolio_post.category(
-    id SERIAL PRIMARY KEY,
-    category VARCHAR(40)
+CREATE TABLE IF NOT EXISTS portfolio_post.session(
+        ID SERIAL PRIMARY KEY,
+        session_id VARCHAR(120),
+        user_id INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS portfolio_post.tag(
-    id SERIAL PRIMARY KEY, 
-    tag VARCHAR(40)
-);
+-- CREATE TABLE IF NOT EXISTS portfolio_post.category(
+--     id SERIAL PRIMARY KEY,
+--     category VARCHAR(40)
+-- );
 
-CREATE TABLE IF NOT EXISTS portfolio_post.post_category(
-    id SERIAL PRIMARY KEY, 
-    post_id INT,
-    category_id INT,
-    FOREIGN KEY (post_id) REFERENCES portfolio_post.post(id),
-    FOREIGN KEY (category_id) REFERENCES portfolio_post.category(id)
-);
+-- CREATE TABLE IF NOT EXISTS portfolio_post.tag(
+--     id SERIAL PRIMARY KEY, 
+--     tag VARCHAR(40)
+-- );
 
-CREATE TABLE IF NOT EXISTS portfolio_post.post_tag(
-    id SERIAL PRIMARY KEY,
-    post_id INT, 
-    tag_id INT,
-    FOREIGN KEY (post_id) REFERENCES portfolio_post.post(id),
-    FOREIGN KEY (tag_id) REFERENCES portfolio_post.tag(id)
-);
+-- CREATE TABLE IF NOT EXISTS portfolio_post.post_category(
+--     id SERIAL PRIMARY KEY, 
+--     post_id INT,
+--     category_id INT,
+--     FOREIGN KEY (post_id) REFERENCES portfolio_post.post(id),
+--     FOREIGN KEY (category_id) REFERENCES portfolio_post.category(id)
+-- );
+
+-- CREATE TABLE IF NOT EXISTS portfolio_post.post_tag(
+--     id SERIAL PRIMARY KEY,
+--     post_id INT, 
+--     tag_id INT,
+--     FOREIGN KEY (post_id) REFERENCES portfolio_post.post(id),
+--     FOREIGN KEY (tag_id) REFERENCES portfolio_post.tag(id)
+-- );
 
 
 
