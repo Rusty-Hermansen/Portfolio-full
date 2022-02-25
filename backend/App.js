@@ -44,7 +44,7 @@ app.post('/api/auth/login', async (req, res) => {
         }
         const session_id = uuid()
         console.log("session " + session_id)
-        const time = Date.now();
+        const time = new Date();
         console.log("time " + time)
         time.setHours( time.getHours() + 2 );
         console.log("time added " + time);
