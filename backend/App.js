@@ -44,7 +44,7 @@ app.post('/api/auth/login', async (req, res) => {
         }
         const session_id = uuid()
         console.log("session " + session_id)
-        const time = date.now();
+        const time = Date.now();
         time.setHours( time.getHours() + 2 );
         await queries.storeSession(session_id, dbResult.user_id, time);
         res.cookie("session_id", session_id, { sameSite: 'strict', httpOnly: true })
