@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS portfolio_post.post(
 CREATE TABLE IF NOT EXISTS portfolio_post.session(
         ID SERIAL PRIMARY KEY,
         session_id VARCHAR(120),
-        user_id INT NOT NULL
+        user_id INT NOT NULL,
+        session_expiration TIMESTAMP NOT NULL
 );
 
 -- CREATE TABLE IF NOT EXISTS portfolio_post.category(
