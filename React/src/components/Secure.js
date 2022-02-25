@@ -1,26 +1,21 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 const Secure = () => {
     const [userName, setUserName] = useState('')
 
 
     useEffect(() => {
-        let history = useHistory();
+
         axios.get('/api/auth/secure', { withCredentials: true })
             .then(r => {
                 console.log(r)
-                if (r.response.status === 301) {
-                    history.push("/login")
-                }
-
-                setUserName(r.data)
+                if (r.response.status !== 301) {
+                    setUserName(r.data)
+                }    
             })
             .catch(err => {
                 console.error(err)
-                if (err.response?.status === 301) {
-                    history.push("/login")
-                }
             })
     }, [])
 
@@ -32,7 +27,7 @@ const Secure = () => {
     else {
         return (
             <div>
-
+                <Redirect to="/login"></Redirect>
             </div>)
     }
 }
