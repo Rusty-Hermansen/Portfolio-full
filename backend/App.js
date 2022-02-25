@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 const { authDbService } = require('./authDbService');
 const { uuid } = require('uuidv4');
+const { dbService } = require('../adminBackend/db-service');
 const cookieAge = 15 * 60 * 1000
 dotenv.config()
 const app = express();
@@ -18,9 +19,7 @@ app.get('/', async (req, res) => {
     res.send("hello!")
 })
 app.get('/api/posts/:postid', async (req, res) => {
-    console.log(req.params.postid);
     const response = await queries.getPostById(req.params.postid)
-    console.log(response)
     res.json(response)
 
 })
@@ -34,21 +33,16 @@ app.post('/api/auth/login', async (req, res) => {
     const password = req.body.password;
 
     const dbResult = await authDbService.getUser(username)
-    console.log("dbResult "+ dbResult);
     const hash = await bcrypt.hash(password, dbResult.user_salt)
 
     if (hash === dbResult.user_password) {
-        res.cookie("auth", "test", { sameSite: 'strict', httpOnly: true })
         const existing_session = await queries.getSession(dbResult.user_id);
         if (existing_session) {
             await deleteSession(dbSession.user_id);
         }
         const session_id = uuid()
-        console.log("session " + session_id)
         const time = new Date();
-        console.log("time " + time)
         time.setHours( time.getHours() + 2 );
-        console.log("time added " + time);
         await queries.storeSession(session_id, dbResult.user_id, time);
         res.cookie("session_id", session_id, { sameSite: 'strict', httpOnly: true })
         res.send(200)
@@ -60,16 +54,17 @@ app.post('/api/auth/login', async (req, res) => {
 })
 
 app.get('/api/auth/secure', async (req, res) => {
-    const dbSession = queries.getSession(req.user_id)
-    if (dbSession.session_id === req.cookies.session_id) {
-        res.user_username
-    }
-    else {
+    const dbSession = queries.getSessionBySessionId(req.cookies.session_id);
+    if (!dbSession) {
         res.sendStatus(301);
     }
-
-
-    res.username = dbUser.user_username;
+    if((new Date(dbSession.session_expiration)).getTime() < (new Date()).getTime()){
+        return res.sendStatus(301)
+    }
+    else{
+        const response = authDbService.getUserById(dbSession.user_id);
+        res.send(response.user_username);
+    }
 })
 
 app.get('/api/auth/logout', async (req, res) => {

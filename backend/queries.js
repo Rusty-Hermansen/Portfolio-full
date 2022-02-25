@@ -77,4 +77,18 @@ const getSession = async (user_id) => {
         [user_id]
     )
 }
-module.exports.queries = { getPostById, getPosts, storeSession, deleteSession, getSession };
+
+const getSessionBySessionId = async (session_id) => {
+    const res = await pool.query(
+        `SELECT * FROM portfolio_post.session WHERE session_id = $1;`,
+        [session_id]
+    )
+}
+module.exports.queries = {
+     getPostById, 
+     getPosts, 
+     storeSession, 
+     deleteSession, 
+     getSession,
+     getSessionBySessionId
+     };
