@@ -59,7 +59,7 @@ const deletePost = (request, response) => {
 
 
 
-const storeSession = async (session_id, user_id) => {
+const storeSession = async (session_id, user_id, session_expiration) => {
     const res = await pool.query(`
     INSERT INTO portfolio_post.session(session_id, user_id, session_expiration) VALUES ($1, $2, $3) returning user_id;`,
     [session_id, user_id, session_expiration])
