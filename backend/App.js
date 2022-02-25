@@ -34,6 +34,7 @@ app.post('/api/auth/login', async (req, res) => {
     const password = req.body.password;
 
     const dbResult = await authDbService.getUser(username)
+    console.log("dbResult "+ dbResult);
     const hash = await bcrypt.hash(password, dbResult.user_salt)
 
     if (hash === dbResult.user_password) {
