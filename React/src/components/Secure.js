@@ -1,11 +1,12 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 const Secure = () => {
 const [userName, setUserName] = useState('')
-const history = useHistory();
+
 
 useEffect(() => {
+let history = useHistory();
  axios.get('/api/auth/secure', {withCredentials: true})
  .then(r => {
      console.log(r)

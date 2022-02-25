@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 const { authDbService } = require('./authDbService');
 const { uuid } = require('uuidv4');
-dotenv.config()
+dotenv.config();
 const app = express();
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
