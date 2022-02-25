@@ -9,7 +9,7 @@ useEffect(() => {
  .catch(err => {
      console.error(err)
      if (err.response?.status===301){
-         history.pushState("*/")
+         history.pushState("/login")
      }
  })
 }, [])
