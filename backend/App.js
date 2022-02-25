@@ -6,8 +6,6 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 const { authDbService } = require('./authDbService');
 const { uuid } = require('uuidv4');
-const { dbService } = require('../adminBackend/db-service');
-const cookieAge = 15 * 60 * 1000
 dotenv.config()
 const app = express();
 app.use(express.urlencoded({ extended: true }))
