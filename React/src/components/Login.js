@@ -62,7 +62,7 @@ const Login = () => {
         )
     }
     else {
-        setUserName(null);
+        setUserName(undefined);
         return(
             <button onClick={logoutHandler}>Logout</button>
         )
