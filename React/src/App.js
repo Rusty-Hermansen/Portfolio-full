@@ -8,6 +8,7 @@ const About = React.lazy(()=> import('./components/About'))
 const Post = React.lazy(()=> import('./components/Post'))
 const SinglePost = React.lazy(()=> import('./components/SinglePost'))
 const Login = React.lazy(()=>import('./components/Login'))
+const Secure = React.lazy(()=>import('./components/Secure'))
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route component={SinglePost} path='/singlepost/:id'></Route>
         <Route component={Post} path='/posts'></Route>
         <Route component={Login} path='/login'></Route>
+        <Route component={Secure} path='/secure'></Route>
       </Switch>
 
     </Suspense>
