@@ -39,7 +39,7 @@ const Login = () => {
         event.preventDefault();
         setUserName('');
         setPassword('');
-        document.cookie = "";
+        document.cookie = "session_id =;";
         axios.get('/api/auth/logout', {withCredentials: true});
 
     }
