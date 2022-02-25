@@ -44,7 +44,7 @@ const Login = () => {
 
     }
 
-    if (!username) {
+    if (username.trim().length === 0) {
         return (
             <>
                 <h1>
@@ -62,7 +62,7 @@ const Login = () => {
         )
     }
     else {
-        setUserName(undefined);
+        setUserName("");
         return(
             <button onClick={logoutHandler}>Logout</button>
         )
