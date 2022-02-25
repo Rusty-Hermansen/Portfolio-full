@@ -65,10 +65,10 @@ const storeSession = async (session_id, user_id, session_expiration) => {
     [session_id, user_id, session_expiration])
 }
 
-const deleteSession = async (user_id) => {
+const deleteSession = async (session_id) => {
     const res = await pool.query(`
-    DELETE FROM portfolio_post.session WHERE user_id = $1;
-    `,[user_id])
+    DELETE FROM portfolio_post.session WHERE session_id = $1;
+    `,[session_id])
 }
 
 const getSession = async (user_id) => {

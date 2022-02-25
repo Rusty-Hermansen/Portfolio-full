@@ -67,7 +67,7 @@ app.get('/api/auth/secure', async (req, res) => {
 
 app.get('/api/auth/logout', async (req, res) => {
     //remove user and session id from db table
-    const response = await queries.deleteSession(req.body.user_id)
+    const response = await queries.deleteSession(req.cookies.session_id)
     res.clearCookie('')
 })
 
