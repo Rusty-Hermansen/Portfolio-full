@@ -1,27 +1,17 @@
-const express = require('express')
-const { queries } = require('./queries')
-const dotenv = require('dotenv')
-var bcrypt = require('bcrypt')
-var cookieParser = require('cookie-parser')
-var session = require('express-session')
-const { authDbService } = require('./authDbService')
-
+const express = require('express');
+const { queries } = require('./queries');
+const dotenv = require('dotenv');
+var bcrypt = require('bcrypt');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+const { authDbService } = require('./authDbService');
+const { uuid } = require('uuidv4');
+const cookieAge = 15 * 60 * 1000
 dotenv.config()
 const app = express();
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cookieParser());
-var current_session = {
-    secret: 'howmuchwoodwouldawoodchuckchuck',
-    proxy: true,
-    saveUninitialized: true,
-    session_id: null,
-    cookie: { secure: true,
-        sameSite: 'strict',
-        httpOnly: true
-
-    }
-}
 
 
 app.get('/', async (req, res) => {
@@ -42,21 +32,21 @@ app.get('/api/posts', async (req, res) => {
 app.post('/api/auth/login', async (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
-    var sid = req.sessionID;
-    var user_id = req.body.user_id;
 
     const dbResult = await authDbService.getUser(username)
-    console.log(dbResult)
     const hash = await bcrypt.hash(password, dbResult.user_salt)
-    console.log(hash)
-    if (hash === dbResult.user_password) {
-        const session_user = await queries.storeSession(sid, dbResult.user_id);
-        current_session.secret = sid;
-        app.use(session(current_session))
-        res.username = session_user
-        ///more session stuff
-        res.send(200)
 
+    if (hash === dbResult.user_password) {
+        res.cookie("auth", "test", { sameSite: 'strict', httpOnly: true })
+        const existing_session = await queries.getSession(dbResult.user_id);
+        if (existing_session) {
+            await deleteSession(dbSession.user_id);
+        }
+        const session_id = uuid()
+        console.log("session " + session_id)
+        await queries.storeSession(session_id, dbResult.user_id);
+        res.cookie("session_id", session_id, { sameSite: 'strict', httpOnly: true })
+        res.send(200)
     }
     else {
         res.sendStatus(403)
