@@ -1,4 +1,4 @@
-import { FC, useState, FormEvent, ChangeEvent } from 'react';
+import { useEffect, useState } from 'react';
 import authService from '../Services/authService';
 import axios from 'axios';
 
