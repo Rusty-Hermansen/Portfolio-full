@@ -69,14 +69,19 @@ app.get('/api/auth/secure', async (req, res) => {
         res.sendStatus(403);
     }
     else {
-        if ((new Date(dbSession.session_expiration)).getTime() < (new Date()).getTime()) {
-            return res.sendStatus(403)
-        }
-        else {
-            const response = await authDbService.getUserById(dbSession.user_id);
-            console.table(response)
-            res.send(response.user_username);
-        }
+        // if ((new Date(dbSession.session_expiration)).getTime() < (new Date()).getTime()) {
+        //     return res.sendStatus(403)
+        // }
+        // else {
+        //     const response = await authDbService.getUserById(dbSession.user_id);
+        //     console.table(response)
+        //     res.send(response.user_username);
+        // }
+
+        const response = await authDbService.getUserById(dbSession.user_id);
+        console.table(response)
+        res.send(response.user_username);
+
     }
 
 })
