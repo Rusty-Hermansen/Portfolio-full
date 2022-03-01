@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 var bcrypt = require('bcrypt');
 var cookieParser = require('cookie-parser');
 const { authDbService } = require('./authDbService');
-const { uuid } = require('uuidv4');
+const { v4 } = require('uuid');
 dotenv.config();
 const app = express();
 app.use(express.urlencoded({ extended: true }))
@@ -37,11 +37,11 @@ app.post('/api/auth/login', async (req, res) => {
         if (existing_session) {
             await deleteSession(dbSession.user_id);
         }
-        const session_id = uuid()
+        const session_id = v4();
         const time = new Date();
         time.setHours( time.getHours() + 2 );
         await queries.storeSession(session_id, dbResult.user_id, time);
-        res.cookie("session_id", session_id, { sameSite: 'strict', httpOnly: true })
+        res.cookie("session_id", session_id, { sameSite: 'strict', expires: time })
         res.send(200)
     }
     else {
@@ -67,7 +67,7 @@ app.get('/api/auth/secure', async (req, res) => {
 app.get('/api/auth/logout', async (req, res) => {
     //remove user and session id from db table
     const response = await queries.deleteSession(req.cookies.session_id)
-    res.cookie("session_id", "", { sameSite: 'strict' })
+    res.clearCookie("session_id")
     res.sendStatus(200)
 })
 
