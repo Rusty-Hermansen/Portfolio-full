@@ -76,6 +76,12 @@ const getSession = async (user_id) => {
         `SELECT * FROM portfolio_post.session WHERE user_id = $1;`,
         [user_id]
     )
+    if(res.rowCount > 0){
+        return res.rows[0]
+    }
+    else {
+        return null
+    }
 }
 
 const getSessionBySessionId = async (session_id) => {
@@ -83,6 +89,12 @@ const getSessionBySessionId = async (session_id) => {
         `SELECT * FROM portfolio_post.session WHERE session_id = $1;`,
         [session_id]
     )
+    if(res.rowCount > 0){
+        return res.rows[0]
+    }
+    else {
+        return null
+    }
 }
 module.exports.queries = {
      getPostById, 

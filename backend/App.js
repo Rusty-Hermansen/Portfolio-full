@@ -64,7 +64,7 @@ app.get('/api/auth/secure', async (req, res) => {
     console.table(req.cookies)
     const dbSession = await queries.getSessionBySessionId(req.cookies.session_id);
     console.table(dbSession)
-    if (!dbSession) {
+    if (dbSession === null) {
         console.log("no session")
         res.sendStatus(403);
     }
