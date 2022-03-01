@@ -60,7 +60,7 @@ app.post('/api/auth/login', async (req, res) => {
 })
 
 app.get('/api/auth/secure', async (req, res) => {
-    const dbSession = queries.getSessionBySessionId(req.cookies.session_id);
+    const dbSession = await queries.getSessionBySessionId(req.cookies.session_id);
     if (!dbSession) {
         res.sendStatus(403);
     }
@@ -68,7 +68,7 @@ app.get('/api/auth/secure', async (req, res) => {
         return res.sendStatus(403)
     }
     else{
-        const response = authDbService.getUserById(dbSession.user_id);
+        const response = await authDbService.getUserById(dbSession.user_id);
         res.send(response.user_username);
     }
 })
