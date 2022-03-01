@@ -49,13 +49,12 @@ const Login = () => {
         }
     }
 
-    const logoutHandler = (event) => {
+    const logoutHandler = async (event) => {
         event.preventDefault();
         setUsername('');
         setPassword('');
-        document.cookie = "session_id =;";
-        axios.get('/api/auth/logout', {withCredentials: true});
-
+        setIsLoggedIn(false);
+        await axios.get('/api/auth/logout');
     }
 
     if (!isLoggedIn) {
