@@ -48,7 +48,7 @@ app.post('/api/auth/login', async (req, res) => {
         console.log("creating new session")
         const session_id = v4();
         const time = new Date();
-        time.setHours( time.getHours() + 2 );
+        time.setHours(time.getHours() + 2);
         await queries.storeSession(session_id, dbResult.user_id, time);
         res.cookie("session_id", session_id, { sameSite: 'strict', expires: time })
         res.send(200)
@@ -61,19 +61,23 @@ app.post('/api/auth/login', async (req, res) => {
 
 app.get('/api/auth/secure', async (req, res) => {
     console.log("hit /secure")
+    console.table(req.cookies)
     const dbSession = await queries.getSessionBySessionId(req.cookies.session_id);
     if (!dbSession) {
         console.log("no session")
         res.sendStatus(403);
     }
-    if((new Date(dbSession.session_expiration)).getTime() < (new Date()).getTime()){
-        return res.sendStatus(403)
+    else {
+        if ((new Date(dbSession.session_expiration)).getTime() < (new Date()).getTime()) {
+            return res.sendStatus(403)
+        }
+        else {
+            const response = await authDbService.getUserById(dbSession.user_id);
+            console.table(response)
+            res.send(response.user_username);
+        }
     }
-    else{
-        const response = await authDbService.getUserById(dbSession.user_id);
-        console.table(response)
-        res.send(response.user_username);
-    }
+
 })
 
 app.get('/api/auth/logout', async (req, res) => {
