@@ -19,7 +19,7 @@ const Secure = () => {
             })
     }, [])
 
-    if (userName) {
+    if (userName !== '') {
         return (<div>
             <h1>Welcome, {userName}!</h1>
         </div>)
