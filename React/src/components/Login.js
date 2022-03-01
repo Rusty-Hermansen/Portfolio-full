@@ -10,6 +10,19 @@ const Login = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
+    useEffect(() => {
+
+        axios.get('/api/auth/secure', { withCredentials: true })
+            .then(r => {
+                console.log(r)
+                if (r.response.status !== 403) {
+                    setIsLoggedIn(true)
+                }    
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    }, [])
 
     const formValid = (
 
