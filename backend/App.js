@@ -31,12 +31,17 @@ app.post('/api/auth/login', async (req, res) => {
 
     const dbResult = await authDbService.getUser(username)
     const hash = await bcrypt.hash(password, dbResult.user_salt)
+    console.table(dbResult)
+    console.log(hash)
 
     if (hash === dbResult.user_password) {
         const existing_session = await queries.getSession(dbResult.user_id);
+        console.log("Got inside if")
         if (existing_session) {
+            console.log("deleting old session")
             await deleteSession(dbSession.user_id);
         }
+        console.log("creating new session")
         const session_id = v4();
         const time = new Date();
         time.setHours( time.getHours() + 2 );
