@@ -46,7 +46,8 @@ const Login = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        const authServiceResult = await authService.signIn(username, password)
+        const authServiceResult = await authService.signIn(username, password);
+        console.table(authServiceResult)
         if (authServiceResult){
             setIsLoggedIn(true);
             setHasError(false);
