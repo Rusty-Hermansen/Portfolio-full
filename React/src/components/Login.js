@@ -15,7 +15,7 @@ const Login = () => {
         axios.get('/api/auth/secure', { withCredentials: true })
             .then(r => {
                 console.log(r)
-                if (r.response.status !== 403) {
+                if (r.status !== 403) {
                     setIsLoggedIn(true)
                 }    
             })
