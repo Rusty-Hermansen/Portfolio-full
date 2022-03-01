@@ -19,6 +19,8 @@ const Login = () => {
 
     const userNameChangeHandler = (e) => {
         setUserName(e.target.value)
+        console.log(e.target.value)
+        console.log(username)
     }
 
     const passwordChangeHandler = (e) => {
