@@ -60,8 +60,10 @@ app.post('/api/auth/login', async (req, res) => {
 })
 
 app.get('/api/auth/secure', async (req, res) => {
+    console.log("hit /secure")
     const dbSession = await queries.getSessionBySessionId(req.cookies.session_id);
     if (!dbSession) {
+        console.log("no session")
         res.sendStatus(403);
     }
     if((new Date(dbSession.session_expiration)).getTime() < (new Date()).getTime()){
@@ -69,6 +71,7 @@ app.get('/api/auth/secure', async (req, res) => {
     }
     else{
         const response = await authDbService.getUserById(dbSession.user_id);
+        console.table(response)
         res.send(response.user_username);
     }
 })
