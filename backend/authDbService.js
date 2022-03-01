@@ -13,7 +13,12 @@ const getUser = async (username) => {
         `select * from wireguard.user where user_username = $1;`,
         [username]
     )
-    return res.rows[0];
+    if(res.rowCount > 0) {
+         return res.rows[0];
+    }
+    else {
+        return null;
+    }
 }
 const getUserById = async (user_id) => {
     const res = await pool.query(
