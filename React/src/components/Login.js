@@ -7,6 +7,7 @@ import axios from 'axios';
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
 
@@ -19,8 +20,6 @@ const Login = () => {
 
     const userNameChangeHandler = (e) => {
         setUsername(e.target.value)
-        console.log(e.target.value)
-        console.log(username)
     }
 
     const passwordChangeHandler = (e) => {
@@ -29,9 +28,12 @@ const Login = () => {
 
 
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        authService.signIn(username, password)
+        const authServiceResult = await authService.signIn(username, password)
+        if (authServiceResult){
+            setIsLoggedIn(true);
+        }
     }
 
     const logoutHandler = (event) => {
@@ -43,7 +45,7 @@ const Login = () => {
 
     }
 
-    if (username.trim().length === 0) {
+    if (!isLoggedIn) {
         return (
             <>
                 <h1>
@@ -60,12 +62,11 @@ const Login = () => {
             </>
         )
     }
-    // else {
-    //     setUsername("");
-    //     return(
-    //         <button onClick={logoutHandler}>Logout</button>
-    //     )
-    // }
+    else {
+        return(
+            <button onClick={logoutHandler}>Logout</button>
+        )
+    }
 
 
 }
