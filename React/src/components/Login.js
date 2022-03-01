@@ -8,6 +8,7 @@ const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [hasError, setHasError] = useState(false);
 
 
     useEffect(() => {
@@ -32,11 +33,13 @@ const Login = () => {
 
 
     const userNameChangeHandler = (e) => {
-        setUsername(e.target.value)
+        setHasError(false);
+        setUsername(e.target.value);
     }
 
     const passwordChangeHandler = (e) => {
-        setPassword(e.target.value)
+        setHasError(false);
+        setPassword(e.target.value);
     }
 
 
@@ -46,6 +49,10 @@ const Login = () => {
         const authServiceResult = await authService.signIn(username, password)
         if (authServiceResult){
             setIsLoggedIn(true);
+            setHasError(false);
+        }
+        else {
+            setHasError(true);
         }
     }
 
@@ -71,6 +78,12 @@ const Login = () => {
                     <button type="submit">Sign In</button>
 
                 </form>
+                { 
+                    hasError &&
+                    <div>
+                        Incorrect credentials
+                    </div>
+                }
             </>
         )
     }
