@@ -29,6 +29,7 @@ app.post('/api/auth/login', async (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
 
+    console.log("Hit endpoint");
     const dbResult = await authDbService.getUser(username)
     const hash = await bcrypt.hash(password, dbResult.user_salt)
     console.table(dbResult)
