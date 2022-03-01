@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 const Login = () => {
-    const [username, setUserName] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
 
@@ -18,7 +18,7 @@ const Login = () => {
 
 
     const userNameChangeHandler = (e) => {
-        setUserName(e.target.value)
+        setUsername(e.target.value)
         console.log(e.target.value)
         console.log(username)
     }
@@ -36,7 +36,7 @@ const Login = () => {
 
     const logoutHandler = (event) => {
         event.preventDefault();
-        setUserName('');
+        setUsername('');
         setPassword('');
         document.cookie = "session_id =;";
         axios.get('/api/auth/logout', {withCredentials: true});
@@ -60,12 +60,12 @@ const Login = () => {
             </>
         )
     }
-    else {
-        setUserName("");
-        return(
-            <button onClick={logoutHandler}>Logout</button>
-        )
-    }
+    // else {
+    //     setUsername("");
+    //     return(
+    //         <button onClick={logoutHandler}>Logout</button>
+    //     )
+    // }
 
 
 }
