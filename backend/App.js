@@ -3,7 +3,6 @@ const { queries } = require('./queries');
 const dotenv = require('dotenv');
 var bcrypt = require('bcrypt');
 var cookieParser = require('cookie-parser');
-var session = require('express-session');
 const { authDbService } = require('./authDbService');
 const { uuid } = require('uuidv4');
 dotenv.config();
@@ -54,10 +53,10 @@ app.post('/api/auth/login', async (req, res) => {
 app.get('/api/auth/secure', async (req, res) => {
     const dbSession = queries.getSessionBySessionId(req.cookies.session_id);
     if (!dbSession) {
-        res.sendStatus(301);
+        res.sendStatus(403);
     }
     if((new Date(dbSession.session_expiration)).getTime() < (new Date()).getTime()){
-        return res.sendStatus(301)
+        return res.sendStatus(403)
     }
     else{
         const response = authDbService.getUserById(dbSession.user_id);
@@ -68,7 +67,7 @@ app.get('/api/auth/secure', async (req, res) => {
 app.get('/api/auth/logout', async (req, res) => {
     //remove user and session id from db table
     const response = await queries.deleteSession(req.cookies.session_id)
-    res.cookie("session_id", "", { sameSite: 'strict', httpOnly: true })
+    res.cookie("session_id", "", { sameSite: 'strict' })
     res.sendStatus(200)
 })
 
