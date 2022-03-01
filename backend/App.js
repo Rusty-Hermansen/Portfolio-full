@@ -41,9 +41,9 @@ app.post('/api/auth/login', async (req, res) => {
     if (hash === dbResult.user_password) {
         const existing_session = await queries.getSession(dbResult.user_id);
         console.log("Got inside if")
-        if (existing_session) {
+        if (existing_session !== null) {
             console.log("deleting old session")
-            await deleteSession(dbSession.user_id);
+            await queries.deleteSession(existing_session.session_id);
         }
         console.log("creating new session")
         const session_id = v4();
