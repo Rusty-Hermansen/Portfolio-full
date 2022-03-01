@@ -28,10 +28,11 @@ const Secure = () => {
     else {
         return (
             <div>
-                {
+                {/* {
                     !firstRender &&
                    <Redirect to="/login"></Redirect> 
-                }
+                } */}
+                Unauthorized
                 
             </div>)
     }
