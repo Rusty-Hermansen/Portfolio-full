@@ -63,7 +63,7 @@ const Login = () => {
         setIsLoggedIn(false);
         await axios.get('/api/auth/logout');
     }
-
+    console.log(hasError);
     if (!isLoggedIn) {
         return (
             <>
