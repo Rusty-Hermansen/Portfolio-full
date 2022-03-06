@@ -1,7 +1,7 @@
 import axios from "axios";
 import ClientConfig from "../Models/clientConfig";
 import fileDownload from "js-file-download";
-import keyModel from "../../../Models/keyModel";
+import keyModel from "../Models/keyModel";
 
 const apiUrl= '/api';
 

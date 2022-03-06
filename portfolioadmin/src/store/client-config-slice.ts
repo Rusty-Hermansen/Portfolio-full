@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { create } from "domain";
 import { stat } from "fs";
 import { Client } from "pg";
-import keyModel from "../../../Models/keyModel";
+import keyModel from "../Models/keyModel";
 import ClientConfig from "../Models/clientConfig";
 
 import apiService from "../services/apiService";

@@ -1,5 +1,5 @@
-import ipAddressModel from "../../../Models/ipAddressModel";
-import nameModel from "../../../Models/nameModel";
+import ipAddressModel from "./ipAddressModel";
+import nameModel from "./nameModel";
 
 
 export default class ClientConfig {

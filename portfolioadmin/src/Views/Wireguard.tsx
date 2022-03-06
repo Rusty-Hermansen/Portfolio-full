@@ -5,7 +5,7 @@ import { StoreDistpatch } from '../store';
 import { addConfig, getStatus, restartService, removePeer } from '../store/client-config-slice'
 import Registration from '../Components/Registration';
 import { useStoreSelector } from '../store';
-import keyModel from '../../../Models/keyModel'
+import keyModel from '../Models/keyModel'
 
 const Wireguard = () => {
   const [peer, SetPeer] = useState<string>("");

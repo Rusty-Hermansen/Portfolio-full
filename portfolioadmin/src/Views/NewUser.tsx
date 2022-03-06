@@ -1,7 +1,7 @@
 import { FC, useState, FormEvent, ChangeEvent } from 'react';
 import newUserApiService from '../services/new-user-api-service';
-import nameModel from '../../../Models/nameModel';
-import passwordModel from '../../../Models/passwordModel'
+import nameModel from '../Models/nameModel';
+import passwordModel from '../Models/passwordModel'
 
 
 const NewUser = () => {

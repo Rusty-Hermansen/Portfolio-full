@@ -1,7 +1,7 @@
 import { FC, FormEvent, ChangeEvent, useState } from 'react';
 import ClientConfig from '../Models/clientConfig';
-import nameModel from '../../../Models/nameModel';
-import ipAddressModel from '../../../Models/ipAddressModel';
+import nameModel from '../Models/nameModel';
+import ipAddressModel from '../Models/ipAddressModel';
 
 type Props = {
     onSubmit: (config: ClientConfig) => void;

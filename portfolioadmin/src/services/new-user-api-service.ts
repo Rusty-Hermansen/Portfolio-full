@@ -1,6 +1,6 @@
 import axios from "axios"
-import nameModel from "../../../Models/nameModel"
-import passwordModel from "../../../Models/passwordModel"
+import nameModel from "../Models/nameModel"
+import passwordModel from "../Models/passwordModel"
 
 const apiUrl = '/api'
 
