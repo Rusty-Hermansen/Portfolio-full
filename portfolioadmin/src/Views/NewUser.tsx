@@ -1,21 +1,15 @@
 import { FC, useState, FormEvent, ChangeEvent } from 'react';
 import newUserApiService from '../services/new-user-api-service';
-
+import nameModel from '../../../Models/nameModel';
+import passwordModel from '../../../Models/passwordModel'
 
 
 const NewUser = () => {
     const [username, setUserName] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [password2, setPassword2] = useState<string>('')
-
-
-    const formValid: boolean = (
-
-        username.trim().length > 0 &&
-        password.trim().length > 0 &&
-        password2.trim().length > 0 &&
-        password.trim() === password2.trim())
-
+    const [formValid , setFormValid] = useState<boolean>(false)
+    
 
     const userNameChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setUserName(e.target.value)
@@ -31,10 +25,17 @@ const NewUser = () => {
 
     const submitUserHandler = (e: FormEvent) => {
         e.preventDefault();
-        if (formValid) {
-            newUserApiService.addUser({ username, password, password2 })
-                .then(r => console.log('success'))
-                .catch(error => console.error(error));
+        try{
+            const userObject = new nameModel(username);
+            const passwordObject = new passwordModel(password);
+            const passwordObject2 = new passwordModel(password2);
+            if(passwordObject.password.trim() === passwordObject2.password.trim()){
+                 newUserApiService.addUser({ username: userObject, password: passwordObject, password2: passwordObject2 })
+            }
+           
+        }
+        catch(err){
+            throw new Error("Invalid username, password, or passwords don't match")
         }
     }
 

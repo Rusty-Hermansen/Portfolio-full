@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { create } from "domain";
 import { stat } from "fs";
 import { Client } from "pg";
+import keyModel from "../../../Models/keyModel";
 import ClientConfig from "../Models/clientConfig";
 
 import apiService from "../services/apiService";
@@ -55,7 +56,7 @@ export const getPeers = createAsyncThunk(
 )
 export const removePeer = createAsyncThunk(
     'removePeer', 
-    async(peerPublicKey: string, thunkApi)=>{
+    async(peerPublicKey: keyModel, thunkApi)=>{
         await apiService.removePeer(peerPublicKey)
     }
 )

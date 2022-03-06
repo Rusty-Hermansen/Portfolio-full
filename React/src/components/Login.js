@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import authService from '../Services/authService';
+import nameModel from '../Models/nameModel';
+import passwordModel from '../Models/passwordModel';
 import axios from 'axios';
 
 
@@ -46,14 +48,21 @@ const Login = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        const authServiceResult = await authService.signIn(username, password);
-        console.table(authServiceResult)
-        if (authServiceResult){
-            setIsLoggedIn(true);
-            setHasError(false);
+        try {
+            const nameObject = new nameModel(username)
+            const passwordObject = new passwordModel(password)
+            const authServiceResult = await authService.signIn(nameObject, passwordObject);
+            console.table(authServiceResult)
+            if (authServiceResult){
+                setIsLoggedIn(true);
+                setHasError(false);
+            }
+            else {
+                throw new Error("Invalid username or password")
+            }
         }
-        else {
-            setHasError(true);
+        catch(err){
+            console.error(error)
         }
     }
 

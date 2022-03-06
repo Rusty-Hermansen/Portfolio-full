@@ -1,11 +1,12 @@
 import axios from "axios";
 import ClientConfig from "../Models/clientConfig";
 import fileDownload from "js-file-download";
+import keyModel from "../../../Models/keyModel";
 
 const apiUrl= '/api';
 
 const addConfig = async (config: ClientConfig): Promise<Blob> => {
-    const res = await axios.post<Blob>(apiUrl +'/addConfig', config, {responseType: 'blob'});
+    const res = await axios.post<Blob>(apiUrl +'/addConfig', {name: config.name.name, ipAddress: config.ipAddress.ipAddress, dateAdded: config.dateAdded}, {responseType: 'blob'});
     fileDownload(res.data, 'vpnconfig.conf')
     return res.data;
 }
@@ -28,8 +29,8 @@ const getPeers = async(): Promise<string[]> => {
     const res = await axios.get<string[]>(apiUrl + '/wgservice/peers');
     return res.data;
 }
-const removePeer = async(publicKey: string) =>{
-    await axios.post(apiUrl + '/wgservice/removeconfig', {publicKey})
+const removePeer = async(publicKey: keyModel) =>{
+    await axios.post(apiUrl + '/wgservice/removeconfig', {publicKey: publicKey.key})
 }
 
 const apiService = {

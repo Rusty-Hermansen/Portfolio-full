@@ -1,5 +1,7 @@
 import { FC, FormEvent, ChangeEvent, useState } from 'react';
 import ClientConfig from '../Models/clientConfig';
+import nameModel from '../../../Models/nameModel';
+import ipAddressModel from '../../../Models/ipAddressModel';
 
 type Props = {
     onSubmit: (config: ClientConfig) => void;
@@ -10,11 +12,6 @@ const Registration: FC<Props> = (props): JSX.Element => {
     const [ipAddress, setIpAddress] = useState<string>("");
    
 
-    const isFormValid = (
-        name.trim().length > 0 && 
-        ipAddress.trim().length > 0
-     
-    )
     
 
     const nameChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
@@ -29,17 +26,19 @@ const Registration: FC<Props> = (props): JSX.Element => {
 
     const submitHandler = (event: FormEvent) =>{
         event.preventDefault();
-        if (isFormValid){
-            const config: ClientConfig = {
-                name,
-                ipAddress,
-                dateAdded: new Date(),
-                
-                
-            }
-            props.onSubmit(config);
+        try{
+            const userObject = new nameModel(name);
+            const ipAddressObject = new ipAddressModel(ipAddress)
+            const config = new ClientConfig(
+                userObject,
+                ipAddressObject,
+                new Date())
+            props.onSubmit(config)
         }
-      
+        catch(err){
+            throw new Error("Invalid name or ip address")
+        }
+    
 
     }
     return( 
