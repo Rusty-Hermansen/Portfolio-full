@@ -62,7 +62,7 @@ const Login = () => {
             }
         }
         catch(err){
-            console.error(error)
+            console.error(err)
         }
     }
 
