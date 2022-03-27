@@ -11,6 +11,8 @@ const Secure = () => {
     const [age, setAge] = useState();
     const [nickname, setNickname] = useState('');
 
+    const [userName, setUserName] = useState('');
+
     useEffect(() => {
 
         axios.get('/api/auth/secure', { withCredentials: true })

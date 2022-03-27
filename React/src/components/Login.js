@@ -40,7 +40,7 @@ const Login = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const onSuccess = (res) => {
-        console.log('[Login Success] currentUser:' , resprofileObj);
+        console.log('[Login Success] currentUser:' , res.profileObj);
         setIsLoggedIn(true)
         refreshTokenSetup(res);
     }
