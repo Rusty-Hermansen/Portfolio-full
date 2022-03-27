@@ -29,7 +29,7 @@ const NewUser = () => {
             const userObject = new nameModel(username);
             const passwordObject = new passwordModel(password);
             const passwordObject2 = new passwordModel(password2);
-            if(passwordObject.password.trim() === passwordObject2.password.trim()){
+            if(password.trim() === password.trim()){
                  newUserApiService.addUser({ username: userObject, password: passwordObject, password2: passwordObject2 })
             }
            
