@@ -1,7 +1,7 @@
 const { exec, execSync, execFile} = require('child_process')
 const {dbService} = require('./db-service');
 
-const genConfig = async (body) => {
+const genConfig = async (body, originIp) => {
     execSync(`/home/rusty/actions-runner/_work/Portfolio-full/Portfolio-full/adminBackend/clientssh.bash ${body.name}`, {uid: 1000})
    
     const config = {
@@ -10,7 +10,8 @@ const genConfig = async (body) => {
         ipRange: '0.0.0.0'.trim(),
         publicKey: getPublicKey(body.name).toString().trim(),
         privateKey: getPrivateKey(body.name).toString().trim(),
-        dateAdded: new Date()
+        dateAdded: new Date(),
+        originIp: originIp
     }
 
      const clientConfig = await dbService.addConfig(config);
@@ -37,7 +38,7 @@ const getPrivateKey = (clientName) => {
        )
 }
 
-const addConfig = async (body) => {
+const addConfig = async (body, originIp) => {
     const config = await genConfig(body);
     console.log(config)
     exec(

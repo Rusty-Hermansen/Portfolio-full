@@ -2,8 +2,13 @@ import axios from 'axios'
 import { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 const Secure = () => {
-    const [userName, setUserName] = useState('')
+    const [givenName, setGivenName] = useState('')
+    const [email, setEmail] = useState('')
     const [firstRender, setFirstRender] = useState(true);
+    const [joke, setJoke] = useState('');
+    const [iceCream, setIceCream] = useState('');
+    const [age, setAge] = useState();
+    const [nickname, setNickname] = useState('');
 
     useEffect(() => {
 
@@ -13,12 +18,29 @@ const Secure = () => {
                 if (r.status !== 403) {
                     setFirstRender(false)
                     setUserName(r.data)
-                }    
+                }
             })
             .catch(err => {
                 console.error(err)
             })
     }, [])
+
+    const jokeChanged = (e) => {
+        setJoke(e.target.value)
+    }
+    const iceCreamChanged = (e) => {
+        setIceCream(e.target.value)
+    }
+    const ageChanged = (e) => {
+        setAge(e.target.value)
+    }
+    const nicknameChanged = (e) => {
+        setNickname(e.target.value)
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+    }
 
     if (userName !== '' && firstRender === false) {
         return (<div>
@@ -27,13 +49,33 @@ const Secure = () => {
     }
     else {
         return (
+            
             <div>
+                <h2>User Information</h2>
+                <p>Email Address: {email}</p>
+                <p>Name: {givenName}</p>
+                <p>Favorite Joke: {joke}</p>
+                <p>favorite Ice Cream: {iceCream}</p>
+                <p>age: {age}</p>
+                <p>your nickname: {nickname}</p>
+                <hr/>
+                <form onSubmit={onSubmit}>
+                    <label>Joke</label>
+                    <input type='text' onChange={jokeChanged} value={joke} />
+                    <label>Favorite Ice Cream</label>
+                    <input type='text' onChange = {iceCreamChanged} value={iceCream} />
+                    <label>Age</label>
+                    <input type='number' onChange = {ageChanged} value={age}/>
+                    <label>Nickname</label>
+                    <input type='text' onChange = {nicknameChanged} value={nickname}/>
+                    <button type='submit'>Submit</button>
+                </form>
                 {/* {
                     !firstRender &&
                    <Redirect to="/login"></Redirect> 
                 } */}
                 Unauthorized
-                
+
             </div>)
     }
 }

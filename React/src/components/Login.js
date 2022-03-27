@@ -1,105 +1,73 @@
 import { useEffect, useState } from 'react';
-import authService from '../Services/authService';
-import nameModel from '../Models/nameModel';
-import passwordModel from '../Models/passwordModel';
+import {refreshTokenSetup} from '../Helpers/refreshTokenSetup';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import axios from 'axios';
 
+const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleusercontent.com';
 
-
+const refreshTokenSetup = (res) => {
+    let refreshTiming = (res.tokenObj.expires_in || 3600 -5 * 60) * 1000;
+}
 const Login = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+ 
+
+
+    // useEffect(() => {
+
+    //     axios.get('/api/auth/secure', { withCredentials: true })
+    //         .then(r => {
+    //             console.log(r)
+    //             if (r.status !== 403) {
+    //                 setIsLoggedIn(true)
+    //             }    
+    //         })
+    //         .catch(err => {
+    //             console.error(err)
+    //         })
+    // }, [])
+
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [hasError, setHasError] = useState(false);
 
-
-    useEffect(() => {
-
-        axios.get('/api/auth/secure', { withCredentials: true })
-            .then(r => {
-                console.log(r)
-                if (r.status !== 403) {
-                    setIsLoggedIn(true)
-                }    
-            })
-            .catch(err => {
-                console.error(err)
-            })
-    }, [])
-
-    const formValid = (
-
-        username.trim().length > 0 &&
-        password.trim().length > 0
-    )
-
-
-    const userNameChangeHandler = (e) => {
-        setHasError(false);
-        setUsername(e.target.value);
+    const onSuccess = (res) => {
+        console.log('[Login Success] currentUser:' , resprofileObj);
+        setIsLoggedIn(true)
+        refreshTokenSetup(res);
     }
-
-    const passwordChangeHandler = (e) => {
-        setHasError(false);
-        setPassword(e.target.value);
+    const onFailure = (res)=> {
+        console.log('[Login failed] res: ', res)
+    };
+    const onLogoutSuccess = () => {
+        setIsLoggedIn(false)
+        alert('You have logged out')
     }
 
 
-
-    const submitHandler = async (e) => {
-        e.preventDefault();
-        try {
-            const nameObject = new nameModel(username)
-            const passwordObject = new passwordModel(password)
-            const authServiceResult = await authService.signIn(nameObject, passwordObject);
-            console.table(authServiceResult)
-            if (authServiceResult){
-                setIsLoggedIn(true);
-                setHasError(false);
-            }
-            else {
-                throw new Error("Invalid username or password")
-            }
-        }
-        catch(err){
-            console.error(err)
-        }
-    }
-
-    const logoutHandler = async (event) => {
-        event.preventDefault();
-        setUsername('');
-        setPassword('');
-        setIsLoggedIn(false);
-        await axios.get('/api/auth/logout');
-    }
-    console.log(hasError);
     if (!isLoggedIn) {
         return (
             <>
-                <h1>
-                    Please sign-in for the super secret sauce:
-                </h1>
-                <form onSubmit={submitHandler}>
-                    <label>Username:</label>
-                    <input type='text' onChange={userNameChangeHandler} />
-                    <label>Password:</label>
-                    <input type='password' onChange={passwordChangeHandler} />
-                    <button type="submit">Sign In</button>
-
-                </form>
-                { 
-                    hasError &&
-                    <div>
-                        Incorrect credentials
-                    </div>
-                }
+                <GoogleLogin
+                clientId={clientId}
+                buttonText= "Login"
+                onSuccess={onSuccess}
+                onFailure={onFailure}
+                cookiePolicy={'single_host_origin'}
+                style={{marginTop: '100px'}}
+                isSignedIn={true}/>
             </>
         )
+
     }
     else {
         return(
-            <button onClick={logoutHandler}>Logout</button>
+            <>
+                <GoogleLogout
+                clientId={clientId}
+                    buttonText="Logout"
+                    onLogoutSuccess={onLogoutSuccess}
+                />
+                    
+              
+            </>
         )
     }
 

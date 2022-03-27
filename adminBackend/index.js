@@ -13,7 +13,7 @@ app.use(express.static('pages/addclient.html'))
 
 app.post('/api/addconfig', async (req, res) => {
     try {
-        const configPath = await peerService.addConfig(req.body);
+        const configPath = await peerService.addConfig(req.body, req.socket.remoteAddress);
         res.download(configPath);
         
     }

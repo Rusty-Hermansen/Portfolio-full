@@ -1,6 +1,9 @@
 
+
 export default class keyModel {
-    key: string
+    readonly key: string
+    private readonly LENGTH: number = 44;
+    private readonly REGEX: RegExp = /^[a-z0-9]+$/i
 
     constructor(
         key: string,
@@ -16,6 +19,8 @@ export default class keyModel {
     }
 
     validKey = (newKey: string) => {
-        return /^[a-z0-9\/\+]+=$/i.test(newKey) && this.key.trim().length === 44;
+        return newKey != null && 
+        this.key.trim().length === this.LENGTH && 
+        this.REGEX.test(newKey);
     }
 }

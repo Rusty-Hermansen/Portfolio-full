@@ -28,6 +28,7 @@ const Wireguard = () => {
   const peerChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     SetPeer(e.target.value)
   }
+
   const removePeerHandler = () => {
     try {
       const peerObject = new keyModel(peer)
@@ -36,7 +37,6 @@ const Wireguard = () => {
     catch (err) {
       throw new Error("Invalid peer public key")
     }
-
   }
   return (
     <>

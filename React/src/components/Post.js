@@ -23,7 +23,7 @@ const Post = () =>{
                     { dbPosts && dbPosts.map((post)=> (                                                                                                   
                        <article>
                         <Link to={"/singlepost/" + post.id} key={post.id} state={{id: post.id}}>                                                            
-                          <span className="block h-64 relative rouded shadow leading-snug bg-white border-l-8 border-black" key={post.id}>                  
+                          <span className="block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-black" key={post.id}>                  
                              <img src={post.post_img} alt={post.alt} className="w-full h-full object-contain absolute"/>                                    
                              <span className="block relative h-full flex justify-end items-end pr-4 pb-4">                                                  
                                 <h3 className="text-white text-lg font-blog px-3 py-4 bg-black text-white bg-opacity-75 rounded" >{post.title} </h3>        

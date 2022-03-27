@@ -38,9 +38,8 @@ const Registration: FC<Props> = (props): JSX.Element => {
         catch(err){
             throw new Error("Invalid name or ip address")
         }
-    
-
     }
+    
     return( 
     <form onSubmit={submitHandler}>
         <label>Client Name</label>
