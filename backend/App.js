@@ -98,6 +98,19 @@ app.get('/api/auth/logout', async (req, res) => {
     res.sendStatus(200)
 })
 
+app.get('/api/user/get', async(req, res) => {
+    const response = await queries.getUserInfoByEmail(req.body.email)
+})
+app.post('/api/user/create', async(req, res) => {
+    const email = req.body.email;
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const joke = req.body.joke;
+    const iceCream = req.body.iceCream;
+    const age = req.body.age;
+    const nickname = req.body.nickname;
+    const response = await queries.createUser(email, firstName, lastName, joke, iceCream, age, nickname);
+})
 
 
 app.listen(5000, () => {

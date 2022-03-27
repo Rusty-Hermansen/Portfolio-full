@@ -17,6 +17,23 @@ CREATE TABLE IF NOT EXISTS portfolio_post.session(
         session_expiration TIMESTAMP NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS portfolio_post.user(
+        ID SERIAL PRIMARY KEY,
+        email VARCHAR(200),
+        firstName VARCHAR(200)
+        lastName VARCHAR(200),
+        joke VARCHAR(500),
+        iceCream VARCHAR(100),
+        age INT,
+        nickName VARCHAR(100)
+)
+EMAIL
+GIVEN Name
+FAMILY NAME 
+
+
+
+
 -- CREATE TABLE IF NOT EXISTS portfolio_post.category(
 --     id SERIAL PRIMARY KEY,
 --     category VARCHAR(40)

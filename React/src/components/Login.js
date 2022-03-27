@@ -5,9 +5,7 @@ import axios from 'axios';
 
 const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleusercontent.com';
 
-const refreshTokenSetup = (res) => {
-    let refreshTiming = (res.tokenObj.expires_in || 3600 -5 * 60) * 1000;
-}
+
 const Login = () => {
  
 

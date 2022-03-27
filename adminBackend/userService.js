@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const { queries } = require('../backend/queries');
 const { dbService } = require('./db-service');
 const saltRounds = 5;
 
@@ -22,6 +23,8 @@ console.log("hashing and salting")
     await dbService.addUser(user.username, hash, salt)
     
 }
+
+
 
 module.exports.userService = {
     addUser

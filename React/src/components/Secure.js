@@ -1,8 +1,9 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+
 const Secure = () => {
-    const [givenName, setGivenName] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [firstRender, setFirstRender] = useState(true);
     const [joke, setJoke] = useState('');
@@ -53,7 +54,7 @@ const Secure = () => {
             <div>
                 <h2>User Information</h2>
                 <p>Email Address: {email}</p>
-                <p>Name: {givenName}</p>
+                <p>Name: {firstName} {lastName}</p>
                 <p>Favorite Joke: {joke}</p>
                 <p>favorite Ice Cream: {iceCream}</p>
                 <p>age: {age}</p>
