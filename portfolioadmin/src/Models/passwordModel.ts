@@ -1,5 +1,5 @@
 export default class passwordModel {
-    private password: string | null
+    password: string | null
     private readonly MINCHARS: number = 6; 
     private readonly MAXCHARS: number = 30;
     private consumed: boolean = false;
