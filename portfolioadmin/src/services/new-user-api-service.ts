@@ -11,7 +11,7 @@ type user = {
 }
 
 const addUser = async(user: user) => {
-await axios.post(apiUrl + '/user/adduser', {user: user.username.name, password: user.password.password, password2: user.password2.password});
+await axios.post(apiUrl + '/user/adduser', {user: user.username.name, password: user.password.value, password2: user.password2.value});
 }
 
 const newUserApiService = {
