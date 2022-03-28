@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import { useHistory } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
@@ -11,6 +11,7 @@ const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleuserc
 const Login = () => {
  
     const dispatch = useDispatch();
+    let history = useHistory();
 
     const refreshTokenSetup = (res) => {
         let refreshTiming = (res.tokenObj.expires_in || 3600 - 5 * 60) * 1000
@@ -48,7 +49,8 @@ const Login = () => {
         setIsLoggedIn(true)
         refreshTokenSetup(res);
         dispatch(getUser(res.tokenId))
-        
+        history.push('/secure');
+
     }
     const onFailure = (res)=> {
         console.log('[Login failed] res: ', res)
