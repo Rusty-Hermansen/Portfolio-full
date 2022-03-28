@@ -74,7 +74,7 @@ const Secure = () => {
         userService.createUser(storeUser)
     }
 
-        if(user){
+        if(storeUser){
             return (
 
             <div>
