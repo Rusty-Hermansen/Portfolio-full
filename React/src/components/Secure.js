@@ -38,7 +38,7 @@ const Secure = () => {
             console.error("no user")
         }
         else {
-            const user = userService.getUser(user.email)
+            const user = userService.getUser(token)
             setEmail(user.email)
             setFullName(user.fullName)
             setJoke(user.joke)
@@ -71,7 +71,7 @@ const Secure = () => {
             age: age,
             nickName: nickname
         }
-        userService.createUser(storeUser)
+        userService.createUser(user)
     }
 
         if(storeUser){
