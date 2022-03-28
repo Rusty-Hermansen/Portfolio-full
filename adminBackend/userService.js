@@ -24,8 +24,6 @@ console.log("hashing and salting")
     
 }
 
-
-
 module.exports.userService = {
     addUser
 }
