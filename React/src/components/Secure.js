@@ -18,7 +18,7 @@ const Secure = () => {
     const token = useStore(store => store.user.token)
     const dispatch = useDispatch();
 
-    console.table(storeUser)
+    console.log("store" + storeUser)
 
     useEffect(() => {
 
