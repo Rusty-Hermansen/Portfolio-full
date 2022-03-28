@@ -18,6 +18,8 @@ const Secure = () => {
     const token = useStore(store => store.user.token)
     const dispatch = useDispatch();
 
+    console.table(storeUser)
+
     useEffect(() => {
 
         axios.get('/api/auth/secure', { withCredentials: true })
