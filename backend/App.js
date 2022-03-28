@@ -111,7 +111,7 @@ app.get('/api/user/get', async (req, res) => {
 })
 app.get('/api/user/authenticate', async (req, res) => {
     try {
-        const response = userService.authenticateUser(req.body.token);
+        const response = userService.authenticateUser(req.header('authorization'));
         res.send(response)
     }
     catch (error) {
