@@ -32,6 +32,7 @@ const createUser = async (email, fullName, joke, iceCream, age, nickname) =>{
     )}
 
 const authenticateUser = async(token) =>{
+    console.log(token)
     const client = new OAuth2Client(clientId)
     const ticket = await client.verifyIdToken({
         idToken: token,
