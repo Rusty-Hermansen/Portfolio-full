@@ -1,7 +1,8 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 import userService from '../Services/userService';
-import { useStore } from 'react-redux';
+import { useDispatch, useStore } from 'react-redux';
+import { getUser } from '../store/userSlice';
 
 const Secure = () => {
     const [fullName, setFullName] = useState('')
@@ -13,6 +14,9 @@ const Secure = () => {
     const [nickname, setNickname] = useState('');
 
     const [userName, setUserName] = useState('');
+    const storeUser = useStore(store => store.user.user)
+    const token = useStore(store => store.user.token)
+    const dispatch = useDispatch();
 
     useEffect(() => {
 
@@ -27,9 +31,9 @@ const Secure = () => {
             .catch(err => {
                 console.error(err)
             })
-        const storeUser = useStore(store => store.user.user)
-        const user = userService.authenticateUser(storeUser.tokenId)
-        console.log(user);
+        
+        useDispatch(getUser(token))
+        console.log(storeUser);
         if (!user) {
             console.error("no user")
         }
