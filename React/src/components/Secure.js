@@ -38,13 +38,13 @@ const Secure = () => {
             console.error("no user")
         }
         else {
-            const user = userService.getUser(token)
-            setEmail(user.email)
-            setFullName(user.fullName)
-            setJoke(user.joke)
-            setIceCream(user.iceCream)
-            setAge(user.age)
-            setNickname(user.nickName)
+            
+            setEmail(storeUser.email)
+            setFullName(storeUser.fullName)
+            setJoke(storeUser.joke)
+            setIceCream(storeUser.iceCream)
+            setAge(storeUser.age)
+            setNickname(storeUser.nickName)
         }
     }, [])
 
