@@ -34,7 +34,7 @@ const Secure = () => {
         
         dispatch(getUser(token))
         console.log(storeUser);
-        if (!user) {
+        if (!storeUser) {
             console.error("no user")
         }
         else {
@@ -71,7 +71,7 @@ const Secure = () => {
             age: age,
             nickName: nickname
         }
-        userService.createUser(user)
+        userService.createUser(storeUser)
     }
 
         if(user){
@@ -80,7 +80,7 @@ const Secure = () => {
             <div>
                 <h2>User Information</h2>
                 <p>Email Address: {email}</p>
-                <p>Name: {firstName} {lastName}</p>
+                <p>Name: {fullName}</p>
                 <p>Favorite Joke: {joke}</p>
                 <p>favorite Ice Cream: {iceCream}</p>
                 <p>age: {age}</p>
