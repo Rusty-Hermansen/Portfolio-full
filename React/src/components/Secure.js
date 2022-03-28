@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 import userService from '../Services/userService';
-import { useDispatch, useStore } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '../store/userSlice';
 
 const Secure = () => {
@@ -14,8 +14,8 @@ const Secure = () => {
     const [nickname, setNickname] = useState('');
 
     const [userName, setUserName] = useState('');
-    const storeUser = useStore(store => store.user.user)
-    const token = useStore(store => store.user.token)
+    const storeUser = useSelector(store => store.user.user)
+    const token = useSelector(store => store.user.token)
     const dispatch = useDispatch();
 
     console.log("store" + storeUser)
