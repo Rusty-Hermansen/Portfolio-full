@@ -1,6 +1,7 @@
 const { Pool } = require('pg')
 const dotenv = require('dotenv')
 
+
 dotenv.config()
 
 const pool = new Pool({
@@ -97,27 +98,7 @@ const getSessionBySessionId = async (session_id) => {
     }
 }
 
-const getUserInfoByEmail = async (email) => {
-    const res = await pool.query(
-        `SELECT * FROM portfolio_post.user WHERE email = $1;`, 
-    [email])
-    if(res.rowCount > 0){
-        return res.rows[0];
-    }
-    else {
-        return null
-    }
-}
 
-const createUser = async (email, firstName, lastName, joke, iceCream, age, nickname) =>{
-    const res = await pool.query(
-        `INSERT INTO portfolio_post.user(email, firstName, lastName, joke, iceCream, age, nickname)
-         VALUES($1, $2, $3, $4, $5, $6, $7);`,
-         [email, firstName, lastName, joke, iceCream, age, nickname]
-    )
-   
-    
-}
 module.exports.queries = {
      getPostById, 
      getPosts, 
@@ -125,6 +106,4 @@ module.exports.queries = {
      deleteSession, 
      getSession,
      getSessionBySessionId,
-     getUserInfoByEmail,
-     createUser
      };

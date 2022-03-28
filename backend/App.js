@@ -1,5 +1,6 @@
 const express = require('express');
 const { queries } = require('./queries');
+const { userService } = require('./services/userService')
 const dotenv = require('dotenv');
 var bcrypt = require('bcrypt');
 var cookieParser = require('cookie-parser');
@@ -98,18 +99,37 @@ app.get('/api/auth/logout', async (req, res) => {
     res.sendStatus(200)
 })
 
-app.get('/api/user/get', async(req, res) => {
-    const response = await queries.getUserInfoByEmail(req.body.email)
+app.get('/api/user/get', async (req, res) => {
+    try {
+        const response = await queries.getUserInfoByEmail(req.body.email)
+        res.send(response)
+    }
+    catch (error) {
+        console.error(error.stack)
+    }
+
 })
-app.post('/api/user/create', async(req, res) => {
-    const email = req.body.email;
-    const firstName = req.body.firstName;
-    const lastName = req.body.lastName;
-    const joke = req.body.joke;
-    const iceCream = req.body.iceCream;
-    const age = req.body.age;
-    const nickname = req.body.nickname;
-    const response = await queries.createUser(email, firstName, lastName, joke, iceCream, age, nickname);
+app.get('/api/user/authenticate', async (req, res) => {
+    try {
+        const response = userService.authenticateUser(req.body.token);
+        res.send(response)
+    }
+    catch (error) {
+        console.error(error.stack)
+        res.sendStatus(500)
+    }
+
+})
+app.post('/api/user/create', async (req, res) => {
+    try {
+        const response = await userService.createUser(req.body.email, req.body.name, req.body.joke, req.body.iceCream, req.body.age, req.body.nickname);
+        res.sendStatus(200)
+    }
+    catch (error) {
+        console.error(error.stack)
+        res.sendStatus(500)
+    }
+    
 })
 
 

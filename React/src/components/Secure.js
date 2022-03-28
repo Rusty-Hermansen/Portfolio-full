@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react';
+import userService from '../Services/userService';
+import { useStore } from 'react-redux';
 
 const Secure = () => {
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
+    const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [firstRender, setFirstRender] = useState(true);
     const [joke, setJoke] = useState('');
@@ -26,6 +27,21 @@ const Secure = () => {
             .catch(err => {
                 console.error(err)
             })
+        const storeUser = useStore(store => store.user.user)
+        const user = userService.authenticateUser(storeUser.tokenId)
+        console.log(user);
+        if (!user) {
+            console.error("no user")
+        }
+        else {
+            const user = userService.getUser(user.email)
+            setEmail(user.email)
+            setFullName(user.fullName)
+            setJoke(user.joke)
+            setIceCream(user.iceCream)
+            setAge(user.age)
+            setNickname(user.nickName)
+        }
     }, [])
 
     const jokeChanged = (e) => {
@@ -43,16 +59,20 @@ const Secure = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        const user = {
+            email: email,
+            fullName: fullName,
+            joke: joke,
+            iceCream: iceCream,
+            age: age,
+            nickName: nickname
+        }
+        userService.createUser(user)
     }
 
-    if (userName !== '' && firstRender === false) {
-        return (<div>
-            <h1>Welcome, {userName}!</h1>
-        </div>)
-    }
-    else {
-        return (
-            
+        if(user){
+            return (
+
             <div>
                 <h2>User Information</h2>
                 <p>Email Address: {email}</p>
@@ -61,26 +81,32 @@ const Secure = () => {
                 <p>favorite Ice Cream: {iceCream}</p>
                 <p>age: {age}</p>
                 <p>your nickname: {nickname}</p>
-                <hr/>
+                <hr />
                 <form onSubmit={onSubmit}>
                     <label>Joke</label>
                     <input type='text' onChange={jokeChanged} value={joke} />
                     <label>Favorite Ice Cream</label>
-                    <input type='text' onChange = {iceCreamChanged} value={iceCream} />
+                    <input type='text' onChange={iceCreamChanged} value={iceCream} />
                     <label>Age</label>
-                    <input type='number' onChange = {ageChanged} value={age}/>
+                    <input type='number' onChange={ageChanged} value={age} />
                     <label>Nickname</label>
-                    <input type='text' onChange = {nicknameChanged} value={nickname}/>
+                    <input type='text' onChange={nicknameChanged} value={nickname} />
                     <button type='submit'>Submit</button>
                 </form>
-                {/* {
-                    !firstRender &&
-                   <Redirect to="/login"></Redirect> 
-                } */}
-                Unauthorized
+               
 
-            </div>)
+            </div>) 
+        }
+        else {
+            return (
+                <>
+                Unauthorized
+                </>
+                
+            )
+        }
+       
     }
-}
+
 
 export default Secure;

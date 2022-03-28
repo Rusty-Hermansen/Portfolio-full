@@ -2,18 +2,13 @@ import axios from 'axios';
 
 const url = '/api/user';
 
-const getUser = async (email) => {
-    const res = await axios.get(url + '/get');
-    return res.data;
-}
 
 const createUser = async (userObject) => {
     try {
         const res = await axios.post(url + '/create',
             {
                 email: userObject.email,
-                firstName: userObject.firstName,
-                lastName: userObject.lastName,
+                fullName: userObject.fullName,
                 joke: userObject.joke,
                 iceCream: userObject.iceCream,
                 age: userObject.age,
@@ -26,9 +21,23 @@ const createUser = async (userObject) => {
     }
     
 }
+
+const authenticateUser = async (token)=> {
+    try {
+        const res = await axios.get(url + '/authenticate',{
+            headers: {
+                    Authorization: `Bearer ${token} `, 
+            }
+        });
+        return res.data;
+    }
+    catch(error){
+        return error.stack(error)
+    }
+}
 const userService = {
-    getUser,
-    createUser
+    createUser,
+    authenticateUser
 }
 
 export default userService;
