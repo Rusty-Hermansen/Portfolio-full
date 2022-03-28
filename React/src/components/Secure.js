@@ -32,7 +32,7 @@ const Secure = () => {
                 console.error(err)
             })
         
-        useDispatch(getUser(token))
+        dispatch(getUser(token))
         console.log(storeUser);
         if (!user) {
             console.error("no user")
