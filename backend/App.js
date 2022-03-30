@@ -115,7 +115,8 @@ app.get('/api/user/authenticate', async (req, res) => {
 })
 app.post('/api/user/create', async (req, res) => {
     try {
-        console.log("Creating a new user" + req.body)
+        console.log("Creating a new user " + req.body);
+        console.table(req.body);
         const response = await userService.createUser(req.body.email, req.body.name, req.body.joke, req.body.iceCream, req.body.age, req.body.nickname);
         console.log("api response call for new user" + response)
         res.sendStatus(200)
