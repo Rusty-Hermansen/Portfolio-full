@@ -99,22 +99,15 @@ app.get('/api/auth/logout', async (req, res) => {
     res.sendStatus(200)
 })
 
-app.get('/api/user/get', async (req, res) => {
-    try {
-        const response = await queries.getUserInfoByEmail(req.body.email)
-        res.send(response)
-    }
-    catch (error) {
-        console.error(error.stack)
-    }
 
-})
 app.get('/api/user/authenticate', async (req, res) => {
     try {
+        console.log("Hit the authenticate endpoint")
         const response = userService.authenticateUser(req.header('authorization').substring(7));
         res.send(response)
     }
     catch (error) {
+        console.log("There was an error hitting the authenticate endpoint")
         console.error(error.stack)
         res.sendStatus(500)
     }
@@ -122,7 +115,9 @@ app.get('/api/user/authenticate', async (req, res) => {
 })
 app.post('/api/user/create', async (req, res) => {
     try {
+        console.log("Creating a new user" + req.body)
         const response = await userService.createUser(req.body.email, req.body.name, req.body.joke, req.body.iceCream, req.body.age, req.body.nickname);
+        console.log("api response call for new user" + response)
         res.sendStatus(200)
     }
     catch (error) {
@@ -130,6 +125,10 @@ app.post('/api/user/create', async (req, res) => {
         res.sendStatus(500)
     }
     
+})
+app.post('/api/user/logout', async (req, res) => {
+    const response = await userService.logoutUser();
+    res.sendStatus(200)
 })
 
 

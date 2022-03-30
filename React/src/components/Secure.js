@@ -73,6 +73,7 @@ const Secure = () => {
             age: age,
             nickName: nickname
         }
+        console.log("nickname" + nickname)
         userService.createUser(user)
     }
 
