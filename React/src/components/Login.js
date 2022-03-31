@@ -43,8 +43,13 @@ const Login = () => {
     // }, [])
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [loginData, setLoginData] = useState(
+    //     localStorage.getItem('loginData')
+    //     ? JSON.parse(localStorage.getItem('loginData'))
+    //     : null
+    // )
 
-    const onSuccess = (res) => {
+    const onSuccess = async (res) => {
         console.log('[Login Success] currentUser:' , res.profileObj);
         setIsLoggedIn(true)
         refreshTokenSetup(res);
@@ -57,6 +62,8 @@ const Login = () => {
     };
     const onLogoutSuccess = () => {
         setIsLoggedIn(false)
+        localStorage.removeItem('loginData')
+        setLoginData(null)
         alert('You have logged out')
     }
 
@@ -64,16 +71,27 @@ const Login = () => {
     if (!isLoggedIn) {
         return (
             <>
-                <GoogleLogin
+            {loginData ? (
+                <div>
+                    <h2>You are logged in as {loginData.email} </h2>
+                </div>
+
+            )
+            : (
+
+                 <GoogleLogin
                 clientId={clientId}
                 buttonText= "Login"
-                accessType="offline"
-                responseType="code"
+                // accessType="offline"
+                // responseType="code"
                 onSuccess={onSuccess}
                 onFailure={onFailure}
                 cookiePolicy={'single_host_origin'}
                 style={{marginTop: '100px'}}
                 isSignedIn={true}/>
+            )
+            } 
+               
             </>
         )
 

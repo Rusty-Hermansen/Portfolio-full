@@ -35,7 +35,7 @@ const Secure = () => {
             })
         
         dispatch(getUser(token))
-        console.log(storeUser);
+        console.log("stored user" + storeUser);
         if (!storeUser) {
             console.error("no user")
         }
