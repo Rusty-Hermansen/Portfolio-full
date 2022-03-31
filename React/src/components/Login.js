@@ -28,6 +28,9 @@ const Login = () => {
         setTimeout(refreshToken, refreshTiming)
     }
 
+    const redirectHandler = () => {
+        history.push('/secure');
+    }
 
     // useEffect(() => {
 
@@ -56,7 +59,7 @@ const Login = () => {
         refreshTokenSetup(res);
         dispatch(getUser(res.tokenId))
         console.log(res.tokenId);
-        history.push('/secure');
+        
 
     }
 
@@ -111,6 +114,7 @@ const Login = () => {
                     buttonText="Logout"
                     onLogoutSuccess={onLogoutSuccess}
                 />
+                <button onClick= {redirectHandler}>Redirect to /secure</button>
                     
               
             </>
