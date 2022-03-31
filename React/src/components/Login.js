@@ -71,13 +71,10 @@ const Login = () => {
         localStorage.removeItem('loginData')
         setLoginData(null);
        
-        // axios.post('https://oauth2.googleapis.com/revoke', {
-        //     clientId: clientId
-        //     token
-        // })
         console.log("token from slice" + token)
         const logout = userService.logoutUser(token)
-        userService.authenticateUser(token)
+        const response = userService.authenticateUser(token)
+        console.log("logout response " + response)
         alert('You have logged out')
     }
 
