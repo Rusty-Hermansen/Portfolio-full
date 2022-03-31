@@ -5,7 +5,7 @@ export const getUser = createAsyncThunk(
     "getUser",
     async(token, thunkApi) => {
         const response = await userService.authenticateUser(token);
-        console.log("response in thunk " + response)
+        console.log("response in thunk " + response.payload)
         return response;
     }
 )
