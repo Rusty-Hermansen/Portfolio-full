@@ -58,6 +58,7 @@ const Login = () => {
         history.push('/secure');
 
     }
+
     const onFailure = (res)=> {
         console.log('[Login failed] res: ', res)
     };
@@ -87,7 +88,7 @@ const Login = () => {
                 // responseType="code"
                 onSuccess={onSuccess}
                 onFailure={onFailure}
-                cookiePolicy={'single_host_origin'}
+                cookiePolicy='single_host_origin'
                 style={{marginTop: '100px'}}
                 isSignedIn={true}/>
             )
