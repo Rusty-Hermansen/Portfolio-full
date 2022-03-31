@@ -11,6 +11,9 @@ const Login = () => {
  
     const dispatch = useDispatch();
     let history = useHistory();
+    const token = useSelector(store => store.user.token);
+
+
 
     const refreshTokenSetup = (res) => {
         let refreshTiming = (res.tokenObj.expires_in || 3600 - 5 * 60) * 1000
@@ -67,7 +70,7 @@ const Login = () => {
         setIsLoggedIn(false)
         localStorage.removeItem('loginData')
         setLoginData(null);
-        const token = useSelector(store => store.user.token);
+       
         // axios.post('https://oauth2.googleapis.com/revoke', {
         //     clientId: clientId
         //     token
