@@ -4,6 +4,7 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { getUser } from '../store/userSlice';
+import { useSelector } from 'react-redux';
 
 const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleusercontent.com';
 
@@ -66,6 +67,10 @@ const Login = () => {
         setIsLoggedIn(false)
         localStorage.removeItem('loginData')
         setLoginData(null)
+        const token = useSelector(store => store.user.token)
+        axios.get('https://oauth2.googleapis.com/revoke', {
+            token: token
+        })
         alert('You have logged out')
     }
 

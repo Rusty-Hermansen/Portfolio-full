@@ -11,6 +11,7 @@ const pool = new Pool({
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT
 });
+
 const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleusercontent.com'
 const getUserInfoByEmail = async (email) => {
     const res = await pool.query(

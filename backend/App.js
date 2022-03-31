@@ -104,6 +104,7 @@ app.get('/api/user/authenticate', async (req, res) => {
     try {
         console.log("Hit the authenticate endpoint")
         const response = userService.authenticateUser(req.header('authorization').substring(7));
+        console.log(response)
         res.send(response)
     }
     catch (error) {
