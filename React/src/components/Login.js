@@ -43,11 +43,11 @@ const Login = () => {
     // }, [])
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    // const [loginData, setLoginData] = useState(
-    //     localStorage.getItem('loginData')
-    //     ? JSON.parse(localStorage.getItem('loginData'))
-    //     : null
-    // )
+    const [loginData, setLoginData] = useState(
+        localStorage.getItem('loginData')
+        ? JSON.parse(localStorage.getItem('loginData'))
+        : null
+    )
 
     const onSuccess = async (res) => {
         console.log('[Login Success] currentUser:' , res.profileObj);
