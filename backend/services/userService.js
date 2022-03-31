@@ -51,7 +51,8 @@ const authenticateUser = async(token) =>{
 
 const logoutUser = async(token) => {
     console.log("revoking token " + token)
-    const result = await OAuth2Client.revokeToken(token);
+    const client = new OAuth2Client(clientId)
+    const result = await client.revokeToken(token);
 
 }
 
