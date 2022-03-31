@@ -54,6 +54,7 @@ const Login = () => {
         setIsLoggedIn(true)
         refreshTokenSetup(res);
         dispatch(getUser(res.tokenId))
+        console.log(res.tokenId);
         history.push('/secure');
 
     }
