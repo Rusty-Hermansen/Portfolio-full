@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { useDispatch } from 'react-redux';
 import { getUser } from '../store/userSlice';
-import { userService } from '../Services/userService';
+import userService from '../Services/userService';
 
 const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleusercontent.com';
 
@@ -74,8 +74,7 @@ const Login = () => {
         //     token
         // })
         console.log("token from slice" + token)
-        const logout = userService.logoutUser(token);
-
+        const logout = userService.logoutUser(token)
         alert('You have logged out')
     }
 
