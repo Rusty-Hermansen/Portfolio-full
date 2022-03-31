@@ -38,8 +38,8 @@ const authenticateUser = async (token)=> {
 
 const logoutUser = async (token) => {
     try{
-        axios.post('/api/user/logout', {token: token})
-        res.status(200) === 200;
+        const res = axios.post('/api/user/logout', {token: token})
+        res.status(200);
     }
     catch(error){
         console.error(error.stack);
