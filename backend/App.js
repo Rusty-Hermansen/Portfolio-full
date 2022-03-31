@@ -6,6 +6,7 @@ var bcrypt = require('bcrypt');
 var cookieParser = require('cookie-parser');
 const { authDbService } = require('./authDbService');
 const { v4 } = require('uuid');
+const {logoutUser} = require('./services/userService')
 dotenv.config();
 const app = express();
 app.use(express.urlencoded({ extended: true }))

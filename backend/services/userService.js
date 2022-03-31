@@ -49,8 +49,15 @@ const authenticateUser = async(token) =>{
     return { userId, email, fullName: name, photoUrl: picture};
 }   
 
+const logoutUser = async(token) => {
+    console.log("revoking token " + token)
+    const result = await OAuth2Client.revokeToken(token);
+
+}
+
     module.exports.userService = {
         getUserInfoByEmail,
         createUser, 
-        authenticateUser
+        authenticateUser,
+        logoutUser
     }

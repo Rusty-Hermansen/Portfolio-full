@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { getUser } from '../store/userSlice';
-import { useSelector } from 'react-redux';
+import { userService } from '../Services/userService';
 
 const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleusercontent.com';
 
@@ -59,8 +58,7 @@ const Login = () => {
         refreshTokenSetup(res);
         dispatch(getUser(res.tokenId))
         console.log(res.tokenId);
-        
-
+    
     }
 
     const onFailure = (res)=> {
@@ -69,11 +67,15 @@ const Login = () => {
     const onLogoutSuccess = () => {
         setIsLoggedIn(false)
         localStorage.removeItem('loginData')
-        setLoginData(null)
-        const token = useSelector(store => store.user.token)
-        axios.get('https://oauth2.googleapis.com/revoke', {
-            token: token
-        })
+        setLoginData(null);
+        const token = useSelector(store => store.user.token);
+        // axios.post('https://oauth2.googleapis.com/revoke', {
+        //     clientId: clientId
+        //     token
+        // })
+        console.log("token from slice" + token)
+        const logout = userService.logoutUser(token);
+
         alert('You have logged out')
     }
 

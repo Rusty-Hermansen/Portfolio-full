@@ -35,9 +35,20 @@ const authenticateUser = async (token)=> {
         return error.stack(error)
     }
 }
+
+const logoutUser = async (token) => {
+    try{
+        axios.post('/api/user/logout', {token: token})
+        res.status(200) === 200;
+    }
+    catch(error){
+        console.error(error.stack);
+    }
+}
 const userService = {
     createUser,
-    authenticateUser
+    authenticateUser,
+    logoutUser
 }
 
 export default userService;
