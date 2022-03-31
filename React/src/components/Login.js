@@ -77,6 +77,7 @@ const Login = () => {
         // })
         console.log("token from slice" + token)
         const logout = userService.logoutUser(token)
+        userService.authenticateUser(token)
         alert('You have logged out')
     }
 
