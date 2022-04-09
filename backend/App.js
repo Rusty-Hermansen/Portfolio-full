@@ -4,7 +4,7 @@ const { userService } = require('./services/userService')
 const dotenv = require('dotenv');
 var bcrypt = require('bcrypt');
 var cookieParser = require('cookie-parser');
-const { authDbService } = require('./authDbService');
+const { authDbService } = require('./dbService/authDbService');
 const { v4 } = require('uuid');
 const {logoutUser} = require('./services/userService')
 dotenv.config();
@@ -104,7 +104,7 @@ app.get('/api/auth/logout', async (req, res) => {
 app.get('/api/user/authenticate', async (req, res) => {
     try {
         console.log("Hit the authenticate endpoint")
-        const response = userService.authenticateUser(req.header('authorization').substring(7));
+        const response = await userService.authenticateUser(req.header('authorization').substring(7));
         console.log(response)
         res.send(response)
     }
@@ -115,10 +115,12 @@ app.get('/api/user/authenticate', async (req, res) => {
     }
 
 })
+
 app.post('/api/user/create', async (req, res) => {
     try {
         console.log("Creating a new user " + req.body);
         console.table(req.body);
+        console.log(res)
         const response = await userService.createUser(req.body.email, req.body.name, req.body.joke, req.body.iceCream, req.body.age, req.body.nickname);
         console.log("api response call for new user" + response)
         res.sendStatus(200)

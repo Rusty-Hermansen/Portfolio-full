@@ -4,6 +4,7 @@ import userService from '../Services/userService'
 export const getUser = createAsyncThunk(
     "getUser",
     async(token, thunkApi) => {
+        console.log(token)
         const response = await userService.authenticateUser(token);
         console.log("response in thunk " + response.payload)
         return response;

@@ -4,6 +4,8 @@ const url = '/api/user';
 
 
 const createUser = async (userObject) => {
+    console.log("inside of create in userservice in frontend")
+    console.table(userObject);
     try {
         const res = await axios.post(url + '/create',
             {
@@ -29,6 +31,7 @@ const authenticateUser = async (token)=> {
                     Authorization: `Bearer ${token} `, 
             }
         });
+        console.log(res.data)
         return res.data;
     }
     catch(error){

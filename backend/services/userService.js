@@ -44,9 +44,7 @@ const authenticateUser = async(token) =>{
     const payload = ticket.getPayload();
     console.log( `User ${payload.name} verified`);
 
-    const {sub, email, name, picture} = payload;
-    const userId = sub;
-    return { userId, email, fullName: name, photoUrl: picture};
+    return { userId: payload.sub, email: payload.email, fullName: payload.name, photoUrl: payload.picture};
 }   
 
 const logoutUser = async(token) => {
