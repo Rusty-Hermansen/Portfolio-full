@@ -5,7 +5,6 @@ const dotenv = require('dotenv');
 var bcrypt = require('bcrypt');
 var cookieParser = require('cookie-parser');
 const { authDbService } = require('./dbService/authDbService');
-const { userService } = require('./services/userService');
 const { v4 } = require('uuid');
 const { logoutUser } = require('./services/userService')
 dotenv.config();
