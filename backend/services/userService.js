@@ -13,6 +13,7 @@ const pool = new Pool({
 });
 
 const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleusercontent.com'
+
 const getUserInfoByEmail = async (email) => {
     const res = await pool.query(
         `SELECT * FROM portfolio_post.user WHERE email = $1;`, 

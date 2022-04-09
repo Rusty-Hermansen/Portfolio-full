@@ -5,8 +5,9 @@ const dotenv = require('dotenv');
 var bcrypt = require('bcrypt');
 var cookieParser = require('cookie-parser');
 const { authDbService } = require('./dbService/authDbService');
+const { userService } = require('./services/userService');
 const { v4 } = require('uuid');
-const {logoutUser} = require('./services/userService')
+const { logoutUser } = require('./services/userService')
 dotenv.config();
 const app = express();
 app.use(express.urlencoded({ extended: true }))
@@ -71,25 +72,13 @@ app.get('/api/auth/secure', async (req, res) => {
     console.table(req.cookies)
     const dbSession = await queries.getSessionBySessionId(req.cookies.session_id);
     console.table(dbSession)
-    if (dbSession === null) {
-        console.log("no session")
-        res.sendStatus(403);
-    }
-    else {
-        // if ((new Date(dbSession.session_expiration)).getTime() < (new Date()).getTime()) {
-        //     return res.sendStatus(403)
-        // }
-        // else {
-        //     const response = await authDbService.getUserById(dbSession.user_id);
-        //     console.table(response)
-        //     res.send(response.user_username);
-        // }
 
-        const response = await authDbService.getUserById(dbSession.user_id);
-        console.table(response)
-        res.send(response.user_username);
+    const user = await userService.authenticateUser(req.header('authorization').substring(7));
+    const response = await userService.getUserInfoByEmail(user.email)
+    console.table(response)
+    res.send(response);
 
-    }
+
 
 })
 
@@ -129,7 +118,7 @@ app.post('/api/user/create', async (req, res) => {
         console.error(error.stack)
         res.sendStatus(500)
     }
-    
+
 })
 app.post('/api/user/logout', async (req, res) => {
     const response = await userService.logoutUser();
