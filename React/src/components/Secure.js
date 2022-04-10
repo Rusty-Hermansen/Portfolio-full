@@ -87,7 +87,7 @@ const Secure = () => {
         setFile(file)
     }
 
-        if(!storeUser){
+        if(storeUser){
             return (
 
             <div>
