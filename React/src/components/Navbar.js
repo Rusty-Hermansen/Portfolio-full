@@ -29,7 +29,7 @@ const Navbar = () => {
                     style={{ textDecoration: 'none' }}
                     activeClassName='text-yellow-200'
                     className='inflex-flex items-center py-2 px-3  text-yellow-700 hover:text-white  font-bold text-2xl'>
-                        About
+                        Login
                     </NavLink>
                 </nav>
                 <div className="inline-flex py-2 px-3 ">
