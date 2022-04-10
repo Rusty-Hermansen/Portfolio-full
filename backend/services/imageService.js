@@ -13,8 +13,8 @@ const s3 = new S3({
     secretAccessKey
 })
 //upload
-function uploadImage(file) {
-    const fileStream = fs.createReadStream(file.path)
+function uploadImage(imageFile) {
+    const fileStream = fs.createReadStream(imageFile.path)
 
     const uploadParams = {
         Bucket: bucketName,
@@ -34,7 +34,8 @@ function downloadImage(fileKey){
         Bucket: bucketName
     }
 
-    return s3.getObject(downloadParams).createReadStream();
+    const url= s3.getSignedUrl('getObject', downloadParams);
+    return url;
 }
 // exports.downloadImage = downloadImage;
 exports.imageService = {uploadImage, downloadImage}

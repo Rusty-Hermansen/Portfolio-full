@@ -4,6 +4,12 @@ const { userService } = require('./services/userService')
 const dotenv = require('dotenv');
 var bcrypt = require('bcrypt');
 var cookieParser = require('cookie-parser');
+const multer  = require('multer')
+const { uploadImage, downloadImage, imageService } = require('./services/imageService')
+const upload = multer({ dest: 'uploads/' })
+const fs = require('fs');
+const util = require('util');
+const unlink = util.promisify(fs.unlink);
 const { authDbService } = require('./dbService/authDbService');
 const { v4 } = require('uuid');
 const { logoutUser } = require('./services/userService')
@@ -28,8 +34,8 @@ app.get('/api/posts', async (req, res) => {
 })
 
 app.post('/api/auth/login', async (req, res) => {
-    const username = req.body.username;
-    const password = req.body.password;
+    // const username = req.body.username;
+    // const password = req.body.password;
 
     console.table(req.body);
 
@@ -78,7 +84,6 @@ app.get('/api/auth/secure', async (req, res) => {
     res.send(response);
 
 
-
 })
 
 app.get('/api/auth/logout', async (req, res) => {
@@ -124,6 +129,21 @@ app.post('/api/user/logout', async (req, res) => {
     res.sendStatus(200)
 })
 
+app.post('/api/images', upload.single('image'), async (req, res) =>{
+    const file = req.file;
+
+    const result = await imageService.uploadImage(file);
+    await unlinkFile(file.path);
+    console.log(result);
+    res.send({imagePath: `/images/${result.Key}`}); //key is filename in s3
+})
+
+app.get('/api/images/:key', (req, res)=>{
+    const key = req.params.key;
+    const readStream = imageService.downloadImage(key);
+
+    readStream.pipe(res)
+})
 
 app.listen(5000, () => {
     console.log("Listening on port 5000")
