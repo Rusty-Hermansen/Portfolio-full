@@ -123,8 +123,8 @@ app.post('/api/user/create', authorizationCheck , async (req, res) => {
         console.error(error.stack)
         res.sendStatus(500)
     }
-
 })
+
 app.post('/api/user/logout', async (req, res) => {
     const response = await userService.logoutUser();
     res.sendStatus(200)
