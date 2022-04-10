@@ -11,6 +11,7 @@ const fs = require('fs');
 const util = require('util');
 const unlink = util.promisify(fs.unlink);
 // const { authDbService } = require('./dbService/authDbService');
+const authorizationCheck = require('./middleware/authorizationCheck')
 const { v4 } = require('uuid');
 const { logoutUser } = require('./services/userService')
 dotenv.config();
@@ -109,7 +110,7 @@ app.get('/api/user/authenticate', async (req, res) => {
 
 })
 
-app.post('/api/user/create', async (req, res) => {
+app.post('/api/user/create', authorizationCheck , async (req, res) => {
     try {
         console.log("Creating a new user " + req.body);
         console.table(req.body);
