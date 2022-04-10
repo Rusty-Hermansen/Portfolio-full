@@ -68,7 +68,7 @@ const Secure = () => {
         e.preventDefault();
         
         console.log("nickname" + nickname)
-        const result = await imageService.uploadImage({ image: file })
+        const result = imageService.uploadImage({ image: file })
         console.log(result)
         const user = {
             email: email,
