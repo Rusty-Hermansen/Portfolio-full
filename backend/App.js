@@ -10,7 +10,7 @@ const upload = multer({ dest: 'uploads/' })
 const fs = require('fs');
 const util = require('util');
 const unlink = util.promisify(fs.unlink);
-const { authDbService } = require('./dbService/authDbService');
+// const { authDbService } = require('./dbService/authDbService');
 const { v4 } = require('uuid');
 const { logoutUser } = require('./services/userService')
 dotenv.config();
@@ -40,7 +40,7 @@ app.post('/api/auth/login', async (req, res) => {
     console.table(req.body);
 
     console.log("Hit endpoint");
-    const dbResult = await authDbService.getUser(username)
+    // const dbResult = await authDbService.getUser(username)
     if (dbResult === null) {
         res.sendStatus(403)
     }
