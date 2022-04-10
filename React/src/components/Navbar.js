@@ -25,6 +25,12 @@ const Navbar = () => {
                     className='inflex-flex items-center py-2 px-3  text-yellow-700 hover:text-white  font-bold text-2xl'>
                         About
                     </NavLink>
+                    <NavLink to='login' 
+                    style={{ textDecoration: 'none' }}
+                    activeClassName='text-yellow-200'
+                    className='inflex-flex items-center py-2 px-3  text-yellow-700 hover:text-white  font-bold text-2xl'>
+                        About
+                    </NavLink>
                 </nav>
                 <div className="inline-flex py-2 px-3 ">
                     <SocialIcon url="https://www.linkedin.com/in/rusty-hermansen/" className="mr-4" target='_blank' fgColor="#fff" style={{height: 45, width:45}} />
