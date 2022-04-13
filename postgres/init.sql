@@ -1575,18 +1575,101 @@ VALUES ('Adding a background image with a div in React','https://upload.wikimedi
 ');
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Using Google for Authentification in React','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
-'
-');
-
-insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Combatting SQL Injection With Parameterized Queries in Postgres','https://wiki.postgresql.org/images/3/30/PostgreSQL_logo.3colors.120x120.png', '2021-11-21 10:23:54',
-'
-');
-
-insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Uploading and Displaying Image From an S3 Bucket in React','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
-'
+VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
+' <p class="c2"><span class="c0">When it comes to writing backend code for our frontend web applications there are
+            many options out there to make that happen. One of the more popular choices is Node and Express and many are
+            familiar with the way that an API is written using them. Here is your pretty typical GET request that would
+            live in your index.js file. This example is a snippet grabbed from my first article about writing a
+            Node/Express API. </span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 395.00px; height: 80.00px;"><img
+                alt="" src="images/image4.png"
+                style="width: 395.00px; height: 80.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">In this post I&rsquo;ll be showing how to write an API in a totally new way that
+            allows for loose coupling &nbsp;and for a testable Node API. This new way utilizes dependency inversion to
+            achieve loose coupling and further testability. In this example I&rsquo;ll start from the start.js file and
+            work out from there showing an example from a recipe application that I wrote with two fellow engineering
+            students. We&rsquo;ll focus on just the recipe piece of the application. </span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 573.00px; height: 904.00px;"><img
+                alt="" src="images/image2.png"
+                style="width: 573.00px; height: 904.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2"><span class="c0">It starts with service interfaces, the implemented services, controllers, contexts,
+            and app configuration. Then after that is where the services are injected, this is important because the way
+            that the services are injected with their respective contexts are how we achieve loose coupling and
+            testability. Each of these pieces can be switched out for mocked pieces that allow for testing. The
+            controllers are then exported for use when routing occurs and the server is started up. I&rsquo;ll now work
+            from top to bottom to show exactly what each piece of this file looks like. </span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span>&nbsp;</span><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 502.00px; height: 793.00px;"><img
+                alt="" src="images/image5.png"
+                style="width: 502.00px; height: 793.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">Here is what the IRecipeService interface looks like. You can see that it looks like
+            what a good interface should, showing inputs that will be passed into the actual service. It&rsquo;s also
+            important to note a few other things about this code snippet. On line 2 where #service is, when you put the
+            &lsquo;#&rsquo; in front of the variable name, that makes that variable private to the class. Then after the
+            service is set on line 4 there is Object.freeze(this), when you freeze an object like this in the
+            constructor it makes it so the variables set in the constructor are immutable and cannot be changed. The
+            Object.freeze on line 59 makes the class completely immutable and makes it so a user cannot do something
+            tricky like add a new function to the class. </span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 578.67px;"><img
+                alt="" src="images/image3.png"
+                style="width: 624.00px; height: 578.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2"><span class="c0">This is a portion of the implemented recipe service. You can see that it takes in a
+            dbcontext and has the implemented service functions. This shot shows an example of the builder pattern that
+            will be covered in a future post. The service is always where the hard work takes place. </span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 724.00px;"><img
+                alt="" src="images/image1.png"
+                style="width: 624.00px; height: 724.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2"><span class="c0">This is an example of some of the functions that live inside of the context. As you
+            can see, the pool calls the query function (like on line 27 for example) that actually finds that specific
+            query in the recipequeries file and takes in all of the arguments in a parameterized way to prevent SQL
+            injection and returns the result(s) obtained from the database. </span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 230.67px;"><img
+                alt="" src="images/image6.png"
+                style="width: 624.00px; height: 230.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2"><span class="c0">This is an example of the recipe queries that were written for use in the context.
+        </span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 623.00px; height: 335.00px;"><img
+                alt="" src="images/image8.png"
+                style="width: 623.00px; height: 335.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2"><span class="c0">There is also the glue that makes everything work, that is the appConfig file that
+            gets the server configured and up and running. Now that the bulk of the work is taken care of, now
+            it&rsquo;s time to have a URL endpoint that will take requests from any frontend that needs to interact with
+            a recipe. </span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 569.00px; height: 511.00px;"><img
+                alt="" src="images/image7.png"
+                style="width: 569.00px; height: 511.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2"><span class="c0">Now here in the recipes router is where the endpoints that allow the API to be
+            accessed are as well as with their associated request types. It is important to note that if you have
+            multiple GET requests that need to occur in the same router that you have to break those additional requests
+            out into their own pieces. A good example of this is lines 5-8 that allows you to get a recipe by id. This
+            differs from the get request that starts on line 12 because the request on line 5 takes in an id to get a
+            specific recipe, whereas line 12 gets all recipes. This models the way that I prefer to write routers for
+            each piece of functionality, with the &lsquo;get all&rsquo; type request being lumped in with all of the
+            others, and any other GET requests are separated. </span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">This is what all of the inner workings look like in my implementation of dependency
+            inversion. Please come back soon to see new posts on the builder pattern, domain primitives, and testing
+            that utilizes dependency inversion. </span></p>
 ');
 
 
