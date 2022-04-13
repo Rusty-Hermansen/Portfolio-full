@@ -1575,7 +1575,7 @@ VALUES ('Adding a background image with a div in React','https://upload.wikimedi
 ');
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
-VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png', '2021-11-21 10:23:54',
+VALUES ('Dependency Inversion in Node/Express','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54',
 ' <p class="c2"><span class="c0">When it comes to writing backend code for our frontend web applications there are
             many options out there to make that happen. One of the more popular choices is Node and Express and many are
             familiar with the way that an API is written using them. Here is your pretty typical GET request that would
@@ -1630,7 +1630,7 @@ VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wik
             will be covered in a future post. The service is always where the hard work takes place. </span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 724.00px;"><img
-                alt="" src="images/image1.png"
+                alt="1" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/dependencyInversion/images/image1.png"
                 style="width: 624.00px; height: 724.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c2"><span class="c0">This is an example of some of the functions that live inside of the context. As you
