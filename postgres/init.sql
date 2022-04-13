@@ -1584,7 +1584,7 @@ VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wik
     <p class="c1"><span class="c0"></span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 395.00px; height: 80.00px;"><img
-                alt="" src="images/image4.png"
+                alt="4" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/dependencyInversion/images/image4.png"
                 style="width: 395.00px; height: 80.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1"><span class="c0"></span></p>
@@ -1596,7 +1596,7 @@ VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wik
     <p class="c1"><span class="c0"></span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 573.00px; height: 904.00px;"><img
-                alt="" src="images/image2.png"
+                alt="2" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/dependencyInversion/images/image2.png"
                 style="width: 573.00px; height: 904.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c2"><span class="c0">It starts with service interfaces, the implemented services, controllers, contexts,
@@ -1608,7 +1608,7 @@ VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wik
     <p class="c1"><span class="c0"></span></p>
     <p class="c2"><span>&nbsp;</span><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 502.00px; height: 793.00px;"><img
-                alt="" src="images/image5.png"
+                alt="5" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/dependencyInversion/images/image5.png"
                 style="width: 502.00px; height: 793.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c1"><span class="c0"></span></p>
@@ -1622,7 +1622,7 @@ VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wik
             tricky like add a new function to the class. </span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 578.67px;"><img
-                alt="" src="images/image3.png"
+                alt="3" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/dependencyInversion/images/image3.png"
                 style="width: 624.00px; height: 578.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c2"><span class="c0">This is a portion of the implemented recipe service. You can see that it takes in a
@@ -1639,14 +1639,14 @@ VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wik
             injection and returns the result(s) obtained from the database. </span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 230.67px;"><img
-                alt="" src="images/image6.png"
+                alt="6" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/dependencyInversion/images/image6.png"
                 style="width: 624.00px; height: 230.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c2"><span class="c0">This is an example of the recipe queries that were written for use in the context.
         </span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 623.00px; height: 335.00px;"><img
-                alt="" src="images/image8.png"
+                alt="8" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/dependencyInversion/images/image8.png"
                 style="width: 623.00px; height: 335.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c2"><span class="c0">There is also the glue that makes everything work, that is the appConfig file that
@@ -1655,7 +1655,7 @@ VALUES ('Dependency Inversion in Node/Express','https://upload.wikimedia.org/wik
             a recipe. </span></p>
     <p class="c2"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 569.00px; height: 511.00px;"><img
-                alt="" src="images/image7.png"
+                alt="7" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/dependencyInversion/images/image7.png"
                 style="width: 569.00px; height: 511.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                 title=""></span></p>
     <p class="c2"><span class="c0">Now here in the recipes router is where the endpoints that allow the API to be
