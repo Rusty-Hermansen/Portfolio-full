@@ -1672,6 +1672,116 @@ VALUES ('Dependency Inversion in Node/Express','https://logodix.com/logo/1764835
             that utilizes dependency inversion. </span></p>
 ');
 
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('Image uploading to Amazon S3 in React and Node/Express','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54',
+' <p class="c2"><span class="c0">When it comes to handling images on a web page, especially images that need to be
+            uploaded by a user there are a number of options available for use. In this post I will show one of those
+            options, that being uploading an image to an Amazon S3 bucket in a React frontend using Node/Express.
+            I&rsquo;ll begin by starting in the Node/Express API in the index.js file. In order to make it happen, there
+            are a few imports that are needed beyond the standard Node/Express imports in the API. I&rsquo;ll include
+            all of the needed imports for the Index.js file below. Note: the imports/code on lines 2, 3, 12, 14, and 16
+            are for handling cookies/sessions and is unnecessary for uploading images to S3.</span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 498.00px; height: 339.00px;"><img
+                alt="1" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/ImageUploadS3/images/image1.png"
+                style="width: 498.00px; height: 339.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">The multer import on line 6 is what really helps to make this task easy, then the s3
+            import on line 7 is another file that helps with the functionality that is needed for upload and download
+            functionality with your S3 bucket. Line 8 is where Multer comes into play, this line indicates that images
+            will be uploaded to the uploads directory that will live in the root directory of the Node/Express api.
+            Please note that the upload folder will be created by Multer if it does not already exist. The fs import on
+            line 9 &nbsp;and the util import on line 10 help to clean up the upload folder after the file uploaded has
+            been sent to s3. This is done using unlink on line 17. This prevents the upload folder from becoming
+            excessively large and keeps the disk size of your API in check so you won&rsquo;t have hundreds or thousands
+            of images needlessly taking up space in your API. &nbsp;</span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 550.00px; height: 203.00px;"><img
+                alt="6" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/ImageUploadS3/images/image6.png"
+                style="width: 550.00px; height: 203.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">The image contains the only two requests needed in order to upload and download
+            images. </span></p>
+    <p class="c2"><span class="c0">The post request uploads the image, taking a file from the requests parameter,
+            feeding that file to the upload file function that returns an image key on line 441, then unlinking that
+            file so it&rsquo;s not taking up space in your api on line 442, and then then sends the response as an
+            object to the frontend. The image key that is returned from the uploadFile() function is what is used to
+            refer to the uploaded image in S3. If you&rsquo;re storing the image information in a database table, that
+            image key is what will need to be stored. &nbsp;</span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 358.00px; height: 121.00px;"><img
+                alt="4" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/ImageUploadS3/images/image1.png"
+                style="width: 358.00px; height: 121.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">The get request is responsible for downloading the image from S3 so it can be
+            displayed. It takes the image key from the URL parameters and that can be used to download the image. That
+            key can then be used to create a readStream and you can pipe the response into the readstream to download
+            the image. </span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 447.00px; height: 546.00px;"><img
+                alt="3" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/ImageUploadS3/images/image3.png"
+                style="width: 447.00px; height: 546.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">The s3 file that is imported in index.js is where you interface with the actual AWS
+            SDK that makes the magic come to life. Starting from the top, I first configure my environment variables
+            that live in an env file, and then import fs (line 3) and the only the S3 functionality from the AWS SDK
+            (line 4). After that I just make constants that contain the environment variables and pass them into the
+            constructor in an object to make a new s3 object (lines 11-15). On lines 17-27 is where the upload function
+            is defined that we saw in index.js It involves creating a read stream using fs passing in the file path that
+            the image lives in when it is first uploaded into the API (in the uploads folder that is specified using
+            multer), then creating the uploadParam object that is passed into the s3.upload() function that returns a
+            promise of a file key that is used to identify the file when you need to upload it.</span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 470.00px; height: 220.00px;"><img
+                alt="7" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/ImageUploadS3/images/image7.png"
+                style="width: 470.00px; height: 220.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">After the upload functionality comes the download functionality in the getFileStream
+            function that is also seen in index.js. This function takes in the image key that identifies the file that
+            was uploaded to s3 and uses that inside of the downloadParmas along with the bucket name that is passed into
+            the s3.getObject function along with chaining the createReadStream function that returns the image. Now
+            we&rsquo;re ready to look at the React frontend. </span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 280.00px;"><img
+                alt="5" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/ImageUploadS3/images/image5.png"
+                style="width: 624.00px; height: 280.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">The example here is a little trivial but serves the purpose of showing how image
+            uploading works on the frontend. The only hook that is needed in this example is just the useState hook that
+            will just hold file information and I&rsquo;ll do the axios call directly instead of having it abstracted
+            into a service like I would normally do. We can see in the postImage function (lines 5-11) that I create a
+            new formData object and append image information and then make a post request to my API with the formData
+            object, and some necessary headers and return the results. Then down in the main Recipe function that starts
+            on line 12 I create the file state variable and make a submitHandler that utilizes the postImage function
+            from above to return the image.</span></p>
+    <p class="c2"><span class="c0">&nbsp;</span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 617.00px; height: 362.00px;"><img
+                alt="2" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/ImageUploadS3/images/image2.png"
+                style="width: 617.00px; height: 362.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c1"><span class="c0"></span></p>
+    <p class="c2"><span class="c0">Next comes the fileSelected handler that just takes in the event and sets the file
+            state variable to the file passed in through that event. Then comes the JSX that displays a simple image
+            upload form. Outside of that form in the image tag displays an image that is downloaded from S3, displaying
+            an image works this way because React will automatically reach out to the API to download the image and
+            display it. This however can be problematic in some circumstances so the API code can be changed to return
+            an image URL that seems to be more robust. This, in a nutshell, is how you can upload files/images from a
+            React frontend to an Amazon S3 bucket. </span></p>
+');
+
 
 
 
