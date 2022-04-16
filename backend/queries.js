@@ -102,6 +102,7 @@ const getAllComments = async () => {
     const res = await pool.query(
         'SELECT * FROM portfolio_post.comment;'
     )
+    console.log(res.comment)
     if(res.rowCount > 0){
         return res.rows
     }
@@ -128,7 +129,7 @@ const getCommentsByUserId = async (id) => {
 
 const addNewComment = async (comment) => {
     const res = await pool.query(
-        `INSERT INTO portfolio_post.comment VALUES($1)`,
+        `INSERT INTO portfolio_post.comment VALUES($1);`,
         [comment]
     )
     res.send(200);
