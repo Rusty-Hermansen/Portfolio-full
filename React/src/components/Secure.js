@@ -9,7 +9,7 @@ import commentService from '../Services/commentService';
 const Secure = () => {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
-    // const [firstRender, setFirstRender] = useState(true);
+    const [firstRender, setFirstRender] = useState(true);
     const [joke, setJoke] = useState('');
     const [iceCream, setIceCream] = useState('');
     const [age, setAge] = useState();
