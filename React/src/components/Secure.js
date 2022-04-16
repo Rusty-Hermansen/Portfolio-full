@@ -53,7 +53,7 @@ const Secure = () => {
             setNickname(storeUser.nickName)
         }
 
-        const dbComments = commentService.getAllComments();
+        const dbComments = await commentService.getAllComments();
         setComments(dbComments)
 
     }, [])
