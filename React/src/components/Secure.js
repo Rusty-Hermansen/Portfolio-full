@@ -37,14 +37,14 @@ const Secure = () => {
             .catch(err => {
                 console.error(err)
             })
-        
+
         // dispatch(getUser(token))
-     
+
         if (!storeUser) {
             console.error("no user")
         }
         else {
-            
+
             setEmail(storeUser.email)
             setFullName(storeUser.fullName)
             setJoke(storeUser.joke)
@@ -73,7 +73,7 @@ const Secure = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        
+
         console.log("nickname" + nickname)
         const result = imageService.uploadImage({ image: file })
         console.log(result)
@@ -104,9 +104,9 @@ const Secure = () => {
         setComments(comments => [...comments, comment]);
         console.log(comments)
     }
-
-        if(!storeUser){
-            return (
+    console.log(comments);
+    if (!storeUser) {
+        return (
 
             <div>
                 <h2>User Information</h2>
@@ -127,40 +127,40 @@ const Secure = () => {
                     <label>Nickname</label>
                     <input type='text' onChange={nicknameChanged} value={nickname} />
                     <label>Upload your image here:</label>
-                <input
-                    type="file"
-                    onChange={fileSelectedHandler}
-                    accept="image/*"
-                />
+                    <input
+                        type="file"
+                        onChange={fileSelectedHandler}
+                        accept="image/*"
+                    />
                     <button type='submit'>Submit</button>
                 </form>
-               <form onSubmit={onCommentSubmit}>
-                   <label>Please make your comments here:</label>
-                   <input type='text' onChange={commentChangedHandler} />
-               </form>
-                <hr/>
+                <form onSubmit={onCommentSubmit}>
+                    <label>Please make your comments here:</label>
+                    <input type='text' onChange={commentChangedHandler} />
+                </form>
+                <hr />
                 <h1>Comments:</h1>
-               {
-                   comments && comments.reverse().map((c)=> (
-                     <div>
-                         <p>{c}</p>
-                         <hr/>
-                     </div>
-                   ))
-               }
+                {
+                    comments && comments.reverse().map((c) => (
+                        <div>
+                            <p>{c}</p>
+                            <hr />
+                        </div>
+                    ))
+                }
 
-            </div>) 
-        }
-        else {
-            return (
-                <>
-                Unauthorized
-                </>
-                
-            )
-        }
-       
+            </div>)
     }
+    else {
+        return (
+            <>
+                Unauthorized
+            </>
+
+        )
+    }
+
+}
 
 
 export default Secure;
