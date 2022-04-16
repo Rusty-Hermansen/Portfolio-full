@@ -4,11 +4,12 @@ import userService from '../Services/userService';
 import { useDispatch, useSelector } from 'react-redux';
 import imageService from '../Services/imageService';
 import { getUser } from '../store/userSlice';
+import commentService from '../Services/commentService';
 
 const Secure = () => {
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
-    const [firstRender, setFirstRender] = useState(true);
+    // const [firstRender, setFirstRender] = useState(true);
     const [joke, setJoke] = useState('');
     const [iceCream, setIceCream] = useState('');
     const [age, setAge] = useState();
@@ -17,6 +18,8 @@ const Secure = () => {
     const [userName, setUserName] = useState('');
     const storeUser = useSelector(store => store.user.user)
     const token = useSelector(store => store.user.token)
+    const [comment, setComment] = useState('');
+    const [comments, setComments] = useState([]);
     const dispatch = useDispatch();
 
     console.log("store " + storeUser)
@@ -36,7 +39,7 @@ const Secure = () => {
             })
         
         // dispatch(getUser(token))
-        console.log("stored user" + storeUser);
+     
         if (!storeUser) {
             console.error("no user")
         }
@@ -49,6 +52,10 @@ const Secure = () => {
             setAge(storeUser.age)
             setNickname(storeUser.nickName)
         }
+
+        const dbComments = commentService.getAllComments();
+        setComments(dbComments)
+
     }, [])
 
     const jokeChanged = (e) => {
@@ -87,7 +94,18 @@ const Secure = () => {
         setFile(file)
     }
 
-        if(storeUser){
+    const commentChangedHandler = (e) => {
+        setComment(e.target.value)
+    }
+
+    const onCommentSubmit = (e) => {
+        e.preventDefault()
+
+        setComments(comments => [...comments, comment]);
+        console.log(comments)
+    }
+
+        if(!storeUser){
             return (
 
             <div>
@@ -116,7 +134,20 @@ const Secure = () => {
                 />
                     <button type='submit'>Submit</button>
                 </form>
-               
+               <form onSubmit={onCommentSubmit}>
+                   <label>Please make your comments here:</label>
+                   <input type='text' onChange={commentChangedHandler} />
+               </form>
+                <hr/>
+                <h1>Comments:</h1>
+               {
+                   comments && comments.slice(0).reverse().map((c)=> {
+                     <div>
+                         <p>{c}</p>
+                         <hr/>
+                     </div>
+                   })
+               }
 
             </div>) 
         }

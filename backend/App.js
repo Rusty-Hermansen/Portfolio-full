@@ -75,14 +75,14 @@ app.post('/api/auth/login', async (req, res) => {
 
 app.get('/api/auth/secure', async (req, res) => {
     console.log("hit /secure")
-    console.table(req.cookies)
-    const dbSession = await queries.getSessionBySessionId(req.cookies.session_id);
-    console.table(dbSession)
+    // console.table(req.cookies)
+    // const dbSession = await queries.getSessionBySessionId(req.cookies.session_id);
+    // console.table(dbSession)
 
-    const user = await userService.authenticateUser(req.header('authorization').substring(7));
-    const response = await userService.getUserInfoByEmail(user.email)
-    console.table(response)
-    res.send(response);
+    // const user = await userService.authenticateUser(req.header('authorization').substring(7));
+    // const response = await userService.getUserInfoByEmail(user.email)
+    // console.table(response)
+    // res.send(response);
 
 
 })
@@ -144,6 +144,27 @@ app.get('/api/images/:key', (req, res)=>{
     const readStream = imageService.downloadImage(key);
 
     readStream.pipe(res)
+})
+
+app.get('/api/comments/', async (req, res) => {
+    res.json(await queries.getAllComments())
+})
+
+app.get('/api/comments/:id', async (req, res) => {
+    const response = await queries.getCommentsByUserId(req.params.userid);
+    res.json(response)
+}
+)
+
+app.post('/api/comments/', async (req, res) => {
+    try{
+      const response = await queries.addNewComment(req.body.comment)
+    res.send(200)  
+    }
+    catch(error){
+        console.error(error.stack)
+    }
+    
 })
 
 app.listen(5000, () => {

@@ -98,6 +98,55 @@ const getSessionBySessionId = async (session_id) => {
     }
 }
 
+const getAllComments = async () => {
+    const res = await pool.query(
+        'SELECT * FROM portfolio_post.comment;'
+    )
+    if(res.rowCount > 0){
+        return res.rows
+    }
+    else {
+        return null
+    }
+}
+
+const getCommentsByUserId = async (id) => {
+    const res = await pool.query(
+        `SELECT portfolio_post.user.email, portfolio_post.user.fullname, portfolio_post.comment.comment FROM portfolio_post.user_comment
+        INNER JOIN portfolio_post.user ON portfolio_post.user_comment.user_id = portfolio_post.user.id
+        INNER JOIN portfolio_post.comment ON portfolio_post.user_comment.id = portfolio_post.comment.id where portfolio_post.user.id = $1;`,
+        [id]
+    )
+    if(res.rowCount > 0){
+        return res.rows[0]
+    }
+    else {
+        return null
+    }
+    
+}
+
+const addNewComment = async (comment) => {
+    const res = await pool.query(
+        `INSERT INTO portfolio_post.comment VALUES($1)`,
+        [comment]
+    )
+    res.send(200);
+}
+
+// !!!This is for when authetication actually works!!!
+// const addNewComment = async (comment, user_id ) => {
+//      const res = await pool.query(
+//     `INSERT INTO portfolio_post.comment VALUES($1) returning id;`
+//     [comment]
+//  )
+//  const res2 = await pool.query(
+//      `INSERT INTO portfolio_post.user_comment VALUES ($1, $2);`
+//      [user_id, res2.id]
+//  )
+//  res.send(200)
+// }
+
 
 module.exports.queries = {
      getPostById, 
@@ -106,4 +155,7 @@ module.exports.queries = {
      deleteSession, 
      getSession,
      getSessionBySessionId,
+     getAllComments,
+     getCommentsByUserId,
+     addNewComment
      };

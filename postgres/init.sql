@@ -28,6 +28,20 @@ CREATE TABLE IF NOT EXISTS portfolio_post.user(
 );
 
 
+CREATE TABLE IF NOT EXISTS portfolio_post.comment(
+        id SERIAL PRIMARY KEY, 
+        comment TEXT
+);
+
+CREATE TABLE IF NOT EXISTS portfolio_post.user_comment(
+        id SERIAL PRIMARY KEY, 
+        user_id INT,
+        comment_id INT,
+        FOREIGN KEY(user_id) REFERENCES portfolio_post.user(id),
+        FOREIGN KEY(comment_id) REFERENCES portfolio_post.comment(id)
+);
+
+
 -- CREATE TABLE IF NOT EXISTS portfolio_post.category(
 --     id SERIAL PRIMARY KEY,
 --     category VARCHAR(40)
