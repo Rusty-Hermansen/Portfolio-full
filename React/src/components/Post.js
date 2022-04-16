@@ -20,7 +20,7 @@ const Post = () =>{
                 
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
              
-                    { dbPosts && dbPosts.slice(0).reverse().map((post)=> (                                                                                                   
+                    { dbPosts && dbPosts.reverse().map((post)=> (                                                                                                   
                        <article>
                         <Link to={"/singlepost/" + post.id} key={post.id} state={{id: post.id}}>                                                            
                           <span className="block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-black" key={post.id}>                  
