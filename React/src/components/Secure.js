@@ -141,12 +141,12 @@ const Secure = () => {
                 <hr/>
                 <h1>Comments:</h1>
                {
-                   comments && comments.slice(0).reverse().map((c)=> {
+                   comments && comments.slice(0).reverse().map((c)=> (
                      <div>
                          <p>{c}</p>
                          <hr/>
                      </div>
-                   })
+                   ))
                }
 
             </div>) 
