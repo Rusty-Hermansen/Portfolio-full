@@ -141,6 +141,7 @@ const Secure = () => {
                 <form onSubmit={onCommentSubmit}>
                     <label>Please make your comments here:</label>
                     <input type='text' onChange={commentChangedHandler} />
+                    <button type="submit">Submit Comment</button>
                 </form>
                 <hr />
                 <h1>Comments:</h1>
