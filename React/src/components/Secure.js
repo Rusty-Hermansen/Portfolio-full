@@ -53,10 +53,14 @@ const Secure = () => {
             setNickname(storeUser.nickName)
         }
 
-        const dbComments = await commentService.getAllComments();
-        setComments(dbComments)
+        getComments();
 
     }, [])
+
+    const getComments = async () => {
+        const dbComments = await commentService.getAllComments();
+        setComments(dbComments)
+    }
 
     const jokeChanged = (e) => {
         setJoke(e.target.value)

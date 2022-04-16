@@ -1,10 +1,8 @@
 import {useState, useEffect} from 'react';
 import { Link} from 'react-router-dom'
 import apiService from '../Services/apiService';
-import { posts } from '../posts/posts';
 import image from "../background.jpg"
 
-/////////////////////This piece handles RETRIEVAL FROM DATABASE////////////////////////
 const Post = () =>{
 
     const [dbPosts, setDbPosts] = useState([]);
