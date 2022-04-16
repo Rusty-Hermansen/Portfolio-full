@@ -147,6 +147,7 @@ app.get('/api/images/:key', (req, res)=>{
 })
 
 app.get('/api/comments/', async (req, res) => {
+    console.log("trying to get all comments")
     res.json(await queries.getAllComments())
 })
 
