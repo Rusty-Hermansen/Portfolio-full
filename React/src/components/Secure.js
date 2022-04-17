@@ -28,7 +28,6 @@ const Secure = () => {
 
         axios.get('/api/auth/secure', { withCredentials: true })
             .then(r => {
-                console.log(r)
                 if (r.status !== 403) {
                     setFirstRender(false)
                     setUserName(r.data)
@@ -56,7 +55,7 @@ const Secure = () => {
         getComments();
 
     }, [])
-    console.log(comments);
+  
 
     const getComments = async () => {
         const dbComments = await commentService.getAllComments();
@@ -108,7 +107,6 @@ const Secure = () => {
         e.preventDefault()
 
         setComments(comments => [...comments, comment]);
-        console.log(comments)
     }
     console.log(comments);
     if (!storeUser) {
@@ -150,7 +148,7 @@ const Secure = () => {
                 {
                     comments && comments.reverse().map((c) => (
                         <div>
-                            <p>{c}</p>
+                            <p>{c.comment}</p>
                             <hr />
                         </div>
                     ))
