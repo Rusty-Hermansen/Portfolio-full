@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import imageService from '../Services/imageService';
 import { getUser } from '../store/userSlice';
 import commentService from '../Services/commentService';
+import CommentForm from './CommentForm';
 
 const Secure = () => {
     const [fullName, setFullName] = useState('')
@@ -18,7 +19,7 @@ const Secure = () => {
     const [userName, setUserName] = useState('');
     const storeUser = useSelector(store => store.user.user)
     const token = useSelector(store => store.user.token)
-    const [comment, setComment] = useState('');
+  
     const [comments, setComments] = useState([]);
     const dispatch = useDispatch();
 
@@ -99,16 +100,6 @@ const Secure = () => {
         setFile(file)
     }
 
-    const commentChangedHandler = (e) => {
-        setComment(e.target.value)
-    }
-
-    const onCommentSubmit = (e) => {
-        commentService.addNewComment(comment)
-        // setComments(comments => [...comments, comment]);
-        getComments();
-        setComment('');
-    }
     console.log(comments);
     if (!storeUser) {
         return (
@@ -139,11 +130,7 @@ const Secure = () => {
                     />
                     <button type='submit'>Submit</button>
                 </form>
-                <form onSubmit={onCommentSubmit}>
-                    <label>Please make your comments here:</label>
-                    <input type='text' onChange={commentChangedHandler} />
-                    <button type="submit">Submit Comment</button>
-                </form>
+               <CommentForm/>
                 <hr />
                 <h1>Comments:</h1>
                 {
