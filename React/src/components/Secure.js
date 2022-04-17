@@ -105,8 +105,10 @@ const Secure = () => {
 
     const onCommentSubmit = (e) => {
         e.preventDefault()
-
-        setComments(comments => [...comments, comment]);
+        commentService.addNewComment(comment)
+        // setComments(comments => [...comments, comment]);
+        getComments();
+        setComment('');
     }
     console.log(comments);
     if (!storeUser) {
