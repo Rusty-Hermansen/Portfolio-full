@@ -104,7 +104,6 @@ const Secure = () => {
     }
 
     const onCommentSubmit = (e) => {
-        e.preventDefault()
         commentService.addNewComment(comment)
         // setComments(comments => [...comments, comment]);
         getComments();
