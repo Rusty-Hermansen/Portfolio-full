@@ -4,6 +4,7 @@ const url = '/api/comments';
 
 const getAllComments = async() => {
     const res = axios.get(url);
+    console.log("calling out to api");
     console.log(res.data)
     return res.data;
 }
