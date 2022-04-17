@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = '/api/comments';
+const url = '/api/comments/';
 
 const getAllComments = async() => {
     const res = axios.get(url);

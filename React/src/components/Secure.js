@@ -56,7 +56,7 @@ const Secure = () => {
         getComments();
 
     }, [])
-    console.log(dbComments);
+    console.log(comments);
 
     const getComments = async () => {
         const dbComments = await commentService.getAllComments();
