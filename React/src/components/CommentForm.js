@@ -9,8 +9,8 @@ const CommentForm = () => {
     }
 
     const onCommentSubmit = (e) => {
-        commentService.addNewComment(comment)
-        // setComments(comments => [...comments, comment]);
+        e.preventDefault();
+        commentService.addNewComment(comment);
         setComment('');
     }
 
