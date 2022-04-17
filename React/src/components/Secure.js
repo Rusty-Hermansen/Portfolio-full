@@ -136,7 +136,8 @@ const Secure = () => {
                 {
                     comments && comments.reverse().map((c) => (
                         <div>
-                            <p>{c.comment}</p>
+                            <p>{c.comment} <br/>
+                            From: Anonymous</p>
                             <hr />
                         </div>
                     ))
