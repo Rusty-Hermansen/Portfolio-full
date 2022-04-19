@@ -1796,6 +1796,86 @@ VALUES ('Image uploading to Amazon S3 in React and Node/Express','https://logodi
             React frontend to an Amazon S3 bucket. </span></p>
 ');
 
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('The Builder Pattern in Node/Express','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54',
+'  <p class="c0"><span class="c2">When writing code there are many things that we can do in order to make our lives
+            easier and to build better software. In this post I&rsquo;m going to talk about the Builder pattern as used
+            in a recipe web page to show how it works and how it helps to build better code.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 264.00px;"><img
+                alt="" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/BuilderPattern/images/image2.png"
+                style="width: 624.00px; height: 264.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2">In this snippet is a function inside of a Node API that is responsible for getting a
+            recipe from the database by the recipe id. The important part of this function is lines 35-43 when we deal
+            with the recipe. We can see that when we make a new RecipeBuilder object that we chain a bunch of functions
+            that add pieces to the RecipeBuilder object until it is finalized. Notice how this recipe is being formatted
+            for use in the frontend on like 43. </span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 505.00px; height: 528.00px;"><img
+                alt="" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/BuilderPattern/images/image1.png"
+                style="width: 505.00px; height: 528.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2">Here in the start of the actual RecipeBuilder class notice that there is no
+            constructor. This is by design so there is no default recipe that is being built. Each piece of the recipe
+            has to be added by that specific function. </span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 519.00px; height: 398.00px;"><img
+                alt="" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/BuilderPattern/images/image3.png"
+                style="width: 519.00px; height: 398.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2">Here we have the finalizeforFrontendRecipe function within the RecipeBuilder class
+            that makes sure that undefined values cannot be set to the attributes of the Recipe class. If all of those
+            items are not undefined then it will make that new recipe. Another thing to note is line 87, the purpose of
+            line 87 is to freeze the class so that it cannot be extended and have new functions added to it. This helps
+            to keep the integrity of our data and makes the class much harder to exploit. </span></p>
+');
+
+insert into portfolio_post.post(title,post_img, post_date, post_content) 
+VALUES ('Domain Primitives in Node','https://logodix.com/logo/1764835.png', '2021-11-21 10:23:54',
+'
+  <p class="c0"><span class="c1">Oftentimes when we code, we have types that describe a certain attribute. We often
+            think, &ldquo;oh, a name should be a string&rdquo;, or &ldquo;age should be an integer&rdquo;, or something
+            along those lines. That works, but can also have certain weaknesses, weaknesses that can potentially be
+            exploited. A good example of this would be, for a quantity in an online shopping application like Amazon. Do
+            we want to use an integer to describe quantity? Sure, we can, but there is often more to that integer that
+            we take for granted. At face value using an integer type is fine, until someone tries to purchase a negative
+            quantity and your company ends up giving them money when they shouldn&rsquo;t have. This is why domain
+            primitives are important and why it&rsquo;s important to model our domain appropriately with deep models.
+            &nbsp; </span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 575.00px; height: 19.00px;"><img
+                alt="" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/DomainPrimitives/images/image1.png"
+                style="width: 575.00px; height: 19.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">Using an integer to describe a quantity is what is known as a shallow model, it can
+            work, but may not fit as well as it should. This is where deep modeling and domain primitives come into
+            play. </span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 395.00px; height: 272.00px;"><img
+                alt="" src="https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/DomainPrimitives/images/image2.png"
+                style="width: 395.00px; height: 272.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">This is an example of a domain model of a database id in a Node backend that connects
+            with a Postgres database. The primary key in this database is automatically incremented and always starts at
+            1, this is reflected in my domain model that determines if the input is valid in lines 10-13. Here we model
+            exactly what a database id is, it must be of type number and must also be greater than zero. Only when those
+            conditions are met do you have a valid database id. </span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">Having a domain model like the one above also helps to increase the security of your
+            application because you are specifically defining what things like names, numbers, quantities, etc. look
+            like. You can even use domain models to prevent certain injection attacks because something like a name or a
+            password is specifically defined and doesn&rsquo;t allow characters that may be used for an injection
+            attack. <br></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+');
+
 
 
 

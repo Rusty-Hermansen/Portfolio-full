@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <style type="text/css">
+        ol {
+            margin: 0;
+            padding: 0
+        }
+
+        table td,
+        table th {
+            padding: 0
+        }
+
+        .c1 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 11pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+
+        .c0 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c3 {
+            background-color: #ffffff;
+            max-width: 468pt;
+            padding: 72pt 72pt 72pt 72pt
+        }
+
+        .c2 {
+            height: 11pt
+        }
+
+        .title {
+            padding-top: 0pt;
+            color: #000000;
+            font-size: 26pt;
+            padding-bottom: 3pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .subtitle {
+            padding-top: 0pt;
+            color: #666666;
+            font-size: 15pt;
+            padding-bottom: 16pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        li {
+            color: #000000;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        p {
+            margin: 0;
+            color: #000000;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+
+        h1 {
+            padding-top: 20pt;
+            color: #000000;
+            font-size: 20pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h2 {
+            padding-top: 18pt;
+            color: #000000;
+            font-size: 16pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h3 {
+            padding-top: 16pt;
+            color: #434343;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h4 {
+            padding-top: 14pt;
+            color: #666666;
+            font-size: 12pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h5 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h6 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body class="c3">
+    <p class="c0"><span class="c1">Oftentimes when we code, we have types that describe a certain attribute. We often
+            think, &ldquo;oh, a name should be a string&rdquo;, or &ldquo;age should be an integer&rdquo;, or something
+            along those lines. That works, but can also have certain weaknesses, weaknesses that can potentially be
+            exploited. A good example of this would be, for a quantity in an online shopping application like Amazon. Do
+            we want to use an integer to describe quantity? Sure, we can, but there is often more to that integer that
+            we take for granted. At face value using an integer type is fine, until someone tries to purchase a negative
+            quantity and your company ends up giving them money when they shouldn&rsquo;t have. This is why domain
+            primitives are important and why it&rsquo;s important to model our domain appropriately with deep models.
+            &nbsp; </span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 575.00px; height: 19.00px;"><img
+                alt="" src="images/image1.png"
+                style="width: 575.00px; height: 19.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">Using an integer to describe a quantity is what is known as a shallow model, it can
+            work, but may not fit as well as it should. This is where deep modeling and domain primitives come into
+            play. </span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 395.00px; height: 272.00px;"><img
+                alt="" src="images/image2.png"
+                style="width: 395.00px; height: 272.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">This is an example of a domain model of a database id in a Node backend that connects
+            with a Postgres database. The primary key in this database is automatically incremented and always starts at
+            1, this is reflected in my domain model that determines if the input is valid in lines 10-13. Here we model
+            exactly what a database id is, it must be of type number and must also be greater than zero. Only when those
+            conditions are met do you have a valid database id. </span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">Having a domain model like the one above also helps to increase the security of your
+            application because you are specifically defining what things like names, numbers, quantities, etc. look
+            like. You can even use domain models to prevent certain injection attacks because something like a name or a
+            password is specifically defined and doesn&rsquo;t allow characters that may be used for an injection
+            attack. <br></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+    <p class="c0 c2"><span class="c1"></span></p>
+</body>
+
+</html>
