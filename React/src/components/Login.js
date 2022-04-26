@@ -86,7 +86,7 @@ const Login = () => {
      lets see if it renders correctly
      ### stuff
      more stuff`
-     
+
     if (!isLoggedIn) {
         return (
             <>
@@ -109,9 +109,9 @@ const Login = () => {
                 style={{marginTop: '100px'}}
                 isSignedIn={true}/>
 
-                <ReactMarkdown>
-                    {markdown}
-                </ReactMarkdown>
+                <ReactMarkdown components={markdown} />
+               
+           
                 </div>
                
             )
