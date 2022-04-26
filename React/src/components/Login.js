@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { getUser } from '../store/userSlice';
 import userService from '../Services/userService';
 import { useDispatch, useSelector } from 'react-redux';
+import ReactMarkdown from 'react-markdown';
+
 const clientId = '517884522717-4i5ciriig1fm3uondq2ch65brkgrjs92.apps.googleusercontent.com';
 
 
@@ -78,7 +80,13 @@ const Login = () => {
         alert('You have logged out')
     }
 
-
+    const markdown = `## Title
+     here is some content it looks good because it's content. I like it
+     ### Here is more markdown stuff
+     lets see if it renders correctly
+     ### stuff
+     more stuff`
+     
     if (!isLoggedIn) {
         return (
             <>
@@ -89,8 +97,8 @@ const Login = () => {
 
             )
             : (
-
-                 <GoogleLogin
+                <div>
+                      <GoogleLogin
                 clientId={clientId}
                 buttonText= "Login"
                 // accessType="offline"
@@ -100,6 +108,12 @@ const Login = () => {
                 cookiePolicy='single_host_origin'
                 style={{marginTop: '100px'}}
                 isSignedIn={true}/>
+
+                <ReactMarkdown>
+                    {markdown}
+                </ReactMarkdown>
+                </div>
+               
             )
             } 
                
