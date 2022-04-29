@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
-import parse from 'html-react-parser'
+import ReactMarkdown from 'react-markdown';
 import apiService from "../Services/apiService";
 import image from "../background.jpg"
 
@@ -23,7 +23,7 @@ const SinglePost = () => {
              
                                
                                 <div className="col-12 p-5 bg-black bg-opacity-50">
-                                    {parse(dbPost?.post ?? "")}
+                                    <ReactMarkdown>{dbPost?.post ?? ""}</ReactMarkdown>
                                 </div>
                             </div>
                         </div>
