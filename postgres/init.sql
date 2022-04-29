@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS portfolio_post.user_comment(
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
 VALUES ('Kubernetes','https://developers.hp.com/sites/default/files/kubernetes-logo_0.jpg', '2021-11-21 10:23:54',
-`Progressing toward earning my Bachelors degree and being immersed in the world of
+'Progressing toward earning my Bachelors degree and being immersed in the world of
 tech, I have learned and heard about all sorts of different technologies. One of those technologies that has
 caught my attention is kubernetes, or as it is commonly known, k8s. Working as a DevOps engineer intern for
 Pluralsight, I had an opportunity to learn about k8s and even use it to some degree. I wanted to learn more
@@ -82,7 +82,7 @@ about it and here you can join my journey in learning kubernetes.
 ![4](https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Kubernetes/images/image4.png?raw=true)
  
 
-To start our journey into kubernetes, we'll use an image that I previously
+To start our journey into kubernetes, we&rsquo;ll use an image that I previously
 pushed up to docker hub, my car-app image.
 
 
@@ -166,7 +166,7 @@ playground, I created a service to access the load balancer so I could hit the r
 ![8](https://github.com/Rusty-Hermansen/portfolio/blob/main/src/posts/Kubernetes/images/image8.png?raw=true)
 
 
-Here is the running app that lives in each pod of my cluster.`);
+Here is the running app that lives in each pod of my cluster.');
 
 
 insert into portfolio_post.post(title,post_img, post_date, post_content) 
@@ -256,7 +256,7 @@ terminal and running the command:
  
 
  ```
- npx create-react-app reactApi</span>
+ npx create-react-app reactApi
  ```
 
 
@@ -1516,7 +1516,7 @@ The image contains the only two requests needed in order to upload and download
 images.
 
 
->The post request uploads the image, taking a file from the requests parameter,
+The post request uploads the image, taking a file from the requests parameter,
 feeding that file to the upload file function that returns an image key on line 441, then unlinking that
 file so it&rsquo;s not taking up space in your api on line 442, and then then sends the response as an
 object to the frontend. The image key that is returned from the uploadFile() function is what is used to
