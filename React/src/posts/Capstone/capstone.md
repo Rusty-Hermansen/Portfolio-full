@@ -10,19 +10,19 @@ down our application we made a use-case diagram so that we could nail down the f
 that we wanted for our minimum viable product. This use-case diagram indicates the things that authenticated and
 unauthenticated users can do.
 
-![singlepost](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/capstone/images/usecasediagram.png)
+![singlepost](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/usecasediagram.png)
 
 With that use-case diagram we could then more readily break down our application into features and subtasks and ended up with the
 breakdown below.
 
-![breakdown](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/capstone/images/breakdown.png)
+![breakdown](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/breakdown.png)
 
 With our new breakdown of tasks, we needed to make some more diagrams and determine which tech stack that we wanted to use for
 for this project. Since we had been working with React recently, we opted to stick with it, and use a PERN stack (Postgres, Express, React, Node).
 Next, we figured a good logical place to go from our breakdown was to move on to making an ERD for our database. We broke our database down into
 the tables below, in order to capture all of the functionality that we desired.
 
-![erd](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/capstone/images/erd.png)
+![erd](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/erd.png)
 
 Once our ERD was completed we then moved on to making the wireframe for our frontend to get a feel for what we wanted it to look like.
 One of our team members was the product owner on this project so we had the opportunity to discuss what his vision was for this  
@@ -31,7 +31,7 @@ at recipes on 3x5 cards, which is why each recipe card in the wireframe has the 
 it to have tabs, like 3x5 manilla folders. We also wanted a featured recipe, or recipe of the day that could be showcased at the top
 of the page.
 
-![wireframe](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/capstone/images/wireframe.png)
+![wireframe](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/wireframe.png)
 
 Now that we had the basic diagrams and a task breakdown it was time to lay the groundwork so we could start building and tackling
 risk. We began by standing up a basic React frontend using create-react-app, a node/express api, and a postgres database. We decided
@@ -105,5 +105,109 @@ services:
 With docker-compose set up to stand up our entire application, it was now time to get the API up and running.
 Our API started looking like a pretty standard node/express api but ended up evolving later on in the development
 process to utilize dependency inversion. If you would like to see more about how our api evolved and was later
-changed to use dependency inversion in order to promote testability and loose coupling you can visit 
-[this post](https://rustyhermansensoftwareengineer.link/singlepost/19).
+changed to use dependency inversion in order to promote testability and loose coupling you can visit
+[this post](https://rustyhermansensoftwareengineer.link/singlepost/19). The evolution of our API also brought with it additional changes to make everything work as well as make it more secure. Since this project has definitely been a living, breathing thing, we found ourselves building new things into it as we learned new things in our secure coding class. Things like using domain primitives as well as employing the builder pattern in order to build a recipe object piece by piece. I have written other posts about domain primitives and the builder pattern already, you can find the domain primitive post [here](https://rustyhermansensoftwareengineer.link/singlepost/22) and the builder pattern post [here](https://rustyhermansensoftwareengineer.link/singlepost/21).
+
+From here, we moved on to taking on risk, the biggest risk that I took was to figure out how to upload images from a web page to Amazon S3. This is also another post that I wrote that I thought should have it's own dedicated post and it can be found [here](https://rustyhermansensoftwareengineer.link/singlepost/20). As other team members had their respective pieces to work on, like getting pieces of the frontend built, I was then tasked with setting up a CD pipeline using GitHub Actions. The team member who acted as the product owner purchased an inexpensive VM on Linode and gave me the proper credentials in order to get in. I then installed an actions-runner in the vm and got it up and running. 
+
+![actions-runner](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/actionsrunner.png)
+
+This, of course, required setting up a workflow file that lives in a .github/workflows directory. 
+
+v![deployment.yml](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/deployment.png)
+
+This deploy.yml file tells when to do a new build on our server and what jobs to run. This is a pretty standard deployment file that checks out the repo and then does a new build with docker-compose. 
+
+``` yml
+name: "deploy"
+
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2.4.0
+        with: 
+          fetch-depth: 100
+
+      - name: build and test
+        run: |
+          docker-compose up --build -d
+          cd projectbakersman_api
+          npm install
+```
+
+As soon as I got the CD pipeline to run and I could hit our website from the internet, I then got to work getting HTTPS to work with a valid cert using Swag. This is where I got to uncomment the swag stuff in the docker-compose file above and add a couple of new files to help nginx correctly reverse proxy. In our application, nginx came built into our swag docker container and did not require us to run it as a service directly in our VM. In order to get our frontend to correctly interact with our API with nginx, I first made a default.conf file that lives in the root of the frontend. 
+
+![frontend-conf](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/fconf.png)
+
+This default.conf file contains the following code that allows the frontend to interact with the API via the /api location block.
+
+``` 
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+        try_files $uri /index.html;
+    }
+    
+    location /api {
+        proxy_pass http://api-server:3500;
+    }
+  
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+ 
+}
+```
+
+Another default.conf is required that lives in an nginx folder in my project root directory that redirects requests sent from port 80 to port 443. An important part here is that the server_name in the server block has the correct url(s) that your ip address should resolve to or you won't be able to resolve your page with https. 
+
+```
+server {
+    listen 80;
+    listen [::]:80;
+    server_name _;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen       443 ssl;
+    listen  [::]:443;
+    server_name  therecipesbox.com;
+  
+    include /config/nginx/ssl.conf;
+    client_max_body_size 0;
+
+    location / {
+        include /config/nginx/proxy.conf;
+        resolver 127.0.0.11 valid=30s;
+        set $upstream_app frontend;
+        set $upstream_port 80;
+        set $upstream_proto http;
+        proxy_pass $upstream_proto://$upstream_app:$upstream_port;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+}
+```
+
+Once all of this was in place and I could resolve our page using https, it was then time to start working on the frontend. In order to get the tabbed appearance that we wanted, we found an NPM package called react-tabs that gave us just the perfect tabbed appearance. 
+
+![tabs](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/tabs.png)
