@@ -208,6 +208,85 @@ server {
 }
 ```
 
-Once all of this was in place and I could resolve our page using https, it was then time to start working on the frontend. In order to get the tabbed appearance that we wanted, we found an NPM package called react-tabs that gave us just the perfect tabbed appearance. 
+Once all of this was in place and I could resolve our page using https, it was then time to start working on the frontend. In order to get the tabbed appearance that we wanted, we found an NPM package called react-tabs that gave us just the perfect tabbed appearance.
 
 ![tabs](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/tabs.png)
+
+
+This is an example of how the tab panels work in our React frontend. Inside of a tabs JSX element we set up an onSelect that helps our tabs to have the functionality that we desired when a tab is selected and when a tab is moved away from. We then set up the list of tabs that we desire and inside of the tab panel is where we map through our list of filtered recipes and displaying our recipe cards that display basic recipe information and that take us to our recipe detail page.
+
+```
+ <Tabs
+                    onSelect={(currentTab, previousTab) => {
+                        filterRecipesHandler(currentTab)
+                    }}
+                    selectedTabClassName={active}
+                    disabledTabClassName={inactive}
+                >
+                    <TabList className="nav nav-tabs nav-fill">
+                        <Tab className="all nav-item">
+                            {filterCategories[0]}
+                        </Tab>
+                        <Tab className="breakfast nav-item">
+                            {filterCategories[1]}
+                        </Tab>
+                        <Tab className="lunch nav-item">
+                            {filterCategories[2]}
+                        </Tab>
+                        <Tab className="dinner nav-item">
+                            {filterCategories[3]}
+                        </Tab>
+                        <Tab className="search nav-item">
+                            {filterCategories[4]}
+                        </Tab>
+                    </TabList>
+                    <TabPanel className="tab-pane">
+                        <div className="container">
+                            <div className="row row-cols-1">
+                                {recipes &&
+                                    recipes.map(recipe => (
+                                        <article>
+                                            {/* <Link
+                                                to={'/recipe/' + recipe.id}
+                                                key={recipe.id}
+                                                state={{ id: recipe.id }}
+                                            > */}
+                                            <div className="col-lg-4 col-md-6 col-sm-12">
+                                                <RecipeCard recipe={recipe} />
+                                            </div>
+                                            {/* </Link> */}
+                                        </article>
+                                    ))}
+                            </div>
+                        </div>
+                    </TabPanel>
+```
+
+In order to get the recipes to filter properly we made a filterRecipesHandler that takes in the current tab and returns a list of filtered recipes based upon which tab that you select. 
+
+```
+    const filterRecipesHandler = currentTab => {
+        const filtered = recipes.filter(recipe => {
+            if (
+                filterCategories[currentTab] === 'All' ||
+                filterCategories[currentTab] === 'Search'
+            ) {
+                return recipe
+            }
+            if (filterCategories[currentTab] === recipe.category) {
+                return recipe
+            }
+            return
+        })
+        setFilteredRecipes(filtered)
+    }
+```
+
+Here you can see the recipes being filtered by category in action:
+
+![filteredrecipes](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/categoryfilter.png)
+
+We also wanted to be able to filter our recipes by title, so when the search tab is selected and you type in a recipe you can also filter a recipe by title. This is done in the first if block in the filteredRecipesHandler.
+
+![searchdrecipes](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/Capstone/images/search2.png)
+
