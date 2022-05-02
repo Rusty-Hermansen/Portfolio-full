@@ -41,7 +41,7 @@ Once you have your extension installed now all you need to do is navigate to you
 
 ![generatedpolicy](./images/generatedpolicy.png)
 
-Now that I have a policy generated, it's time to put the policy to work. There is more than one way put your policy to work, you can do it in your NGINX conf files if you want if you're using NGINX or you can just put meta tags in the head of your HTML page. Since React is a single page application you really only ever need to worry about putting it in one place, that being between the head tags in the index.html file that lives in the public folder (that is, if you used npx create-react-app *appname* to scaffold your react app for you).
+Now that I have a policy generated, it's time to put the policy to work. There is more than one way put your policy to work, you can do it in your NGINX conf files if you want if you're using NGINX and/or you can put meta tags in the head of your HTML page. Since React is a single page application you really only ever need to worry about putting it in one place, that being between the head tags in the index.html file that lives in the public folder (that is, if you used npx create-react-app *appname* to scaffold your react app for you).
 
 ![index.html](./images/index.png)
 
@@ -49,8 +49,12 @@ Here is what my code looks like with the content security policy in index.html t
 
 ![csp-index](./images/csp-index.png)
 
-You'll notice that I made some changes to mine, these changes were made because I have some images that render from a URL as opposed to living inside of directory for my page. You may very well have to make some of your own changes for your own content security policy. The good news is,  you can use the console in your browser developer tools when you inspect a page in order to determine if your security policy needs some tweaking to make all of your features work. I also added the frame-ancestors 'self' piece on line 12, it is this line specifically that blocks your page from being able to be rendered in an iframe as shown below.
+You'll notice that I made some changes to mine, these changes were made because I have some images that render from a URL as opposed to living inside of directory for my page. You may very well have to make some of your own changes for your own content security policy. The good news is,  you can use the console in your browser developer tools when you inspect a page in order to determine if your security policy needs some tweaking to make all of your features work.
 
-![completecsp](./images/csp-complete.png)
+![completecsp](./images/defaultconf.png)
+
+In my case, I needed to add a piece of code on line 46 in the default.conf file for NGINX to prevent clickjacking. You may notice that there is no frame-ancestors in the picture above. This is because you can't put this in meta tags, it has to be put in a header.
+
+![completecsp](./images/noclickjack.png)
 
 There you have it, a content security policy in place and a page that is more secure than it was before. 

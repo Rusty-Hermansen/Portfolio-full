@@ -1731,10 +1731,15 @@ You&rsquo;ll notice that I made some changes to mine, these changes were made be
 render from a URL as opposed to living inside of directory for my page. You may very well have to make some 
 of your own changes for your own content security policy. The good news is,  you can use the console in your 
 browser developer tools when you inspect a page in order to determine if your security policy needs some 
-tweaking to make all of your features work. I also added the frame-ancestors &rsquo;self&rsquo; piece on line 12, 
-it is this line specifically that blocks your page from being able to be rendered in an iframe as shown below.
+tweaking to make all of your features work. 
 
-![completecsp](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/cpsReact/images/csp-complete.png)
+![completecsp](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/cpsReact/images/defaultconf.png)
+
+In my case, I needed to add a piece of code on line 46 in the default.conf file for NGINX to prevent clickjacking. 
+You may notice that there is no frame-ancestors in the picture above. This is because you can&rsquo;t put this 
+in meta tags, it has to be put in a header.
+
+![completecsp](https://raw.githubusercontent.com/Rusty-Hermansen/Portfolio-full/main/React/src/posts/cpsReact/images/noclickjack.png)
 
 There you have it, a content security policy in place and a page that is more secure than it was before.');
 
