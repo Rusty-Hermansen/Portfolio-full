@@ -23,4 +23,5 @@ jobs:
           chmod 755 clientssh.bash
           npm install
           pm2 start process.yml
+          git secret hide
           
