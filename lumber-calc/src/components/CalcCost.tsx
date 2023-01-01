@@ -1,5 +1,6 @@
 import {FC, FormEvent, ChangeEvent, useState } from 'react';
-
+import moneyModel from '../models/moneyModel';
+import percentModel from '../models/percentModel';
 
 const CalcCost: FC<any>= () : JSX.Element  => {
     const [cost, setCost] = useState<number>(0.0);
@@ -8,8 +9,10 @@ const CalcCost: FC<any>= () : JSX.Element  => {
 
     const onSubmitHandler = (event: FormEvent) => {
         event.preventDefault();
-        let calculatedPrice = cost / (1 - (margin / 100 ))
-        setRetailPrice(calculatedPrice) 
+        let costObject = new moneyModel(cost)
+        let marginObject = new percentModel(margin)
+        let calculatedPrice = new moneyModel(costObject.money / (1 - (marginObject.percent / 100 )))
+        setRetailPrice(calculatedPrice.money) 
     }
 
     const costChangedHandler = (event: ChangeEvent<HTMLInputElement>) => {
@@ -41,7 +44,7 @@ const CalcCost: FC<any>= () : JSX.Element  => {
         </div>
         { retailPrice != 0.0 &&
             <div className="row">
-                        The retail price of your item is <b>$${retailPrice}</b>.
+                        The retail price of your item is <b>${retailPrice}</b>.
                     </div>
 
         }
